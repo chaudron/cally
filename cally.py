@@ -356,10 +356,10 @@ def dump_path_ascii(path, reverse, **kwargs):
     for function in reversed(path) if reverse else path:
         if ascii_path != "":
             ascii_path += " -> "
-        ascii_path += "\"" + function + "\""
+        ascii_path += '"' + function + '"'
 
     if externs:
-        ascii_path += ";\n{} [style=dashed]".format(function)
+        ascii_path += ';\n"{}" [style=dashed]'.format(function)
 
     print_buf(std_buf, ascii_path + ";")
 
@@ -513,7 +513,7 @@ def full_call_graph(functions, **kwargs):
                     print_buf(std_buf, '"{}" -> "{}";'.format(func, caller))
 
                     if caller not in functions:
-                        print_buf(std_buf, "{} [style=dashed]".format(caller))
+                        print_buf(std_buf, '"{}" [style=dashed]'.format(caller))
 
                     printed_functions += 1
 
@@ -709,7 +709,7 @@ def main():
     if config.callee is not None:
         if config.callee in functions:
             print("strict digraph callgraph {")
-            print("{} [color=blue, style=filled];".format(config.callee))
+            print('"{}" [color=blue, style=filled];'.format(config.callee))
             dump_path([], functions, config.callee,
                       max_depth=config.max_depth,
                       reverse_path=True,
@@ -727,7 +727,7 @@ def main():
     elif config.caller is not None:
         if config.caller in functions:
             print("strict digraph callgraph {")
-            print("{} [color=blue, style=filled];".format(config.caller))
+            print('"{}" [color=blue, style=filled];'.format(config.caller))
             dump_path([], functions, config.caller,
                       max_depth=config.max_depth,
                       exclude=exclude_regex,
