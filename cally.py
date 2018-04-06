@@ -60,7 +60,7 @@ unit_test_full_dump_output = [
     'strict digraph callgraph {',
     '"A" -> "A";', '"A" -> "B";',
     '"B" -> "C";', '"B" -> "E";',
-    'E [style=dashed]', '"B" -> "F";',
+    '"E" [style=dashed]', '"B" -> "F";',
     '"B" -> "G";', '"B" -> "H";',
     '"C" -> "D";', '"D"', '"F"',
     '"G" -> "B";', '"H" -> "I";',
@@ -72,7 +72,7 @@ unit_test_full_caller_output = [
     '"A" -> "A";',
     '"A" -> "B" -> "H" -> "I" -> "J" -> "D";',
     '"A" -> "B" -> "C" -> "D";',
-    '"A" -> "B" -> "E";\nE [style=dashed];',
+    '"A" -> "B" -> "E";\n"E" [style=dashed];',
     '"A" -> "B" -> "G" -> "B";',
     '"A" -> "B" -> "F";'
 ]
@@ -80,31 +80,41 @@ unit_test_noexterns_caller_output = [
     '"A" -> "A";',
     '"A" -> "B" -> "H" -> "I" -> "J" -> "D";',
     '"A" -> "B" -> "C" -> "D";',
+    '"B" [color=red];',
     '"A" -> "B" -> "G" -> "B";',
     '"A" -> "B" -> "F";'
 ]
 unit_test_maxdepth2_caller_output = [
-    '"A" -> "A";', '"A" -> "B";', '"A" -> "B";', '"A" -> "B";', '"A" -> "B";'
+    '"A" -> "A";',
+    '"A" -> "B";\n"B" [color=red];',
+    '"A" -> "B";\n"B" [color=red];',
+    '"B" [color=red];',
+    '"A" -> "B";\n"B" [color=red];',
+    '"A" -> "B";\n"B" [color=red];'
 ]
 unit_test_maxdepth3_caller_output = [
-    '"A" -> "A";', '"A" -> "B" -> "H";', '"A" -> "B" -> "C";',
-    '"A" -> "B" -> "E";\nE [style=dashed];', '"A" -> "B" -> "G";',
+    '"A" -> "A";',
+    '"A" -> "B" -> "H";\n"H" [color=red];',
+    '"A" -> "B" -> "C";\n"C" [color=red];',
+    '"A" -> "B" -> "E";\n"E" [style=dashed];',
+    '"A" -> "B" -> "G";\n"G" [color=red];',
     '"A" -> "B" -> "F";'
 ]
 unit_test_regex_caller_output = [
     '"A" -> "A";', '"A" -> "B" -> "H" -> "I" -> "J" -> "D";',
-    '"A" -> "B";', '"A" -> "B";', '"A" -> "B" -> "F";'
-]
-
+    '"A" -> "B";\n"B" [color=red];',
+    '"B" [color=red];',
+    '"A" -> "B";\n"B" [color=red];',
+    '"A" -> "B" -> "F";']
 unit_test_full_callee_output = [
     '"A" -> "A" -> "B";', '"main" -> "A" -> "B";', '"B" -> "G" -> "B";'
 ]
-
 unit_test_maxdepth4_callee_output = [
-    '"A" -> "A" -> "B" -> "C" -> "D";', '"A" -> "B" -> "C" -> "D";',
-    '"G" -> "B" -> "C" -> "D";', '"H" -> "I" -> "J" -> "D";'
+    '"A" -> "A" -> "B" -> "C" -> "D";',
+    '"A" -> "B" -> "C" -> "D";\n"A" [color=red];',
+    '"G" -> "B" -> "C" -> "D";\n"G" [color=red];',
+    '"H" -> "I" -> "J" -> "D";\n"H" [color=red];'
 ]
-
 unit_test_maxdepth5_callee_output = [
     '"A" -> "A" -> "B" -> "C" -> "D";', '"main" -> "A" -> "B" -> "C" -> "D";',
     '"B" -> "G" -> "B" -> "C" -> "D";', '"B" -> "H" -> "I" -> "J" -> "D";'
@@ -185,7 +195,7 @@ def unit_test():
                                       unit_test_noexterns_caller_output,
                                       buffer)
     #
-    # Full caller with limit depth
+    # Caller with limit depth
     #
     print_dbg("")
     print_dbg("CALLER LIMITED DEPTH (2)")
@@ -197,13 +207,10 @@ def unit_test():
               exclude=None,
               no_externs=False,
               stdio_buffer=buffer)
-    failures += unit_test_check_error("CALLER, MAC DEPTH 2",
+    failures += unit_test_check_error("CALLER, MAX DEPTH 2",
                                       unit_test_maxdepth2_caller_output,
                                       buffer)
-    #
-    #
-    # Limited depth caller
-    #
+
     print_dbg("")
     print_dbg("CALLER LIMITED DEPTH (3)")
     print_dbg("========================")
@@ -217,6 +224,9 @@ def unit_test():
     failures += unit_test_check_error("CALLER, MAX DEPTH 3",
                                       unit_test_maxdepth3_caller_output,
                                       buffer)
+    #
+    # Caller with limited by regex
+    #
     print_dbg("")
     print_dbg("CALLER REGEX MATCH")
     print_dbg("==================")
@@ -347,6 +357,7 @@ def build_callee_info(function_db):
 #
 def dump_path_ascii(path, reverse, **kwargs):
     externs = kwargs.get("externs", False)
+    truncated = kwargs.get("truncated", False)
     std_buf = kwargs.get("stdio_buffer", None)
 
     if len(path) == 0:
@@ -358,8 +369,11 @@ def dump_path_ascii(path, reverse, **kwargs):
             ascii_path += " -> "
         ascii_path += '"' + function + '"'
 
-    if externs:
-        ascii_path += ';\n"{}" [style=dashed]'.format(function)
+    if truncated or externs:
+        ascii_path += ';\n"{}"{}{}'. \
+                      format(function if not reverse else path[-1],
+                             " [style=dashed]" if externs else "",
+                             " [color=red]" if truncated else "")
 
     print_buf(std_buf, ascii_path + ";")
 
@@ -392,7 +406,8 @@ def dump_path(path, functions, function_name, **kwargs):
     #
     if (exclude is not None and re.match(exclude, function_name) is not None) \
        or (max_depth > 0 and len(path) >= max_depth):
-        dump_path_ascii(path, reverse_path, stdio_buffer=std_buf)
+        dump_path_ascii(path, reverse_path, stdio_buffer=std_buf,
+                        truncated=True)
         return
 
     #
@@ -437,6 +452,10 @@ def dump_path(path, functions, function_name, **kwargs):
             children += 1
             dump_path_ascii(path + [function_name, caller], reverse_path,
                             externs=True, stdio_buffer=std_buf)
+        else:
+            print_buf(std_buf, '"{}" [color=red];'.
+                      format(function_name))
+
     #
     # If there where no children, the path ends here, so dump it.
     #
@@ -513,7 +532,8 @@ def full_call_graph(functions, **kwargs):
                     print_buf(std_buf, '"{}" -> "{}";'.format(func, caller))
 
                     if caller not in functions:
-                        print_buf(std_buf, '"{}" [style=dashed]'.format(caller))
+                        print_buf(std_buf, '"{}" [style=dashed]'.
+                                  format(caller))
 
                     printed_functions += 1
 

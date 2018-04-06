@@ -130,7 +130,7 @@ Without ```-fno-inline-functions -O0``` there are no _static_ functions:
   <img src="images/full_call_graph.png" width="100%" alt="full_call_graph.png">
 </div>
 
-__NOTE:__ The dashed nodes in the graph are external functions, i.e. not
+__NOTE__: The dashed nodes in the graph are external functions, i.e. not
 defined in any of the RTL files given. If you would like to exclude them from
 the graph you can use the ```--no-externs``` option.
 
@@ -168,6 +168,9 @@ $ find . -name *.expand | xargs cally.py --caller miniflow_extract --max-depth 6
 <div align="center">
   <img src="images/limited_caller.png" width="100%" alt="limited_caller.png">
 </div>
+
+__NOTE__: The red nodes in the graph represents nodes which had calls removed
+due to either the _--max-depth_, _--exclude_ or _--no-externs_ options.
 
 
 
