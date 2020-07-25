@@ -519,6 +519,23 @@ def full_call_graph(functions, **kwargs):
     #
     # Simply walk all nodes and print the callers
     #
+    last = ""
+    cnt = 0
+    cols = [ "grey", "lightblue", "red", "green", "yellow", "cyan", "pink", "purple", "brown" ]
+    for func in sorted(functions.keys(), key=lambda item:functions[item]["files"][0]):
+        if exclude is None or \
+            re.match(exclude, func) is None:
+                directory = os.path.dirname(functions[func]["files"][0])
+                if directory != last:
+                    if last != "":
+                        print_buf(std_buf, "}")
+                    print_buf(std_buf, f"subgraph cluster_{cnt}" + " {")
+                    print_buf(std_buf, f"node [style=filled,color={cols[cnt]}];")
+                    last = directory
+                    cnt += 1
+                print_buf(std_buf, '"{}"'.format(func))
+    print_buf(std_buf, "}")
+
     for func in sorted(functions.keys()):
         printed_functions = 0
         if exclude is None or \
@@ -536,10 +553,6 @@ def full_call_graph(functions, **kwargs):
                                   format(caller))
 
                     printed_functions += 1
-
-            if printed_functions == 0:
-                print_buf(std_buf, '"{}"'.format(func))
-
     print_buf(std_buf, "}")
 
 
