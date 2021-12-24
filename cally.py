@@ -565,10 +565,10 @@ def main():
                         action='store', nargs='?')
     parser.add_argument("--callee",
                         help="Callgraph for the function being called",
-                        type=str, metavar="FUNCTION")
+                        type=str, metavar="FUNCTION", action='append')
     parser.add_argument("--caller",
                         help="Callgraph for functions being called by",
-                        type=str, metavar="FUNCTION")
+                        type=str, metavar="FUNCTION", action='append')
     parser.add_argument("-e", "--exclude",
                         help="RegEx for functions to exclude",
                         type=str, metavar="REGEX")
@@ -726,37 +726,39 @@ def main():
     #
     # Build callgraph for callee function
     #
-    if config.callee is not None:
-        if config.callee in functions:
-            print("strict digraph callgraph {")
-            print('"{}" [color=blue, style=filled];'.format(config.callee))
-            dump_path([], functions, config.callee,
+    if config.callee and len(config.callee) != 0:
+        for callee in config.callee:
+            if callee not in functions:
+                print_err("ERROR: Can't find callee \"{}\" in RTL data!".
+                          format(callee))
+                return 1
+        print("strict digraph callgraph {")
+        for callee in config.callee:
+            print('"{}" [color=blue, style=filled];'.format(callee))
+            dump_path([], functions, callee,
                       max_depth=config.max_depth,
                       reverse_path=True,
                       exclude=exclude_regex,
                       call_index="callee_calls")
-            print("}")
-        else:
-            print_err("ERROR: Can't find callee, \"{}\" in RTL data!".
-                      format(config.callee))
-            return 1
+        print("}")
 
     #
     # Build callgraph for caller function
     #
-    elif config.caller is not None:
-        if config.caller in functions:
-            print("strict digraph callgraph {")
-            print('"{}" [color=blue, style=filled];'.format(config.caller))
-            dump_path([], functions, config.caller,
+    elif config.caller and len(config.caller) != 0:
+        for caller in config.caller:
+            if caller not in functions:
+                print_err("ERROR: Can't find caller \"{}\" in RTL data!".
+                          format(caller))
+                return 1
+        print("strict digraph callgraph {")
+        for caller in config.caller:
+            print('"{}" [color=blue, style=filled];'.format(caller))
+            dump_path([], functions, caller,
                       max_depth=config.max_depth,
                       exclude=exclude_regex,
                       no_externs=config.no_externs)
-            print("}")
-        else:
-            print_err("ERROR: Can't find caller \"{}\" in RTL data!".
-                      format(config.caller))
-            return 1
+        print("}")
 
     if config.debug:
         print_dbg("[PERF] Generating .dot file took {:.9f} seconds".format(
