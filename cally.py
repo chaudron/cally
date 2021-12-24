@@ -600,7 +600,7 @@ def main():
     #
     if config.caller and config.callee:
         print_err("ERROR: Either --caller or --callee option should be given, "
-                  "not both!".format(config.callee))
+                  "not both!")
         return 1
 
     if config.exclude is not None:
