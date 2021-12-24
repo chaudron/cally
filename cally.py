@@ -636,6 +636,8 @@ def main():
         r"^.*\(call.*\"(?P<target>.*)\".*$")
     symbol_ref = re.compile(r"^.*\(symbol_ref.*\"(?P<target>.*)\".*$")
 
+    # This is a very long line which will give us a flake8 warning to see it is also done on pullreqs/
+    
     #
     # Parse each line in each file given
     #
