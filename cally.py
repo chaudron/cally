@@ -631,10 +631,10 @@ def main():
     # Regex to extract functions
     #
     function = re.compile(
-        "^;; Function (?P<mangle>.*)\s+\((?P<function>\S+)(,.*)?\).*$")
+        r"^;; Function (?P<mangle>.*)\s+\((?P<function>\S+)(,.*)?\).*$")
     call = re.compile(
-        "^.*\(call.*\"(?P<target>.*)\".*$")
-    symbol_ref = re.compile("^.*\(symbol_ref.*\"(?P<target>.*)\".*$")
+        r"^.*\(call.*\"(?P<target>.*)\".*$")
+    symbol_ref = re.compile(r"^.*\(symbol_ref.*\"(?P<target>.*)\".*$")
 
     #
     # Parse each line in each file given
