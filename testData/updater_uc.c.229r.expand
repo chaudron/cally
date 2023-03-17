@@ -1,0 +1,1883 @@
+
+;; Function updaterUcInFile (updaterUcInFile, funcdef_no=7, decl_uid=1909, cgraph_uid=7, symbol_order=10)
+
+Partition 3: size 64 align 4
+	sBlockHeader
+Partition 0: size 4 align 4
+	eBlockType_11
+Partition 2: size 4 align 4
+	ulPos
+Partition 1: size 2 align 2
+	wBlockIdx_15
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 65 from 13 to 14.
+Redirecting jump 87 from 13 to 14.
+Merging block 13 into block 12...
+Merged blocks 12 and 13.
+Merged 12 and 13 without moving.
+Removing jump 103.
+Merging block 15 into block 14...
+Merged blocks 14 and 15.
+Merged 14 and 15 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 11 NOTE_INSN_DELETED)
+(note 11 1 4 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 4 11 2 2 (set (reg:SI 109)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [2 isHost+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":12 -1
+     (nil))
+(insn 2 4 3 2 (set (reg/f:SI 108)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [10 cbAffRead+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":12 -1
+     (nil))
+(insn 3 2 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -84 [0xffffffffffffffac])) [10 cbAffRead+0 S4 A32])
+        (reg/f:SI 108)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":12 -1
+     (nil))
+(insn 5 3 6 2 (set (reg:QI 110)
+        (subreg:QI (reg:SI 109) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":12 -1
+     (nil))
+(insn 6 5 7 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -88 [0xffffffffffffffa8])) [2 isHost+0 S1 A32])
+        (reg:QI 110)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":12 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 111)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [11 pVersionOut+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":12 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -92 [0xffffffffffffffa4])) [11 pVersionOut+0 S4 A32])
+        (reg/f:SI 111)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":12 -1
+     (nil))
+(note 9 8 10 2 NOTE_INSN_FUNCTION_BEG)
+(insn 10 9 13 2 (parallel [
+            (set (mem/v/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [3 D.2257+0 S4 A32])
+                (unspec:SI [
+                        (const_int 20 [0x14])
+                    ] UNSPEC_SP_TLS_SET))
+            (set (scratch:SI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":12 -1
+     (nil))
+(insn 13 10 14 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -88 [0xffffffffffffffa8])) [2 isHost+0 S1 A32])
+            (const_int 0 [0]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":14 -1
+     (nil))
+(jump_insn 14 13 15 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 22)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":14 -1
+     (nil)
+ -> 22)
+(note 15 14 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 4 (set (reg:SI 91 [ iftmp.0_4 ])
+        (const_int 8 [0x8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":14 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:DI 93 [ PROF_edge_counter_25 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.updaterUcInFile") [flags 0x2]  <var_decl 0x7fe8625bc870 __gcov0.updaterUcInFile>)
+                        ] UNSPEC_GOTOFF))) [12 __gcov0.updaterUcInFile+0 S8 A256])) -1
+     (nil))
+(insn 18 17 19 4 (parallel [
+            (set (reg:DI 94 [ PROF_edge_counter_26 ])
+                (plus:DI (reg:DI 93 [ PROF_edge_counter_25 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 19 18 20 4 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.updaterUcInFile") [flags 0x2]  <var_decl 0x7fe8625bc870 __gcov0.updaterUcInFile>)
+                        ] UNSPEC_GOTOFF))) [12 __gcov0.updaterUcInFile+0 S8 A256])
+        (reg:DI 94 [ PROF_edge_counter_26 ])) -1
+     (nil))
+(jump_insn 20 19 21 4 (set (pc)
+        (label_ref 28)) -1
+     (nil)
+ -> 28)
+(barrier 21 20 22)
+(code_label 22 21 23 5 2 (nil) [1 uses])
+(note 23 22 24 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 5 (set (reg:SI 91 [ iftmp.0_4 ])
+        (const_int 7 [0x7])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":14 -1
+     (nil))
+(insn 25 24 26 5 (set (reg:DI 95 [ PROF_edge_counter_27 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInFile") [flags 0x2]  <var_decl 0x7fe8625bc870 __gcov0.updaterUcInFile>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [12 __gcov0.updaterUcInFile+8 S8 A64])) -1
+     (nil))
+(insn 26 25 27 5 (parallel [
+            (set (reg:DI 96 [ PROF_edge_counter_28 ])
+                (plus:DI (reg:DI 95 [ PROF_edge_counter_27 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 27 26 28 5 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInFile") [flags 0x2]  <var_decl 0x7fe8625bc870 __gcov0.updaterUcInFile>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [12 __gcov0.updaterUcInFile+8 S8 A64])
+        (reg:DI 96 [ PROF_edge_counter_28 ])) -1
+     (nil))
+(code_label 28 27 29 6 3 (nil) [1 uses])
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -72 [0xffffffffffffffb8])) [8 eBlockType+0 S4 A32])
+        (reg:SI 91 [ iftmp.0_4 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":13 -1
+     (nil))
+(insn 31 30 32 6 (parallel [
+            (set (reg:SI 112)
+                (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -76 [0xffffffffffffffb4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":17 -1
+     (nil))
+(insn 32 31 33 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (reg:SI 112)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":17 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 33 32 34 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":17 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 34 33 35 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -72 [0xffffffffffffffb8])) [8 eBlockType+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":17 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 35 34 36 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -84 [0xffffffffffffffac])) [10 cbAffRead+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":17 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 36 35 37 6 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":17 -1
+     (nil))
+(call_insn 37 36 38 6 (set (reg:HI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("affFindBlock") [flags 0x41]  <function_decl 0x7fe862569100 affFindBlock>) [0 affFindBlock S1 A8])
+            (const_int 16 [0x10]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":17 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 38 37 39 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":17 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 39 38 40 6 (set (reg:HI 113)
+        (reg:HI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":17 -1
+     (nil))
+(insn 40 39 41 6 (set (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -78 [0xffffffffffffffb2])) [9 wBlockIdx+0 S2 A16])
+        (reg:HI 113)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":17 -1
+     (nil))
+(insn 41 40 42 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -78 [0xffffffffffffffb2])) [9 wBlockIdx+0 S2 A16])
+            (const_int -1 [0xffffffffffffffff]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":18 -1
+     (nil))
+(jump_insn 42 41 43 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 89)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":18 -1
+     (nil)
+ -> 89)
+(note 43 42 44 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 44 43 45 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -92 [0xffffffffffffffa4])) [11 pVersionOut+0 S4 A32])
+            (const_int 0 [0]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":19 -1
+     (nil))
+(jump_insn 45 44 46 7 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 81)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":19 -1
+     (nil)
+ -> 81)
+(note 46 45 47 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 47 46 48 8 (set (reg:DI 97 [ PROF_edge_counter_29 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInFile") [flags 0x2]  <var_decl 0x7fe8625bc870 __gcov0.updaterUcInFile>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 16 [0x10])))) [12 __gcov0.updaterUcInFile+16 S8 A128])) -1
+     (nil))
+(insn 48 47 49 8 (parallel [
+            (set (reg:DI 98 [ PROF_edge_counter_30 ])
+                (plus:DI (reg:DI 97 [ PROF_edge_counter_29 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 49 48 50 8 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInFile") [flags 0x2]  <var_decl 0x7fe8625bc870 __gcov0.updaterUcInFile>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 16 [0x10])))) [12 __gcov0.updaterUcInFile+16 S8 A128])
+        (reg:DI 98 [ PROF_edge_counter_30 ])) -1
+     (nil))
+(insn 50 49 51 8 (set (reg:SI 88 [ ulPos.1_1 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -76 [0xffffffffffffffb4])) [1 ulPos+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":21 -1
+     (nil))
+(insn 51 50 52 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":21 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 52 51 53 8 (parallel [
+            (set (reg:SI 114)
+                (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -68 [0xffffffffffffffbc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":21 -1
+     (nil))
+(insn 53 52 54 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [14  S4 A32])
+        (reg:SI 114)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":21 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 54 53 55 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg:SI 88 [ ulPos.1_1 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":21 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 55 54 56 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -84 [0xffffffffffffffac])) [10 cbAffRead+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":21 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 56 55 57 8 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":21 -1
+     (nil))
+(call_insn 57 56 58 8 (set (reg:QI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("affReadBlockHeader") [flags 0x41]  <function_decl 0x7fe862569000 affReadBlockHeader>) [0 affReadBlockHeader S1 A8])
+            (const_int 16 [0x10]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":21 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 58 57 59 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":21 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 59 58 60 8 (set (reg:QI 89 [ _2 ])
+        (reg:QI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":21 -1
+     (nil))
+(insn 60 59 61 8 (parallel [
+            (set (reg:QI 90 [ _3 ])
+                (xor:QI (reg:QI 89 [ _2 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":21 -1
+     (nil))
+(insn 61 60 62 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 90 [ _3 ])
+            (const_int 0 [0]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":21 -1
+     (nil))
+(jump_insn 62 61 63 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 67)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":21 -1
+     (nil)
+ -> 67)
+(note 63 62 64 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 64 63 65 9 (set (reg:QI 92 [ _5 ])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":22 -1
+     (nil))
+(jump_insn 65 64 66 9 (set (pc)
+        (label_ref:SI 97)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":22 659 {jump}
+     (nil)
+ -> 97)
+(barrier 66 65 67)
+(code_label 67 66 68 10 6 (nil) [1 uses])
+(note 68 67 69 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 10 (set (reg/f:SI 115)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -92 [0xffffffffffffffa4])) [11 pVersionOut+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":24 -1
+     (nil))
+(insn 70 69 71 10 (set (reg:SI 116)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -52 [0xffffffffffffffcc])) [5 sBlockHeader.sVersion+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":24 -1
+     (nil))
+(insn 71 70 72 10 (set (mem:SI (reg/f:SI 115) [5 *pVersionOut_17(D)+0 S4 A32])
+        (reg:SI 116)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":24 -1
+     (nil))
+(insn 72 71 73 10 (set (reg:SI 117)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [5 sBlockHeader.sVersion+4 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":24 -1
+     (nil))
+(insn 73 72 74 10 (set (mem:SI (plus:SI (reg/f:SI 115)
+                (const_int 4 [0x4])) [5 *pVersionOut_17(D)+4 S4 A32])
+        (reg:SI 117)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":24 -1
+     (nil))
+(insn 74 73 75 10 (set (reg:SI 118)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -44 [0xffffffffffffffd4])) [5 sBlockHeader.sVersion+8 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":24 -1
+     (nil))
+(insn 75 74 76 10 (set (mem:SI (plus:SI (reg/f:SI 115)
+                (const_int 8 [0x8])) [5 *pVersionOut_17(D)+8 S4 A32])
+        (reg:SI 118)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":24 -1
+     (nil))
+(insn 76 75 77 10 (set (reg:SI 119)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [5 sBlockHeader.sVersion+12 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":24 -1
+     (nil))
+(insn 77 76 78 10 (set (mem:SI (plus:SI (reg/f:SI 115)
+                (const_int 12 [0xc])) [5 *pVersionOut_17(D)+12 S4 A32])
+        (reg:SI 119)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":24 -1
+     (nil))
+(insn 78 77 79 10 (set (reg:DI 99 [ PROF_edge_counter_31 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInFile") [flags 0x2]  <var_decl 0x7fe8625bc870 __gcov0.updaterUcInFile>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 24 [0x18])))) [12 __gcov0.updaterUcInFile+24 S8 A64])) -1
+     (nil))
+(insn 79 78 80 10 (parallel [
+            (set (reg:DI 100 [ PROF_edge_counter_32 ])
+                (plus:DI (reg:DI 99 [ PROF_edge_counter_31 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 80 79 81 10 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInFile") [flags 0x2]  <var_decl 0x7fe8625bc870 __gcov0.updaterUcInFile>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 24 [0x18])))) [12 __gcov0.updaterUcInFile+24 S8 A64])
+        (reg:DI 100 [ PROF_edge_counter_32 ])) -1
+     (nil))
+(code_label 81 80 82 11 5 (nil) [1 uses])
+(note 82 81 83 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 83 82 84 11 (set (reg:QI 92 [ _5 ])
+        (const_int 1 [0x1])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":26 -1
+     (nil))
+(insn 84 83 85 11 (set (reg:DI 101 [ PROF_edge_counter_33 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInFile") [flags 0x2]  <var_decl 0x7fe8625bc870 __gcov0.updaterUcInFile>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 32 [0x20])))) [12 __gcov0.updaterUcInFile+32 S8 A256])) -1
+     (nil))
+(insn 85 84 86 11 (parallel [
+            (set (reg:DI 102 [ PROF_edge_counter_34 ])
+                (plus:DI (reg:DI 101 [ PROF_edge_counter_33 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 86 85 87 11 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInFile") [flags 0x2]  <var_decl 0x7fe8625bc870 __gcov0.updaterUcInFile>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 32 [0x20])))) [12 __gcov0.updaterUcInFile+32 S8 A256])
+        (reg:DI 102 [ PROF_edge_counter_34 ])) -1
+     (nil))
+(jump_insn 87 86 88 11 (set (pc)
+        (label_ref:SI 97)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":26 659 {jump}
+     (nil)
+ -> 97)
+(barrier 88 87 89)
+(code_label 89 88 90 12 4 (nil) [1 uses])
+(note 90 89 91 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 91 90 92 12 (set (reg:QI 92 [ _5 ])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":28 -1
+     (nil))
+(insn 92 91 93 12 (set (reg:DI 103 [ PROF_edge_counter_35 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInFile") [flags 0x2]  <var_decl 0x7fe8625bc870 __gcov0.updaterUcInFile>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 40 [0x28])))) [12 __gcov0.updaterUcInFile+40 S8 A64])) -1
+     (nil))
+(insn 93 92 94 12 (parallel [
+            (set (reg:DI 104 [ PROF_edge_counter_36 ])
+                (plus:DI (reg:DI 103 [ PROF_edge_counter_35 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 94 93 97 12 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInFile") [flags 0x2]  <var_decl 0x7fe8625bc870 __gcov0.updaterUcInFile>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 40 [0x28])))) [12 __gcov0.updaterUcInFile+40 S8 A64])
+        (reg:DI 104 [ PROF_edge_counter_36 ])) -1
+     (nil))
+(code_label 97 94 98 14 8 (nil) [2 uses])
+(note 98 97 99 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 99 98 100 14 (set (reg:DI 105 [ PROF_edge_counter_37 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInFile") [flags 0x2]  <var_decl 0x7fe8625bc870 __gcov0.updaterUcInFile>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 48 [0x30])))) [12 __gcov0.updaterUcInFile+48 S8 A128])) -1
+     (nil))
+(insn 100 99 101 14 (parallel [
+            (set (reg:DI 106 [ PROF_edge_counter_38 ])
+                (plus:DI (reg:DI 105 [ PROF_edge_counter_37 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 101 100 102 14 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInFile") [flags 0x2]  <var_decl 0x7fe8625bc870 __gcov0.updaterUcInFile>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 48 [0x30])))) [12 __gcov0.updaterUcInFile+48 S8 A128])
+        (reg:DI 106 [ PROF_edge_counter_38 ])) -1
+     (nil))
+(insn 102 101 106 14 (set (reg:QI 107 [ <retval> ])
+        (reg:QI 92 [ _5 ])) -1
+     (nil))
+(insn 106 102 107 14 (set (reg/i:QI 0 ax)
+        (reg:QI 107 [ <retval> ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":29 -1
+     (nil))
+(insn 107 106 108 14 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                                (const_int -4 [0xfffffffffffffffc])) [3 D.2257+0 S4 A32])
+                        (const_int 20 [0x14])
+                    ] UNSPEC_SP_TLS_TEST))
+            (clobber (scratch:SI))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":29 -1
+     (nil))
+(jump_insn 108 107 114 14 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 111)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":29 -1
+     (nil)
+ -> 111)
+(note 114 108 109 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(call_insn 109 114 110 16 (call (mem:QI (symbol_ref:SI ("__stack_chk_fail_local") [flags 0x43]  <function_decl 0x7fe8625d5500 __stack_chk_fail_local>) [0 __stack_chk_fail_local S1 A8])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (expr_list:REG_EH_REGION (const_int 0 [0])
+                (nil))))
+    (nil))
+(barrier 110 109 111)
+(code_label 111 110 115 17 9 (nil) [1 uses])
+(note 115 111 112 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 112 115 0 17 (use (reg/i:QI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":29 -1
+     (nil))
+
+;; Function updaterUcInit (updaterUcInit, funcdef_no=8, decl_uid=1912, cgraph_uid=8, symbol_order=11)
+
+Partition 0: size 4 align 4
+	eBlock_20
+Partition 1: size 2 align 2
+	wBlockIdx_23
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 107.
+Merging block 12 into block 11...
+Merged blocks 11 and 12.
+Merged 11 and 12 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg:SI 116)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [2 isHost+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":31 -1
+     (nil))
+(insn 3 2 4 2 (set (reg:QI 117)
+        (subreg:QI (reg:SI 116) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":31 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 isHost+0 S1 A32])
+        (reg:QI 117)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":31 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg:QI 118)
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 isHost+0 S1 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":33 -1
+     (nil))
+(insn 9 8 10 2 (set (mem/c:QI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("s_isProgrammingHostNow") [flags 0x2]  <var_decl 0x7fe8625426c0 s_isProgrammingHostNow>)
+                        ] UNSPEC_GOTOFF))) [2 s_isProgrammingHostNow+0 S1 A8])
+        (reg:QI 118)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":33 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [2 isHost+0 S1 A32])
+            (const_int 0 [0]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":35 -1
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 19)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":35 -1
+     (nil)
+ -> 19)
+(note 12 11 13 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 13 12 14 4 (set (reg:SI 99 [ iftmp.2_12 ])
+        (const_int 8 [0x8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":35 -1
+     (nil))
+(insn 14 13 15 4 (set (reg:DI 101 [ PROF_edge_counter_31 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.updaterUcInit") [flags 0x2]  <var_decl 0x7fe8625bc7e0 __gcov0.updaterUcInit>)
+                        ] UNSPEC_GOTOFF))) [12 __gcov0.updaterUcInit+0 S8 A256])) -1
+     (nil))
+(insn 15 14 16 4 (parallel [
+            (set (reg:DI 102 [ PROF_edge_counter_32 ])
+                (plus:DI (reg:DI 101 [ PROF_edge_counter_31 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 16 15 17 4 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.updaterUcInit") [flags 0x2]  <var_decl 0x7fe8625bc7e0 __gcov0.updaterUcInit>)
+                        ] UNSPEC_GOTOFF))) [12 __gcov0.updaterUcInit+0 S8 A256])
+        (reg:DI 102 [ PROF_edge_counter_32 ])) -1
+     (nil))
+(jump_insn 17 16 18 4 (set (pc)
+        (label_ref 25)) -1
+     (nil)
+ -> 25)
+(barrier 18 17 19)
+(code_label 19 18 20 5 11 (nil) [1 uses])
+(note 20 19 21 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 5 (set (reg:SI 99 [ iftmp.2_12 ])
+        (const_int 7 [0x7])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":35 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:DI 103 [ PROF_edge_counter_33 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInit") [flags 0x2]  <var_decl 0x7fe8625bc7e0 __gcov0.updaterUcInit>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [12 __gcov0.updaterUcInit+8 S8 A64])) -1
+     (nil))
+(insn 23 22 24 5 (parallel [
+            (set (reg:DI 104 [ PROF_edge_counter_34 ])
+                (plus:DI (reg:DI 103 [ PROF_edge_counter_33 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 24 23 25 5 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInit") [flags 0x2]  <var_decl 0x7fe8625bc7e0 __gcov0.updaterUcInit>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [12 __gcov0.updaterUcInit+8 S8 A64])
+        (reg:DI 104 [ PROF_edge_counter_34 ])) -1
+     (nil))
+(code_label 25 24 26 6 12 (nil) [1 uses])
+(note 26 25 27 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 6 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [8 eBlock+0 S4 A32])
+        (reg:SI 99 [ iftmp.2_12 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":34 -1
+     (nil))
+(insn 28 27 29 6 (set (reg/f:SI 119)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [16 pState+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":36 -1
+     (nil))
+(insn 29 28 30 6 (set (reg/f:SI 88 [ _1 ])
+        (mem/f:SI (plus:SI (reg/f:SI 119)
+                (const_int 76 [0x4c])) [26 pState_21(D)->pCallbacks+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":36 -1
+     (nil))
+(insn 30 29 31 6 (set (reg/f:SI 89 [ _2 ])
+        (mem/f:SI (plus:SI (reg/f:SI 88 [ _1 ])
+                (const_int 32 [0x20])) [10 _1->cbReadAff+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":36 -1
+     (nil))
+(insn 31 30 32 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":36 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 32 31 33 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":36 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 33 32 34 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [8 eBlock+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":36 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 34 33 35 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
+        (reg/f:SI 89 [ _2 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":36 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 35 34 36 6 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":36 -1
+     (nil))
+(call_insn 36 35 37 6 (set (reg:HI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("affFindBlock") [flags 0x41]  <function_decl 0x7fe862569100 affFindBlock>) [0 affFindBlock S1 A8])
+            (const_int 16 [0x10]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":36 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 37 36 38 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":36 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 38 37 39 6 (set (reg:HI 120)
+        (reg:HI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":36 -1
+     (nil))
+(insn 39 38 40 6 (set (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -6 [0xfffffffffffffffa])) [9 wBlockIdx+0 S2 A16])
+        (reg:HI 120)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":36 -1
+     (nil))
+(insn 40 39 41 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -6 [0xfffffffffffffffa])) [9 wBlockIdx+0 S2 A16])
+            (const_int -1 [0xffffffffffffffff]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":37 -1
+     (nil))
+(jump_insn 41 40 42 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 49)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":37 -1
+     (nil)
+ -> 49)
+(note 42 41 43 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 43 42 44 7 (set (reg:QI 100 [ _13 ])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":38 -1
+     (nil))
+(insn 44 43 45 7 (set (reg:DI 107 [ PROF_edge_counter_37 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInit") [flags 0x2]  <var_decl 0x7fe8625bc7e0 __gcov0.updaterUcInit>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 24 [0x18])))) [12 __gcov0.updaterUcInit+24 S8 A64])) -1
+     (nil))
+(insn 45 44 46 7 (parallel [
+            (set (reg:DI 108 [ PROF_edge_counter_38 ])
+                (plus:DI (reg:DI 107 [ PROF_edge_counter_37 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 46 45 47 7 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInit") [flags 0x2]  <var_decl 0x7fe8625bc7e0 __gcov0.updaterUcInit>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 24 [0x18])))) [12 __gcov0.updaterUcInit+24 S8 A64])
+        (reg:DI 108 [ PROF_edge_counter_38 ])) -1
+     (nil))
+(jump_insn 47 46 48 7 (set (pc)
+        (label_ref 104)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":38 -1
+     (nil)
+ -> 104)
+(barrier 48 47 49)
+(code_label 49 48 50 8 13 (nil) [1 uses])
+(note 50 49 51 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 52 8 (set (reg:DI 105 [ PROF_edge_counter_35 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInit") [flags 0x2]  <var_decl 0x7fe8625bc7e0 __gcov0.updaterUcInit>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 16 [0x10])))) [12 __gcov0.updaterUcInit+16 S8 A128])) -1
+     (nil))
+(insn 52 51 53 8 (parallel [
+            (set (reg:DI 106 [ PROF_edge_counter_36 ])
+                (plus:DI (reg:DI 105 [ PROF_edge_counter_35 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 53 52 54 8 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInit") [flags 0x2]  <var_decl 0x7fe8625bc7e0 __gcov0.updaterUcInit>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 16 [0x10])))) [12 __gcov0.updaterUcInit+16 S8 A128])
+        (reg:DI 106 [ PROF_edge_counter_36 ])) -1
+     (nil))
+(insn 54 53 55 8 (set (reg:SI 90 [ _3 ])
+        (sign_extend:SI (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -6 [0xfffffffffffffffa])) [9 wBlockIdx+0 S2 A16]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":40 -1
+     (nil))
+(insn 55 54 56 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":40 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 56 55 57 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg:SI 90 [ _3 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":40 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 57 56 58 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [16 pState+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":40 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 58 57 59 8 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":40 -1
+     (nil))
+(call_insn 59 58 60 8 (set (reg:QI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("updaterMakeBlockCurrent") [flags 0x41]  <function_decl 0x7fe862569e00 updaterMakeBlockCurrent>) [0 updaterMakeBlockCurrent S1 A8])
+            (const_int 16 [0x10]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":40 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 60 59 61 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":40 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 61 60 62 8 (set (reg:QI 91 [ _4 ])
+        (reg:QI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":40 -1
+     (nil))
+(insn 62 61 63 8 (parallel [
+            (set (reg:QI 92 [ _5 ])
+                (xor:QI (reg:QI 91 [ _4 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":40 -1
+     (nil))
+(insn 63 62 64 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 92 [ _5 ])
+            (const_int 0 [0]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":40 -1
+     (nil))
+(jump_insn 64 63 65 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 72)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":40 -1
+     (nil)
+ -> 72)
+(note 65 64 66 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 66 65 67 9 (set (reg:QI 100 [ _13 ])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":41 -1
+     (nil))
+(insn 67 66 68 9 (set (reg:DI 111 [ PROF_edge_counter_41 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInit") [flags 0x2]  <var_decl 0x7fe8625bc7e0 __gcov0.updaterUcInit>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 40 [0x28])))) [12 __gcov0.updaterUcInit+40 S8 A64])) -1
+     (nil))
+(insn 68 67 69 9 (parallel [
+            (set (reg:DI 112 [ PROF_edge_counter_42 ])
+                (plus:DI (reg:DI 111 [ PROF_edge_counter_41 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 69 68 70 9 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInit") [flags 0x2]  <var_decl 0x7fe8625bc7e0 __gcov0.updaterUcInit>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 40 [0x28])))) [12 __gcov0.updaterUcInit+40 S8 A64])
+        (reg:DI 112 [ PROF_edge_counter_42 ])) -1
+     (nil))
+(jump_insn 70 69 71 9 (set (pc)
+        (label_ref 104)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":41 -1
+     (nil)
+ -> 104)
+(barrier 71 70 72)
+(code_label 72 71 73 10 15 (nil) [1 uses])
+(note 73 72 74 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 74 73 75 10 (set (reg:DI 109 [ PROF_edge_counter_39 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInit") [flags 0x2]  <var_decl 0x7fe8625bc7e0 __gcov0.updaterUcInit>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 32 [0x20])))) [12 __gcov0.updaterUcInit+32 S8 A256])) -1
+     (nil))
+(insn 75 74 76 10 (parallel [
+            (set (reg:DI 110 [ PROF_edge_counter_40 ])
+                (plus:DI (reg:DI 109 [ PROF_edge_counter_39 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 76 75 77 10 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInit") [flags 0x2]  <var_decl 0x7fe8625bc7e0 __gcov0.updaterUcInit>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 32 [0x20])))) [12 __gcov0.updaterUcInit+32 S8 A256])
+        (reg:DI 110 [ PROF_edge_counter_40 ])) -1
+     (nil))
+(insn 77 76 78 10 (set (reg/f:SI 121)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [16 pState+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":46 -1
+     (nil))
+(insn 78 77 79 10 (parallel [
+            (set (reg/f:SI 93 [ _6 ])
+                (plus:SI (reg/f:SI 121)
+                    (const_int 16696 [0x4138])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":46 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [16 pState+0 S4 A32])
+            (const_int 16696 [0x4138]))
+        (nil)))
+(insn 79 78 80 10 (set (reg/f:SI 122)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [16 pState+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":45 -1
+     (nil))
+(insn 80 79 81 10 (set (reg:QI 94 [ _7 ])
+        (mem:QI (plus:SI (reg/f:SI 122)
+                (const_int 281 [0x119])) [2 pState_21(D)->isTransparent+0 S1 A8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":45 -1
+     (nil))
+(insn 81 80 82 10 (set (reg:SI 95 [ _8 ])
+        (zero_extend:SI (reg:QI 94 [ _7 ]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":44 -1
+     (nil))
+(insn 82 81 83 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":44 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 83 82 84 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (const_int 4 [0x4])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":44 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 84 83 85 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (reg/f:SI 93 [ _6 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":44 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 85 84 86 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (const_int 1 [0x1])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":44 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 86 85 87 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (const_int 48 [0x30])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":44 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 87 86 88 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":44 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 88 87 89 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg:SI 95 [ _8 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":44 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 89 88 90 10 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":44 -1
+     (nil))
+(call_insn 90 89 91 10 (call (mem:QI (symbol_ref:SI ("slipBufferedSendCrcChunkedPacket") [flags 0x41]  <function_decl 0x7fe86259df00 slipBufferedSendCrcChunkedPacket>) [0 slipBufferedSendCrcChunkedPacket S1 A8])
+        (const_int 32 [0x20])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":44 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 91 90 92 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":44 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 92 91 93 10 (set (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("s_ulSeq") [flags 0x2]  <var_decl 0x7fe8625425a0 s_ulSeq>)
+                        ] UNSPEC_GOTOFF))) [1 s_ulSeq+0 S4 A32])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":48 -1
+     (nil))
+(insn 93 92 94 10 (set (reg/f:SI 123)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [16 pState+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":49 -1
+     (nil))
+(insn 94 93 95 10 (set (reg:SI 96 [ _9 ])
+        (mem:SI (plus:SI (reg/f:SI 123)
+                (const_int 16688 [0x4130])) [1 pState_21(D)->sCurrentBlock.ulDataSize+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":49 -1
+     (nil))
+(insn 95 94 96 10 (set (reg/f:SI 124)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [16 pState+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":49 -1
+     (nil))
+(insn 96 95 97 10 (set (reg:SI 97 [ _10 ])
+        (mem:SI (plus:SI (reg/f:SI 124)
+                (const_int 16692 [0x4134])) [1 pState_21(D)->sCurrentBlock.ulTransferSize+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":49 -1
+     (nil))
+(insn 97 96 98 10 (parallel [
+            (set (reg:SI 125)
+                (udiv:SI (reg:SI 96 [ _9 ])
+                    (reg:SI 97 [ _10 ])))
+            (set (reg:SI 126)
+                (umod:SI (reg:SI 96 [ _9 ])
+                    (reg:SI 97 [ _10 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":49 -1
+     (nil))
+(insn 98 97 99 10 (set (reg:SI 98 [ _11 ])
+        (reg:SI 125)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":49 -1
+     (nil))
+(insn 99 98 100 10 (set (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("s_ulPartCount") [flags 0x2]  <var_decl 0x7fe862542630 s_ulPartCount>)
+                        ] UNSPEC_GOTOFF))) [1 s_ulPartCount+0 S4 A32])
+        (reg:SI 98 [ _11 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":49 -1
+     (nil))
+(insn 100 99 101 10 (set (reg:QI 100 [ _13 ])
+        (const_int 1 [0x1])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":50 -1
+     (nil))
+(insn 101 100 102 10 (set (reg:DI 113 [ PROF_edge_counter_43 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInit") [flags 0x2]  <var_decl 0x7fe8625bc7e0 __gcov0.updaterUcInit>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 48 [0x30])))) [12 __gcov0.updaterUcInit+48 S8 A128])) -1
+     (nil))
+(insn 102 101 103 10 (parallel [
+            (set (reg:DI 114 [ PROF_edge_counter_44 ])
+                (plus:DI (reg:DI 113 [ PROF_edge_counter_43 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 103 102 104 10 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcInit") [flags 0x2]  <var_decl 0x7fe8625bc7e0 __gcov0.updaterUcInit>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 48 [0x30])))) [12 __gcov0.updaterUcInit+48 S8 A128])
+        (reg:DI 114 [ PROF_edge_counter_44 ])) -1
+     (nil))
+(code_label 104 103 105 11 14 (nil) [2 uses])
+(note 105 104 106 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 106 105 110 11 (set (reg:QI 115 [ <retval> ])
+        (reg:QI 100 [ _13 ])) -1
+     (nil))
+(insn 110 106 111 11 (set (reg/i:QI 0 ax)
+        (reg:QI 115 [ <retval> ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":51 -1
+     (nil))
+(insn 111 110 0 11 (use (reg/i:QI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":51 -1
+     (nil))
+
+;; Function updaterUcAfterProgramBegin (updaterUcAfterProgramBegin, funcdef_no=9, decl_uid=1915, cgraph_uid=9, symbol_order=12)
+
+Partition 0: size 1 align 1
+	isOk_9
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 6 into block 5...
+Merged blocks 5 and 6.
+Merged 5 and 6 without moving.
+Removing jump 48.
+Merging block 7 into block 5...
+Merged blocks 5 and 7.
+Merged 5 and 7 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg:SI 101)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [2 isHost+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":53 -1
+     (nil))
+(insn 3 2 4 2 (set (reg:QI 102)
+        (subreg:QI (reg:SI 101) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":53 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 isHost+0 S1 A32])
+        (reg:QI 102)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":53 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg:DI 92 [ PROF_edge_counter_12 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.updaterUcAfterProgramBegin") [flags 0x2]  <var_decl 0x7fe8625bc750 __gcov0.updaterUcAfterProgramBegin>)
+                        ] UNSPEC_GOTOFF))) [12 __gcov0.updaterUcAfterProgramBegin+0 S8 A256])) -1
+     (nil))
+(insn 9 8 10 2 (parallel [
+            (set (reg:DI 93 [ PROF_edge_counter_13 ])
+                (plus:DI (reg:DI 92 [ PROF_edge_counter_12 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 10 9 11 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.updaterUcAfterProgramBegin") [flags 0x2]  <var_decl 0x7fe8625bc750 __gcov0.updaterUcAfterProgramBegin>)
+                        ] UNSPEC_GOTOFF))) [12 __gcov0.updaterUcAfterProgramBegin+0 S8 A256])
+        (reg:DI 93 [ PROF_edge_counter_13 ])) -1
+     (nil))
+(insn 11 10 12 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":55 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 12 11 13 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":55 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 13 12 14 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [16 pState+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":55 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 14 13 15 2 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":55 -1
+     (nil))
+(call_insn 15 14 16 2 (call (mem:QI (symbol_ref:SI ("updaterComponentProgress") [flags 0x41]  <function_decl 0x7fe862569c00 updaterComponentProgress>) [0 updaterComponentProgress S1 A8])
+        (const_int 16 [0x10])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":55 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 16 15 17 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":55 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 17 16 18 2 (set (reg:DI 94 [ PROF_edge_counter_14 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramBegin") [flags 0x2]  <var_decl 0x7fe8625bc750 __gcov0.updaterUcAfterProgramBegin>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [12 __gcov0.updaterUcAfterProgramBegin+8 S8 A64])) -1
+     (nil))
+(insn 18 17 19 2 (parallel [
+            (set (reg:DI 95 [ PROF_edge_counter_15 ])
+                (plus:DI (reg:DI 94 [ PROF_edge_counter_14 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 19 18 20 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramBegin") [flags 0x2]  <var_decl 0x7fe8625bc750 __gcov0.updaterUcAfterProgramBegin>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [12 __gcov0.updaterUcAfterProgramBegin+8 S8 A64])
+        (reg:DI 95 [ PROF_edge_counter_15 ])) -1
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 88 [ s_ulSeq.3_1 ])
+        (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("s_ulSeq") [flags 0x2]  <var_decl 0x7fe8625425a0 s_ulSeq>)
+                        ] UNSPEC_GOTOFF))) [1 s_ulSeq+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":56 -1
+     (nil))
+(insn 21 20 22 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 22 21 23 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (const_int 49 [0x31])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 23 22 24 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg:SI 88 [ s_ulSeq.3_1 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 24 23 25 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [16 pState+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 25 24 26 2 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":56 -1
+     (nil))
+(call_insn 26 25 27 2 (set (reg:QI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("updaterSendNextFirmwarePart") [flags 0x41]  <function_decl 0x7fe862569f00 updaterSendNextFirmwarePart>) [0 updaterSendNextFirmwarePart S1 A8])
+            (const_int 16 [0x10]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":56 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 27 26 28 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 28 27 29 2 (set (reg:QI 103)
+        (reg:QI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":56 -1
+     (nil))
+(insn 29 28 30 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [2 isOk+0 S1 A8])
+        (reg:QI 103)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":56 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -1 [0xffffffffffffffff])) [2 isOk+0 S1 A8])
+            (const_int 0 [0]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":57 -1
+     (nil))
+(jump_insn 31 30 32 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 39)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":57 -1
+     (nil)
+ -> 39)
+(note 32 31 33 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 33 32 34 4 (set (reg:SI 89 [ s_ulSeq.4_2 ])
+        (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("s_ulSeq") [flags 0x2]  <var_decl 0x7fe8625425a0 s_ulSeq>)
+                        ] UNSPEC_GOTOFF))) [1 s_ulSeq+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":58 -1
+     (nil))
+(insn 34 33 35 4 (parallel [
+            (set (reg:SI 90 [ _3 ])
+                (plus:SI (reg:SI 89 [ s_ulSeq.4_2 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":58 -1
+     (nil))
+(insn 35 34 36 4 (set (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("s_ulSeq") [flags 0x2]  <var_decl 0x7fe8625425a0 s_ulSeq>)
+                        ] UNSPEC_GOTOFF))) [1 s_ulSeq+0 S4 A32])
+        (reg:SI 90 [ _3 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":58 -1
+     (nil))
+(insn 36 35 37 4 (set (reg:DI 96 [ PROF_edge_counter_16 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramBegin") [flags 0x2]  <var_decl 0x7fe8625bc750 __gcov0.updaterUcAfterProgramBegin>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 16 [0x10])))) [12 __gcov0.updaterUcAfterProgramBegin+16 S8 A128])) -1
+     (nil))
+(insn 37 36 38 4 (parallel [
+            (set (reg:DI 97 [ PROF_edge_counter_17 ])
+                (plus:DI (reg:DI 96 [ PROF_edge_counter_16 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 38 37 39 4 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramBegin") [flags 0x2]  <var_decl 0x7fe8625bc750 __gcov0.updaterUcAfterProgramBegin>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 16 [0x10])))) [12 __gcov0.updaterUcAfterProgramBegin+16 S8 A128])
+        (reg:DI 97 [ PROF_edge_counter_17 ])) -1
+     (nil))
+(code_label 39 38 40 5 17 (nil) [1 uses])
+(note 40 39 41 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 44 5 (set (reg:QI 91 [ _11 ])
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [2 isOk+0 S1 A8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":60 -1
+     (nil))
+(insn 44 41 45 5 (set (reg:DI 98 [ PROF_edge_counter_18 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramBegin") [flags 0x2]  <var_decl 0x7fe8625bc750 __gcov0.updaterUcAfterProgramBegin>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 24 [0x18])))) [12 __gcov0.updaterUcAfterProgramBegin+24 S8 A64])) -1
+     (nil))
+(insn 45 44 46 5 (parallel [
+            (set (reg:DI 99 [ PROF_edge_counter_19 ])
+                (plus:DI (reg:DI 98 [ PROF_edge_counter_18 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 46 45 47 5 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramBegin") [flags 0x2]  <var_decl 0x7fe8625bc750 __gcov0.updaterUcAfterProgramBegin>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 24 [0x18])))) [12 __gcov0.updaterUcAfterProgramBegin+24 S8 A64])
+        (reg:DI 99 [ PROF_edge_counter_19 ])) -1
+     (nil))
+(insn 47 46 51 5 (set (reg:QI 100 [ <retval> ])
+        (reg:QI 91 [ _11 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":60 -1
+     (nil))
+(insn 51 47 52 5 (set (reg/i:QI 0 ax)
+        (reg:QI 100 [ <retval> ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":61 -1
+     (nil))
+(insn 52 51 0 5 (use (reg/i:QI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":61 -1
+     (nil))
+
+;; Function updaterUcAfterProgramData (updaterUcAfterProgramData, funcdef_no=10, decl_uid=1918, cgraph_uid=10, symbol_order=13)
+
+Partition 0: size 1 align 1
+	isOk_14
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 8 into block 7...
+Merged blocks 7 and 8.
+Merged 7 and 8 without moving.
+Removing jump 93.
+Merging block 9 into block 7...
+Merged blocks 7 and 9.
+Merged 7 and 9 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg:SI 117)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [2 isHost+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":63 -1
+     (nil))
+(insn 3 2 4 2 (set (reg:QI 118)
+        (subreg:QI (reg:SI 117) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":63 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 isHost+0 S1 A32])
+        (reg:QI 118)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":63 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg:DI 102 [ PROF_edge_counter_26 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.updaterUcAfterProgramData") [flags 0x2]  <var_decl 0x7fe8625bc510 __gcov0.updaterUcAfterProgramData>)
+                        ] UNSPEC_GOTOFF))) [12 __gcov0.updaterUcAfterProgramData+0 S8 A256])) -1
+     (nil))
+(insn 9 8 10 2 (parallel [
+            (set (reg:DI 103 [ PROF_edge_counter_27 ])
+                (plus:DI (reg:DI 102 [ PROF_edge_counter_26 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 10 9 11 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.updaterUcAfterProgramData") [flags 0x2]  <var_decl 0x7fe8625bc510 __gcov0.updaterUcAfterProgramData>)
+                        ] UNSPEC_GOTOFF))) [12 __gcov0.updaterUcAfterProgramData+0 S8 A256])
+        (reg:DI 103 [ PROF_edge_counter_27 ])) -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 88 [ s_ulSeq.5_1 ])
+        (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("s_ulSeq") [flags 0x2]  <var_decl 0x7fe8625425a0 s_ulSeq>)
+                        ] UNSPEC_GOTOFF))) [1 s_ulSeq+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":64 -1
+     (nil))
+(insn 12 11 13 2 (parallel [
+            (set (reg:SI 89 [ _2 ])
+                (mult:SI (reg:SI 88 [ s_ulSeq.5_1 ])
+                    (const_int 100 [0x64])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":64 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 90 [ s_ulPartCount.6_3 ])
+        (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("s_ulPartCount") [flags 0x2]  <var_decl 0x7fe862542630 s_ulPartCount>)
+                        ] UNSPEC_GOTOFF))) [1 s_ulPartCount+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":64 -1
+     (nil))
+(insn 14 13 15 2 (parallel [
+            (set (reg:SI 119)
+                (udiv:SI (reg:SI 89 [ _2 ])
+                    (reg:SI 90 [ s_ulPartCount.6_3 ])))
+            (set (reg:SI 120)
+                (umod:SI (reg:SI 89 [ _2 ])
+                    (reg:SI 90 [ s_ulPartCount.6_3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":64 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 91 [ _4 ])
+        (reg:SI 119)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":64 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:QI 92 [ _5 ])
+        (subreg:QI (reg:SI 91 [ _4 ]) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":64 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 93 [ _6 ])
+        (zero_extend:SI (reg:QI 92 [ _5 ]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":64 -1
+     (nil))
+(insn 18 17 19 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":64 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 19 18 20 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg:SI 93 [ _6 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":64 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 20 19 21 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [16 pState+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":64 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 21 20 22 2 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":64 -1
+     (nil))
+(call_insn 22 21 23 2 (call (mem:QI (symbol_ref:SI ("updaterComponentProgress") [flags 0x41]  <function_decl 0x7fe862569c00 updaterComponentProgress>) [0 updaterComponentProgress S1 A8])
+        (const_int 16 [0x10])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":64 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 23 22 24 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":64 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 24 23 25 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [2 isOk+0 S1 A8])
+        (const_int 1 [0x1])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":65 -1
+     (nil))
+(insn 25 24 26 2 (set (reg:SI 94 [ s_ulSeq.7_7 ])
+        (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("s_ulSeq") [flags 0x2]  <var_decl 0x7fe8625425a0 s_ulSeq>)
+                        ] UNSPEC_GOTOFF))) [1 s_ulSeq+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":66 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:SI 95 [ s_ulPartCount.8_8 ])
+        (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("s_ulPartCount") [flags 0x2]  <var_decl 0x7fe862542630 s_ulPartCount>)
+                        ] UNSPEC_GOTOFF))) [1 s_ulPartCount+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":66 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 94 [ s_ulSeq.7_7 ])
+            (reg:SI 95 [ s_ulPartCount.8_8 ]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":66 -1
+     (nil))
+(jump_insn 28 27 29 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 57)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":66 -1
+     (nil)
+ -> 57)
+(note 29 28 30 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 4 (set (reg:DI 104 [ PROF_edge_counter_28 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramData") [flags 0x2]  <var_decl 0x7fe8625bc510 __gcov0.updaterUcAfterProgramData>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [12 __gcov0.updaterUcAfterProgramData+8 S8 A64])) -1
+     (nil))
+(insn 31 30 32 4 (parallel [
+            (set (reg:DI 105 [ PROF_edge_counter_29 ])
+                (plus:DI (reg:DI 104 [ PROF_edge_counter_28 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 32 31 33 4 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramData") [flags 0x2]  <var_decl 0x7fe8625bc510 __gcov0.updaterUcAfterProgramData>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [12 __gcov0.updaterUcAfterProgramData+8 S8 A64])
+        (reg:DI 105 [ PROF_edge_counter_29 ])) -1
+     (nil))
+(insn 33 32 34 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":67 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 34 33 35 4 (set (reg/f:SI 121)
+        (plus:SI (reg:SI 87)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7fe8625d2240 *.LC0>)
+                    ] UNSPEC_GOTOFF)))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":67 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7fe8625d2240 *.LC0>)
+        (nil)))
+(insn 35 34 36 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [34  S4 A32])
+        (reg/f:SI 121)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":67 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 36 35 37 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [16 pState+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":67 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 37 36 38 4 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":67 -1
+     (nil))
+(call_insn 38 37 39 4 (call (mem:QI (symbol_ref:SI ("updaterLog") [flags 0x41]  <function_decl 0x7fe862569700 updaterLog>) [0 updaterLog S1 A8])
+        (const_int 16 [0x10])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":67 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 39 38 40 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":67 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 40 39 41 4 (set (reg:DI 108 [ PROF_edge_counter_32 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramData") [flags 0x2]  <var_decl 0x7fe8625bc510 __gcov0.updaterUcAfterProgramData>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 24 [0x18])))) [12 __gcov0.updaterUcAfterProgramData+24 S8 A64])) -1
+     (nil))
+(insn 41 40 42 4 (parallel [
+            (set (reg:DI 109 [ PROF_edge_counter_33 ])
+                (plus:DI (reg:DI 108 [ PROF_edge_counter_32 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 42 41 43 4 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramData") [flags 0x2]  <var_decl 0x7fe8625bc510 __gcov0.updaterUcAfterProgramData>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 24 [0x18])))) [12 __gcov0.updaterUcAfterProgramData+24 S8 A64])
+        (reg:DI 109 [ PROF_edge_counter_33 ])) -1
+     (nil))
+(insn 43 42 44 4 (set (reg/f:SI 122)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [16 pState+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":70 -1
+     (nil))
+(insn 44 43 45 4 (set (reg:QI 96 [ _9 ])
+        (mem:QI (plus:SI (reg/f:SI 122)
+                (const_int 281 [0x119])) [2 pState_17(D)->isTransparent+0 S1 A8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":70 -1
+     (nil))
+(insn 45 44 46 4 (set (reg:SI 97 [ _10 ])
+        (zero_extend:SI (reg:QI 96 [ _9 ]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":69 -1
+     (nil))
+(insn 46 45 47 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":69 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 47 46 48 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":69 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 48 47 49 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [35  S4 A32])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":69 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 49 48 50 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (const_int 50 [0x32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":69 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 50 49 51 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":69 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 51 50 52 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg:SI 97 [ _10 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":69 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 52 51 53 4 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":69 -1
+     (nil))
+(call_insn 53 52 54 4 (call (mem:QI (symbol_ref:SI ("slipBufferedSendPacket") [flags 0x41]  <function_decl 0x7fe86259de00 slipBufferedSendPacket>) [0 slipBufferedSendPacket S1 A8])
+        (const_int 32 [0x20])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":69 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 54 53 55 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":69 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 55 54 56 4 (set (pc)
+        (label_ref 84)) -1
+     (nil)
+ -> 84)
+(barrier 56 55 57)
+(code_label 57 56 58 5 20 (nil) [1 uses])
+(note 58 57 59 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 60 5 (set (reg:DI 106 [ PROF_edge_counter_30 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramData") [flags 0x2]  <var_decl 0x7fe8625bc510 __gcov0.updaterUcAfterProgramData>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 16 [0x10])))) [12 __gcov0.updaterUcAfterProgramData+16 S8 A128])) -1
+     (nil))
+(insn 60 59 61 5 (parallel [
+            (set (reg:DI 107 [ PROF_edge_counter_31 ])
+                (plus:DI (reg:DI 106 [ PROF_edge_counter_30 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 61 60 62 5 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramData") [flags 0x2]  <var_decl 0x7fe8625bc510 __gcov0.updaterUcAfterProgramData>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 16 [0x10])))) [12 __gcov0.updaterUcAfterProgramData+16 S8 A128])
+        (reg:DI 107 [ PROF_edge_counter_31 ])) -1
+     (nil))
+(insn 62 61 63 5 (set (reg:SI 98 [ s_ulSeq.9_11 ])
+        (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("s_ulSeq") [flags 0x2]  <var_decl 0x7fe8625425a0 s_ulSeq>)
+                        ] UNSPEC_GOTOFF))) [1 s_ulSeq+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":75 -1
+     (nil))
+(insn 63 62 64 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":75 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 64 63 65 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (const_int 49 [0x31])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":75 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 65 64 66 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg:SI 98 [ s_ulSeq.9_11 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":75 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 66 65 67 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [16 pState+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":75 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 67 66 68 5 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":75 -1
+     (nil))
+(call_insn 68 67 69 5 (set (reg:QI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("updaterSendNextFirmwarePart") [flags 0x41]  <function_decl 0x7fe862569f00 updaterSendNextFirmwarePart>) [0 updaterSendNextFirmwarePart S1 A8])
+            (const_int 16 [0x10]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":75 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 69 68 70 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":75 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 70 69 71 5 (set (reg:QI 123)
+        (reg:QI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":75 -1
+     (nil))
+(insn 71 70 72 5 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [2 isOk+0 S1 A8])
+        (reg:QI 123)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":75 -1
+     (nil))
+(insn 72 71 73 5 (set (reg:DI 110 [ PROF_edge_counter_34 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramData") [flags 0x2]  <var_decl 0x7fe8625bc510 __gcov0.updaterUcAfterProgramData>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 32 [0x20])))) [12 __gcov0.updaterUcAfterProgramData+32 S8 A256])) -1
+     (nil))
+(insn 73 72 74 5 (parallel [
+            (set (reg:DI 111 [ PROF_edge_counter_35 ])
+                (plus:DI (reg:DI 110 [ PROF_edge_counter_34 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 74 73 75 5 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramData") [flags 0x2]  <var_decl 0x7fe8625bc510 __gcov0.updaterUcAfterProgramData>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 32 [0x20])))) [12 __gcov0.updaterUcAfterProgramData+32 S8 A256])
+        (reg:DI 111 [ PROF_edge_counter_35 ])) -1
+     (nil))
+(insn 75 74 76 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -1 [0xffffffffffffffff])) [2 isOk+0 S1 A8])
+            (const_int 0 [0]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":76 -1
+     (nil))
+(jump_insn 76 75 77 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 84)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":76 -1
+     (nil)
+ -> 84)
+(note 77 76 78 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 78 77 79 6 (set (reg:SI 99 [ s_ulSeq.10_12 ])
+        (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("s_ulSeq") [flags 0x2]  <var_decl 0x7fe8625425a0 s_ulSeq>)
+                        ] UNSPEC_GOTOFF))) [1 s_ulSeq+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":77 -1
+     (nil))
+(insn 79 78 80 6 (parallel [
+            (set (reg:SI 100 [ _13 ])
+                (plus:SI (reg:SI 99 [ s_ulSeq.10_12 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":77 -1
+     (nil))
+(insn 80 79 81 6 (set (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("s_ulSeq") [flags 0x2]  <var_decl 0x7fe8625425a0 s_ulSeq>)
+                        ] UNSPEC_GOTOFF))) [1 s_ulSeq+0 S4 A32])
+        (reg:SI 100 [ _13 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":77 -1
+     (nil))
+(insn 81 80 82 6 (set (reg:DI 112 [ PROF_edge_counter_36 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramData") [flags 0x2]  <var_decl 0x7fe8625bc510 __gcov0.updaterUcAfterProgramData>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 40 [0x28])))) [12 __gcov0.updaterUcAfterProgramData+40 S8 A64])) -1
+     (nil))
+(insn 82 81 83 6 (parallel [
+            (set (reg:DI 113 [ PROF_edge_counter_37 ])
+                (plus:DI (reg:DI 112 [ PROF_edge_counter_36 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 83 82 84 6 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramData") [flags 0x2]  <var_decl 0x7fe8625bc510 __gcov0.updaterUcAfterProgramData>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 40 [0x28])))) [12 __gcov0.updaterUcAfterProgramData+40 S8 A64])
+        (reg:DI 113 [ PROF_edge_counter_37 ])) -1
+     (nil))
+(code_label 84 83 85 7 21 (nil) [2 uses])
+(note 85 84 86 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 86 85 89 7 (set (reg:QI 101 [ _25 ])
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [2 isOk+0 S1 A8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":80 -1
+     (nil))
+(insn 89 86 90 7 (set (reg:DI 114 [ PROF_edge_counter_38 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramData") [flags 0x2]  <var_decl 0x7fe8625bc510 __gcov0.updaterUcAfterProgramData>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 48 [0x30])))) [12 __gcov0.updaterUcAfterProgramData+48 S8 A128])) -1
+     (nil))
+(insn 90 89 91 7 (parallel [
+            (set (reg:DI 115 [ PROF_edge_counter_39 ])
+                (plus:DI (reg:DI 114 [ PROF_edge_counter_38 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 91 90 92 7 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.updaterUcAfterProgramData") [flags 0x2]  <var_decl 0x7fe8625bc510 __gcov0.updaterUcAfterProgramData>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 48 [0x30])))) [12 __gcov0.updaterUcAfterProgramData+48 S8 A128])
+        (reg:DI 115 [ PROF_edge_counter_39 ])) -1
+     (nil))
+(insn 92 91 96 7 (set (reg:QI 116 [ <retval> ])
+        (reg:QI 101 [ _25 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":80 -1
+     (nil))
+(insn 96 92 97 7 (set (reg/i:QI 0 ax)
+        (reg:QI 116 [ <retval> ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":81 -1
+     (nil))
+(insn 97 96 0 7 (use (reg/i:QI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":81 -1
+     (nil))
+
+;; Function _GLOBAL__sub_I_00100_0_updaterUcInFile (_GLOBAL__sub_I_00100_0_updaterUcInFile, funcdef_no=11, decl_uid=2244, cgraph_uid=0, symbol_order=28)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":81 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 6 5 7 2 (set (reg/f:SI 88)
+        (plus:SI (reg:SI 87)
+            (const:SI (unspec:SI [
+                        (symbol_ref:SI ("*.LPBX0") [flags 0x2]  <var_decl 0x7fe8625bc900 *.LPBX0>)
+                    ] UNSPEC_GOTOFF)))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":81 -1
+     (expr_list:REG_EQUAL (symbol_ref:SI ("*.LPBX0") [flags 0x2]  <var_decl 0x7fe8625bc900 *.LPBX0>)
+        (nil)))
+(insn 7 6 8 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [37  S4 A32])
+        (reg/f:SI 88)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":81 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 8 7 9 2 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":81 -1
+     (nil))
+(call_insn 9 8 10 2 (call (mem:QI (symbol_ref:SI ("__gcov_init") [flags 0x41]  <function_decl 0x7fe8625c5000 __gcov_init>) [0 __gcov_init S1 A8])
+        (const_int 16 [0x10])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":81 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 10 9 0 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":81 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+
+;; Function _GLOBAL__sub_D_00100_1_updaterUcInFile (_GLOBAL__sub_D_00100_1_updaterUcInFile, funcdef_no=12, decl_uid=2247, cgraph_uid=1, symbol_order=29)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":81 -1
+     (nil))
+(call_insn 6 5 0 2 (call (mem:QI (symbol_ref:SI ("__gcov_exit") [flags 0x41]  <function_decl 0x7fe8625c5b00 __gcov_exit>) [0 __gcov_exit S1 A8])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_updater/src/updater_uc.c":81 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
