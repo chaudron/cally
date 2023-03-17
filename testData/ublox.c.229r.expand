@@ -1,0 +1,3331 @@
+
+;; Function ubxProcessNaviPvtMessage (ubxProcessNaviPvtMessage, funcdef_no=0, decl_uid=2173, cgraph_uid=0, symbol_order=1)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 48.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 110)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":40 -1
+     (nil))
+(insn 6 5 7 2 (parallel [
+            (set (reg/f:SI 88 [ _1 ])
+                (plus:SI (reg/f:SI 110)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":40 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])
+            (const_int 4 [0x4]))
+        (nil)))
+(insn 7 6 8 2 (parallel [
+            (set (reg/f:SI 89 [ _2 ])
+                (plus:SI (reg/f:SI 88 [ _1 ])
+                    (const_int 68 [0x44])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":40 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 90 [ _3 ])
+        (mem:SI (reg/f:SI 89 [ _2 ]) [2 *_2+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":40 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 111)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [4 pUbxInputData+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":40 -1
+     (nil))
+(insn 10 9 11 2 (set (mem:SI (reg/f:SI 111) [2 pUbxInputData_21(D)->ulSpeedAccuracy+0 S4 A32])
+        (reg:SI 90 [ _3 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":40 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 112)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":42 -1
+     (nil))
+(insn 12 11 13 2 (parallel [
+            (set (reg/f:SI 91 [ _4 ])
+                (plus:SI (reg/f:SI 112)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":42 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])
+            (const_int 4 [0x4]))
+        (nil)))
+(insn 13 12 14 2 (parallel [
+            (set (reg/f:SI 92 [ _5 ])
+                (plus:SI (reg/f:SI 91 [ _4 ])
+                    (const_int 40 [0x28])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":42 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 93 [ _6 ])
+        (mem:SI (reg/f:SI 92 [ _5 ]) [2 *_5+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":42 -1
+     (nil))
+(insn 15 14 16 2 (set (reg/f:SI 113)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [4 pUbxInputData+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":42 -1
+     (nil))
+(insn 16 15 17 2 (set (mem:SI (plus:SI (reg/f:SI 113)
+                (const_int 4 [0x4])) [2 pUbxInputData_21(D)->ulHorizontalAccuracy+0 S4 A32])
+        (reg:SI 93 [ _6 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":42 -1
+     (nil))
+(insn 17 16 18 2 (set (reg/f:SI 114)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":44 -1
+     (nil))
+(insn 18 17 19 2 (parallel [
+            (set (reg/f:SI 94 [ _7 ])
+                (plus:SI (reg/f:SI 114)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":44 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])
+            (const_int 4 [0x4]))
+        (nil)))
+(insn 19 18 20 2 (parallel [
+            (set (reg/f:SI 95 [ _8 ])
+                (plus:SI (reg/f:SI 94 [ _7 ])
+                    (const_int 44 [0x2c])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":44 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 96 [ _9 ])
+        (mem:SI (reg/f:SI 95 [ _8 ]) [2 *_8+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":44 -1
+     (nil))
+(insn 21 20 22 2 (set (reg/f:SI 115)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [4 pUbxInputData+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":44 -1
+     (nil))
+(insn 22 21 23 2 (set (mem:SI (plus:SI (reg/f:SI 115)
+                (const_int 8 [0x8])) [2 pUbxInputData_21(D)->ulVerticalAccuracy+0 S4 A32])
+        (reg:SI 96 [ _9 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":44 -1
+     (nil))
+(insn 23 22 24 2 (set (reg/f:SI 116)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":46 -1
+     (nil))
+(insn 24 23 25 2 (parallel [
+            (set (reg/f:SI 97 [ _10 ])
+                (plus:SI (reg/f:SI 116)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":46 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])
+            (const_int 4 [0x4]))
+        (nil)))
+(insn 25 24 26 2 (parallel [
+            (set (reg/f:SI 98 [ _11 ])
+                (plus:SI (reg/f:SI 97 [ _10 ])
+                    (const_int 48 [0x30])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":46 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:SI 99 [ _12 ])
+        (mem:SI (reg/f:SI 98 [ _11 ]) [2 *_11+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":46 -1
+     (nil))
+(insn 27 26 28 2 (set (reg/f:SI 117)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [4 pUbxInputData+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":46 -1
+     (nil))
+(insn 28 27 29 2 (set (mem:SI (plus:SI (reg/f:SI 117)
+                (const_int 12 [0xc])) [2 pUbxInputData_21(D)->lNorthVelocity+0 S4 A32])
+        (reg:SI 99 [ _12 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":46 -1
+     (nil))
+(insn 29 28 30 2 (set (reg/f:SI 118)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":48 -1
+     (nil))
+(insn 30 29 31 2 (parallel [
+            (set (reg/f:SI 100 [ _13 ])
+                (plus:SI (reg/f:SI 118)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":48 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])
+            (const_int 4 [0x4]))
+        (nil)))
+(insn 31 30 32 2 (parallel [
+            (set (reg/f:SI 101 [ _14 ])
+                (plus:SI (reg/f:SI 100 [ _13 ])
+                    (const_int 52 [0x34])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":48 -1
+     (nil))
+(insn 32 31 33 2 (set (reg:SI 102 [ _15 ])
+        (mem:SI (reg/f:SI 101 [ _14 ]) [2 *_14+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":48 -1
+     (nil))
+(insn 33 32 34 2 (set (reg/f:SI 119)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [4 pUbxInputData+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":48 -1
+     (nil))
+(insn 34 33 35 2 (set (mem:SI (plus:SI (reg/f:SI 119)
+                (const_int 16 [0x10])) [2 pUbxInputData_21(D)->lEastVelocity+0 S4 A32])
+        (reg:SI 102 [ _15 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":48 -1
+     (nil))
+(insn 35 34 36 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":50 -1
+     (nil))
+(insn 36 35 37 2 (parallel [
+            (set (reg/f:SI 103 [ _16 ])
+                (plus:SI (reg/f:SI 120)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":50 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])
+            (const_int 4 [0x4]))
+        (nil)))
+(insn 37 36 38 2 (parallel [
+            (set (reg/f:SI 104 [ _17 ])
+                (plus:SI (reg/f:SI 103 [ _16 ])
+                    (const_int 56 [0x38])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":50 -1
+     (nil))
+(insn 38 37 39 2 (set (reg:SI 105 [ _18 ])
+        (mem:SI (reg/f:SI 104 [ _17 ]) [2 *_17+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":50 -1
+     (nil))
+(insn 39 38 40 2 (set (reg/f:SI 121)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [4 pUbxInputData+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":50 -1
+     (nil))
+(insn 40 39 41 2 (set (mem:SI (plus:SI (reg/f:SI 121)
+                (const_int 20 [0x14])) [2 pUbxInputData_21(D)->lDownVelocity+0 S4 A32])
+        (reg:SI 105 [ _18 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":50 -1
+     (nil))
+(insn 41 40 44 2 (set (reg:QI 106 [ _28 ])
+        (const_int 1 [0x1])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":52 -1
+     (nil))
+(insn 44 41 45 2 (set (reg:DI 107 [ PROF_edge_counter_29 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubxProcessNaviPvtMessage") [flags 0x2]  <var_decl 0x7ff21e7d8d80 __gcov0.ubxProcessNaviPvtMessage>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubxProcessNaviPvtMessage+0 S8 A64])) -1
+     (nil))
+(insn 45 44 46 2 (parallel [
+            (set (reg:DI 108 [ PROF_edge_counter_30 ])
+                (plus:DI (reg:DI 107 [ PROF_edge_counter_29 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 46 45 47 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubxProcessNaviPvtMessage") [flags 0x2]  <var_decl 0x7ff21e7d8d80 __gcov0.ubxProcessNaviPvtMessage>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubxProcessNaviPvtMessage+0 S8 A64])
+        (reg:DI 108 [ PROF_edge_counter_30 ])) -1
+     (nil))
+(insn 47 46 51 2 (set (reg:QI 109 [ <retval> ])
+        (reg:QI 106 [ _28 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":52 -1
+     (nil))
+(insn 51 47 52 2 (set (reg/i:QI 0 ax)
+        (reg:QI 109 [ <retval> ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":53 -1
+     (nil))
+(insn 52 51 0 2 (use (reg/i:QI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":53 -1
+     (nil))
+
+;; Function ubxHandleInMessage (ubxHandleInMessage, funcdef_no=1, decl_uid=2176, cgraph_uid=1, symbol_order=2)
+
+Partition 0: size 1 align 1
+	isProcessed_4
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+Purged edges from bb 10
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 4->5 to 8 failed.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+Removing jump 47.
+Merging block 10 into block 8...
+Merged blocks 8 and 10.
+Merged 8 and 10 without moving.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 4->5 to 8 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [6 isProcessed+0 S1 A8])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":59 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/f:SI 101)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":60 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:QI 88 [ _1 ])
+        (mem:QI (reg/f:SI 101) [0 pUbxMessage_8(D)->ubClassId+0 S1 A8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":60 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 88 [ _1 ])
+            (const_int 1 [0x1]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":60 -1
+     (nil))
+(jump_insn 9 8 10 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 38)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":60 -1
+     (nil)
+ -> 38)
+(note 10 9 11 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 4 (set (reg:DI 92 [ PROF_edge_counter_12 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubxHandleInMessage") [flags 0x2]  <var_decl 0x7ff21e7d8cf0 __gcov0.ubxHandleInMessage>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubxHandleInMessage+0 S8 A256])) -1
+     (nil))
+(insn 12 11 13 4 (parallel [
+            (set (reg:DI 93 [ PROF_edge_counter_13 ])
+                (plus:DI (reg:DI 92 [ PROF_edge_counter_12 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 13 12 14 4 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubxHandleInMessage") [flags 0x2]  <var_decl 0x7ff21e7d8cf0 __gcov0.ubxHandleInMessage>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubxHandleInMessage+0 S8 A256])
+        (reg:DI 93 [ PROF_edge_counter_13 ])) -1
+     (nil))
+(insn 14 13 15 4 (set (reg/f:SI 102)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":61 -1
+     (nil))
+(insn 15 14 16 4 (set (reg:QI 89 [ _2 ])
+        (mem:QI (plus:SI (reg/f:SI 102)
+                (const_int 1 [0x1])) [0 pUbxMessage_8(D)->ubId+0 S1 A8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":61 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:SI 90 [ _3 ])
+        (zero_extend:SI (reg:QI 89 [ _2 ]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":61 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 90 [ _3 ])
+            (const_int 7 [0x7]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":61 -1
+     (nil))
+(jump_insn 18 17 53 4 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 21)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":61 -1
+     (nil)
+ -> 21)
+(note 53 18 19 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 19 53 20 5 (set (pc)
+        (label_ref 38)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":61 -1
+     (nil)
+ -> 38)
+(barrier 20 19 21)
+(code_label 21 20 22 6 5 (nil) [1 uses])
+(note 22 21 23 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 6 (set (reg:DI 94 [ PROF_edge_counter_14 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubxHandleInMessage") [flags 0x2]  <var_decl 0x7ff21e7d8cf0 __gcov0.ubxHandleInMessage>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubxHandleInMessage+8 S8 A64])) -1
+     (nil))
+(insn 24 23 25 6 (parallel [
+            (set (reg:DI 95 [ PROF_edge_counter_15 ])
+                (plus:DI (reg:DI 94 [ PROF_edge_counter_14 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 25 24 26 6 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubxHandleInMessage") [flags 0x2]  <var_decl 0x7ff21e7d8cf0 __gcov0.ubxHandleInMessage>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubxHandleInMessage+8 S8 A64])
+        (reg:DI 95 [ PROF_edge_counter_15 ])) -1
+     (nil))
+(insn 26 25 27 6 (set (reg:SI 104)
+        (mem/u/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("sUbxInData")  <var_decl 0x7ff21e7427e0 sUbxInData>)
+                        ] UNSPEC_GOT))) [9  S4 A8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":63 -1
+     (nil))
+(insn 27 26 28 6 (set (reg/f:SI 103)
+        (reg:SI 104)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":63 -1
+     (expr_list:REG_EQUAL (symbol_ref:SI ("sUbxInData")  <var_decl 0x7ff21e7427e0 sUbxInData>)
+        (nil)))
+(insn 28 27 29 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [4  S4 A32])
+        (reg/f:SI 103)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":63 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 29 28 30 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 pUbxMessage+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":63 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(call_insn 30 29 31 6 (set (reg:QI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("ubxProcessNaviPvtMessage") [flags 0x3]  <function_decl 0x7ff21e79cf00 ubxProcessNaviPvtMessage>) [0 ubxProcessNaviPvtMessage S1 A8])
+            (const_int 8 [0x8]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":63 -1
+     (nil)
+    (nil))
+(insn 31 30 32 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":63 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 32 31 33 6 (set (reg:QI 105)
+        (reg:QI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":63 -1
+     (nil))
+(insn 33 32 54 6 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [6 isProcessed+0 S1 A8])
+        (reg:QI 105)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":63 -1
+     (nil))
+(insn 54 33 35 6 (const_int 0 [0]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":64 -1
+     (nil))
+(insn 35 54 36 6 (set (reg:DI 96 [ PROF_edge_counter_16 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubxHandleInMessage") [flags 0x2]  <var_decl 0x7ff21e7d8cf0 __gcov0.ubxHandleInMessage>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 16 [0x10])))) [5 __gcov0.ubxHandleInMessage+16 S8 A128])) -1
+     (nil))
+(insn 36 35 37 6 (parallel [
+            (set (reg:DI 97 [ PROF_edge_counter_17 ])
+                (plus:DI (reg:DI 96 [ PROF_edge_counter_16 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 37 36 38 6 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubxHandleInMessage") [flags 0x2]  <var_decl 0x7ff21e7d8cf0 __gcov0.ubxHandleInMessage>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 16 [0x10])))) [5 __gcov0.ubxHandleInMessage+16 S8 A128])
+        (reg:DI 97 [ PROF_edge_counter_17 ])) -1
+     (nil))
+(code_label 38 37 39 8 4 (nil) [2 uses])
+(note 39 38 40 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 40 39 43 8 (set (reg:QI 91 [ _11 ])
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [6 isProcessed+0 S1 A8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":67 -1
+     (nil))
+(insn 43 40 44 8 (set (reg:DI 98 [ PROF_edge_counter_18 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubxHandleInMessage") [flags 0x2]  <var_decl 0x7ff21e7d8cf0 __gcov0.ubxHandleInMessage>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 24 [0x18])))) [5 __gcov0.ubxHandleInMessage+24 S8 A64])) -1
+     (nil))
+(insn 44 43 45 8 (parallel [
+            (set (reg:DI 99 [ PROF_edge_counter_19 ])
+                (plus:DI (reg:DI 98 [ PROF_edge_counter_18 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 45 44 46 8 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubxHandleInMessage") [flags 0x2]  <var_decl 0x7ff21e7d8cf0 __gcov0.ubxHandleInMessage>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 24 [0x18])))) [5 __gcov0.ubxHandleInMessage+24 S8 A64])
+        (reg:DI 99 [ PROF_edge_counter_19 ])) -1
+     (nil))
+(insn 46 45 50 8 (set (reg:QI 100 [ <retval> ])
+        (reg:QI 91 [ _11 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":67 -1
+     (nil))
+(insn 50 46 51 8 (set (reg/i:QI 0 ax)
+        (reg:QI 100 [ <retval> ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":68 -1
+     (nil))
+(insn 51 50 0 8 (use (reg/i:QI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":68 -1
+     (nil))
+
+;; Function ubloxPubxCreateCommandSetMessageOutput (ubloxPubxCreateCommandSetMessageOutput, funcdef_no=2, decl_uid=1506, cgraph_uid=2, symbol_order=3)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg:SI 93)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [6 isEnable+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":74 -1
+     (nil))
+(insn 3 2 4 2 (set (reg:QI 94)
+        (subreg:QI (reg:SI 93) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":74 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 isEnable+0 S1 A32])
+        (reg:QI 94)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":74 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg:DI 89 [ PROF_edge_counter_8 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxPubxCreateCommandSetMessageOutput") [flags 0x2]  <var_decl 0x7ff21e7d8c60 __gcov0.ubloxPubxCreateCommandSetMessageOutput>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxPubxCreateCommandSetMessageOutput+0 S8 A64])) -1
+     (nil))
+(insn 9 8 10 2 (parallel [
+            (set (reg:DI 90 [ PROF_edge_counter_9 ])
+                (plus:DI (reg:DI 89 [ PROF_edge_counter_8 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 10 9 11 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxPubxCreateCommandSetMessageOutput") [flags 0x2]  <var_decl 0x7ff21e7d8c60 __gcov0.ubloxPubxCreateCommandSetMessageOutput>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxPubxCreateCommandSetMessageOutput+0 S8 A64])
+        (reg:DI 90 [ PROF_edge_counter_9 ])) -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 88 [ _1 ])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [6 isEnable+0 S1 A32]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":77 -1
+     (nil))
+(insn 12 11 13 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 88 [ _1 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":77 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 13 12 14 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [11  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [11 pIdent+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":77 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 14 13 15 2 (set (reg/f:SI 95)
+        (plus:SI (reg:SI 87)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7ff21e40d000 *.LC0>)
+                    ] UNSPEC_GOTOFF)))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":77 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7ff21e40d000 *.LC0>)
+        (nil)))
+(insn 15 14 16 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [11  S4 A32])
+        (reg/f:SI 95)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":77 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 16 15 17 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [11  S4 A32])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [11 pBuffer+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":77 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 17 16 18 2 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":77 -1
+     (nil))
+(call_insn 18 17 19 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("sprintf") [flags 0x41]  <function_decl 0x7ff21e69ff00 sprintf>) [0 __builtin_sprintf S1 A8])
+            (const_int 16 [0x10]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":77 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 19 18 20 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":77 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 20 19 21 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":80 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 21 20 22 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [11  S4 A32])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [11 pBuffer+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":80 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 22 21 23 2 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":80 -1
+     (nil))
+(call_insn 23 22 24 2 (set (reg:QI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("pmtkConcatenateCheckSum") [flags 0x41]  <function_decl 0x7ff21e789100 pmtkConcatenateCheckSum>) [0 pmtkConcatenateCheckSum S1 A8])
+            (const_int 16 [0x10]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":80 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 24 23 25 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":80 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 25 24 26 2 (set (reg:DI 91 [ PROF_edge_counter_10 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxPubxCreateCommandSetMessageOutput") [flags 0x2]  <var_decl 0x7ff21e7d8c60 __gcov0.ubloxPubxCreateCommandSetMessageOutput>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxPubxCreateCommandSetMessageOutput+8 S8 A64])) -1
+     (nil))
+(insn 26 25 27 2 (parallel [
+            (set (reg:DI 92 [ PROF_edge_counter_11 ])
+                (plus:DI (reg:DI 91 [ PROF_edge_counter_10 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 27 26 30 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxPubxCreateCommandSetMessageOutput") [flags 0x2]  <var_decl 0x7ff21e7d8c60 __gcov0.ubloxPubxCreateCommandSetMessageOutput>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxPubxCreateCommandSetMessageOutput+8 S8 A64])
+        (reg:DI 92 [ PROF_edge_counter_11 ])) -1
+     (nil))
+(insn 30 27 0 2 (const_int 0 [0]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":81 -1
+     (nil))
+
+;; Function ubloxPubxChangeBaudrate (ubloxPubxChangeBaudrate, funcdef_no=3, decl_uid=1509, cgraph_uid=3, symbol_order=4)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:DI 88 [ PROF_edge_counter_6 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxPubxChangeBaudrate") [flags 0x2]  <var_decl 0x7ff21e7d8bd0 __gcov0.ubloxPubxChangeBaudrate>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxPubxChangeBaudrate+0 S8 A64])) -1
+     (nil))
+(insn 6 5 7 2 (parallel [
+            (set (reg:DI 89 [ PROF_edge_counter_7 ])
+                (plus:DI (reg:DI 88 [ PROF_edge_counter_6 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 7 6 8 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxPubxChangeBaudrate") [flags 0x2]  <var_decl 0x7ff21e7d8bd0 __gcov0.ubloxPubxChangeBaudrate>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxPubxChangeBaudrate+0 S8 A64])
+        (reg:DI 89 [ PROF_edge_counter_7 ])) -1
+     (nil))
+(insn 8 7 9 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":88 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 9 8 10 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [2 ulBaudrate+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":88 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 10 9 11 2 (set (reg/f:SI 92)
+        (plus:SI (reg:SI 87)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7ff21e40d090 *.LC1>)
+                    ] UNSPEC_GOTOFF)))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":88 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7ff21e40d090 *.LC1>)
+        (nil)))
+(insn 11 10 12 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [11  S4 A32])
+        (reg/f:SI 92)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":88 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 12 11 13 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [11  S4 A32])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [11 pBuffer+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":88 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 13 12 14 2 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":88 -1
+     (nil))
+(call_insn 14 13 15 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("sprintf") [flags 0x41]  <function_decl 0x7ff21e69ff00 sprintf>) [0 __builtin_sprintf S1 A8])
+            (const_int 16 [0x10]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":88 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 15 14 16 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":88 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 16 15 17 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":91 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 17 16 18 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [11  S4 A32])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [11 pBuffer+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":91 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 18 17 19 2 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":91 -1
+     (nil))
+(call_insn 19 18 20 2 (set (reg:QI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("pmtkConcatenateCheckSum") [flags 0x41]  <function_decl 0x7ff21e789100 pmtkConcatenateCheckSum>) [0 pmtkConcatenateCheckSum S1 A8])
+            (const_int 16 [0x10]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":91 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 20 19 21 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":91 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 21 20 22 2 (set (reg:DI 90 [ PROF_edge_counter_8 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxPubxChangeBaudrate") [flags 0x2]  <var_decl 0x7ff21e7d8bd0 __gcov0.ubloxPubxChangeBaudrate>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxPubxChangeBaudrate+8 S8 A64])) -1
+     (nil))
+(insn 22 21 23 2 (parallel [
+            (set (reg:DI 91 [ PROF_edge_counter_9 ])
+                (plus:DI (reg:DI 90 [ PROF_edge_counter_8 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 23 22 26 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxPubxChangeBaudrate") [flags 0x2]  <var_decl 0x7ff21e7d8bd0 __gcov0.ubloxPubxChangeBaudrate>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxPubxChangeBaudrate+8 S8 A64])
+        (reg:DI 91 [ PROF_edge_counter_9 ])) -1
+     (nil))
+(insn 26 23 0 2 (const_int 0 [0]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":92 -1
+     (nil))
+
+;; Function ubloxUbxCalculateChecksum (ubloxUbxCalculateChecksum, funcdef_no=4, decl_uid=1512, cgraph_uid=4, symbol_order=5)
+
+Partition 2: size 4 align 4
+	i_12
+Partition 3: size 2 align 2
+	usCheckSum_17
+Partition 1: size 1 align 1
+	ubCkB_11
+Partition 0: size 1 align 1
+	ubCkA_10
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+Removing jump 42.
+Merging block 8 into block 6...
+Merged blocks 6 and 8.
+Merged 6 and 8 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 ubCkA+0 S1 A8])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":98 -1
+     (nil))
+(insn 6 5 7 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -7 [0xfffffffffffffff9])) [0 ubCkB+0 S1 A8])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":98 -1
+     (nil))
+(insn 7 6 8 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 i+0 S4 A32])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":100 -1
+     (nil))
+(jump_insn 8 7 9 2 (set (pc)
+        (label_ref 22)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":100 -1
+     (nil)
+ -> 22)
+(barrier 9 8 25)
+(code_label 25 9 10 4 11 (nil) [1 uses])
+(note 10 25 11 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 4 (set (reg:DI 98 [ PROF_edge_counter_24 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxCalculateChecksum") [flags 0x2]  <var_decl 0x7ff21e7d8b40 __gcov0.ubloxUbxCalculateChecksum>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxCalculateChecksum+0 S8 A64])) -1
+     (nil))
+(insn 12 11 13 4 (parallel [
+            (set (reg:DI 99 [ PROF_edge_counter_25 ])
+                (plus:DI (reg:DI 98 [ PROF_edge_counter_24 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 13 12 14 4 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxCalculateChecksum") [flags 0x2]  <var_decl 0x7ff21e7d8b40 __gcov0.ubloxUbxCalculateChecksum>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxCalculateChecksum+0 S8 A64])
+        (reg:DI 99 [ PROF_edge_counter_25 ])) -1
+     (nil))
+(insn 14 13 15 4 (set (reg:SI 88 [ i.0_1 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 i+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":101 -1
+     (nil))
+(insn 15 14 16 4 (set (reg/f:SI 103)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [12 pData+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":101 -1
+     (nil))
+(insn 16 15 17 4 (parallel [
+            (set (reg/f:SI 89 [ _2 ])
+                (plus:SI (reg:SI 88 [ i.0_1 ])
+                    (reg/f:SI 103)))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":101 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [12 pData+0 S4 A32])
+            (reg:SI 88 [ i.0_1 ]))
+        (nil)))
+(insn 17 16 18 4 (set (reg:QI 90 [ _3 ])
+        (mem:QI (reg/f:SI 89 [ _2 ]) [0 *_2+0 S1 A8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":101 -1
+     (nil))
+(insn 18 17 19 4 (parallel [
+            (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [0 ubCkA+0 S1 A8])
+                (plus:QI (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [0 ubCkA+0 S1 A8])
+                    (reg:QI 90 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":101 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:QI 104)
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 ubCkA+0 S1 A8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":102 -1
+     (nil))
+(insn 20 19 21 4 (parallel [
+            (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -7 [0xfffffffffffffff9])) [0 ubCkB+0 S1 A8])
+                (plus:QI (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -7 [0xfffffffffffffff9])) [0 ubCkB+0 S1 A8])
+                    (reg:QI 104)))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":102 -1
+     (nil))
+(insn 21 20 22 4 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":100 -1
+     (nil))
+(code_label 22 21 23 5 10 (nil) [1 uses])
+(note 23 22 24 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 26 5 (set (reg:SI 91 [ i.1_4 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 i+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":100 -1
+     (nil))
+(insn 26 24 27 5 (set (reg:CC 17 flags)
+        (compare:CC (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 4 [0x4])) [2 ulDataSize+0 S4 A32])
+            (reg:SI 91 [ i.1_4 ]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":100 -1
+     (nil))
+(jump_insn 27 26 28 5 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 25)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":100 -1
+     (nil)
+ -> 25)
+(note 28 27 29 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 29 28 30 6 (set (reg:SI 92 [ _5 ])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -7 [0xfffffffffffffff9])) [0 ubCkB+0 S1 A8]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":105 -1
+     (nil))
+(insn 30 29 31 6 (parallel [
+            (set (reg:SI 93 [ _6 ])
+                (ashift:SI (reg:SI 92 [ _5 ])
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":105 -1
+     (nil))
+(insn 31 30 32 6 (set (reg:HI 94 [ _7 ])
+        (subreg:HI (reg:SI 93 [ _6 ]) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":105 -1
+     (nil))
+(insn 32 31 33 6 (set (reg:HI 95 [ _8 ])
+        (zero_extend:HI (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [0 ubCkA+0 S1 A8]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":105 -1
+     (nil))
+(insn 33 32 34 6 (parallel [
+            (set (reg:HI 96 [ _9 ])
+                (ior:HI (reg:HI 94 [ _7 ])
+                    (reg:HI 95 [ _8 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":105 -1
+     (nil))
+(insn 34 33 35 6 (set (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -6 [0xfffffffffffffffa])) [8 usCheckSum+0 S2 A16])
+        (reg:HI 96 [ _9 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":105 -1
+     (nil))
+(insn 35 34 38 6 (set (reg:HI 97 [ _18 ])
+        (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -6 [0xfffffffffffffffa])) [8 usCheckSum+0 S2 A16])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":106 -1
+     (nil))
+(insn 38 35 39 6 (set (reg:DI 100 [ PROF_edge_counter_26 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxCalculateChecksum") [flags 0x2]  <var_decl 0x7ff21e7d8b40 __gcov0.ubloxUbxCalculateChecksum>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxUbxCalculateChecksum+8 S8 A64])) -1
+     (nil))
+(insn 39 38 40 6 (parallel [
+            (set (reg:DI 101 [ PROF_edge_counter_27 ])
+                (plus:DI (reg:DI 100 [ PROF_edge_counter_26 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 40 39 41 6 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxCalculateChecksum") [flags 0x2]  <var_decl 0x7ff21e7d8b40 __gcov0.ubloxUbxCalculateChecksum>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxUbxCalculateChecksum+8 S8 A64])
+        (reg:DI 101 [ PROF_edge_counter_27 ])) -1
+     (nil))
+(insn 41 40 45 6 (set (reg:HI 102 [ <retval> ])
+        (reg:HI 97 [ _18 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":106 -1
+     (nil))
+(insn 45 41 46 6 (set (reg/i:HI 0 ax)
+        (reg:HI 102 [ <retval> ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":107 -1
+     (nil))
+(insn 46 45 0 6 (use (reg/i:HI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":107 -1
+     (nil))
+
+;; Function ubloxUbxCreateFrame (ubloxUbxCreateFrame, funcdef_no=5, decl_uid=1518, cgraph_uid=5, symbol_order=6)
+
+Partition 0: size 2 align 2
+	usChecksum_33
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 81.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 9 NOTE_INSN_DELETED)
+(note 9 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 9 5 2 (set (reg:SI 112)
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [0 ubClass+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":113 -1
+     (nil))
+(insn 5 2 3 2 (set (reg:SI 114)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [0 ubId+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":113 -1
+     (nil))
+(insn 3 5 4 2 (set (reg:QI 113)
+        (subreg:QI (reg:SI 112) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":113 -1
+     (nil))
+(insn 4 3 6 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 ubClass+0 S1 A32])
+        (reg:QI 113)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":113 -1
+     (nil))
+(insn 6 4 7 2 (set (reg:QI 115)
+        (subreg:QI (reg:SI 114) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":113 -1
+     (nil))
+(insn 7 6 8 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 ubId+0 S1 A32])
+        (reg:QI 115)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":113 -1
+     (nil))
+(note 8 7 11 2 NOTE_INSN_FUNCTION_BEG)
+(insn 11 8 12 2 (set (reg:DI 107 [ PROF_edge_counter_37 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrame") [flags 0x2]  <var_decl 0x7ff21e7d8ab0 __gcov0.ubloxUbxCreateFrame>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxCreateFrame+0 S8 A64])) -1
+     (nil))
+(insn 12 11 13 2 (parallel [
+            (set (reg:DI 108 [ PROF_edge_counter_38 ])
+                (plus:DI (reg:DI 107 [ PROF_edge_counter_37 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 13 12 14 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrame") [flags 0x2]  <var_decl 0x7ff21e7d8ab0 __gcov0.ubloxUbxCreateFrame>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxCreateFrame+0 S8 A64])
+        (reg:DI 108 [ PROF_edge_counter_38 ])) -1
+     (nil))
+(insn 14 13 15 2 (set (reg/f:SI 116)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":114 -1
+     (nil))
+(insn 15 14 16 2 (set (mem:QI (reg/f:SI 116) [0 *pBufferOut_20(D)+0 S1 A8])
+        (const_int -75 [0xffffffffffffffb5])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":114 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:SI 117)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":115 -1
+     (nil))
+(insn 17 16 18 2 (parallel [
+            (set (reg/f:SI 88 [ _1 ])
+                (plus:SI (reg/f:SI 117)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":115 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 18 17 19 2 (set (mem:QI (reg/f:SI 88 [ _1 ]) [0 *_1+0 S1 A8])
+        (const_int 98 [0x62])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":115 -1
+     (nil))
+(insn 19 18 20 2 (set (reg/f:SI 118)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":116 -1
+     (nil))
+(insn 20 19 21 2 (parallel [
+            (set (reg/f:SI 89 [ _2 ])
+                (plus:SI (reg/f:SI 118)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":116 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])
+            (const_int 2 [0x2]))
+        (nil)))
+(insn 21 20 22 2 (set (reg:QI 119)
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 ubClass+0 S1 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":116 -1
+     (nil))
+(insn 22 21 23 2 (set (mem:QI (reg/f:SI 89 [ _2 ]) [0 *_2+0 S1 A8])
+        (reg:QI 119)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":116 -1
+     (nil))
+(insn 23 22 24 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":117 -1
+     (nil))
+(insn 24 23 25 2 (parallel [
+            (set (reg/f:SI 90 [ _3 ])
+                (plus:SI (reg/f:SI 120)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":117 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 25 24 26 2 (set (reg:QI 121)
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 ubId+0 S1 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":117 -1
+     (nil))
+(insn 26 25 27 2 (set (mem:QI (reg/f:SI 90 [ _3 ]) [0 *_3+0 S1 A8])
+        (reg:QI 121)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":117 -1
+     (nil))
+(insn 27 26 28 2 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":118 -1
+     (nil))
+(insn 28 27 29 2 (parallel [
+            (set (reg/f:SI 91 [ _4 ])
+                (plus:SI (reg/f:SI 122)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":118 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])
+            (const_int 4 [0x4]))
+        (nil)))
+(insn 29 28 30 2 (set (reg:SI 123)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [2 ulPayloadSize+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":118 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:QI 92 [ _5 ])
+        (subreg:QI (reg:SI 123) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":118 -1
+     (nil))
+(insn 31 30 32 2 (set (mem:QI (reg/f:SI 91 [ _4 ]) [0 *_4+0 S1 A8])
+        (reg:QI 92 [ _5 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":118 -1
+     (nil))
+(insn 32 31 33 2 (set (reg:SI 124)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [2 ulPayloadSize+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":119 -1
+     (nil))
+(insn 33 32 34 2 (parallel [
+            (set (reg:SI 93 [ _6 ])
+                (lshiftrt:SI (reg:SI 124)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":119 -1
+     (expr_list:REG_EQUAL (lshiftrt:SI (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 12 [0xc])) [2 ulPayloadSize+0 S4 A32])
+            (const_int 8 [0x8]))
+        (nil)))
+(insn 34 33 35 2 (set (reg/f:SI 125)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":119 -1
+     (nil))
+(insn 35 34 36 2 (parallel [
+            (set (reg/f:SI 94 [ _7 ])
+                (plus:SI (reg/f:SI 125)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":119 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])
+            (const_int 5 [0x5]))
+        (nil)))
+(insn 36 35 37 2 (set (reg:QI 95 [ _8 ])
+        (subreg:QI (reg:SI 93 [ _6 ]) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":119 -1
+     (nil))
+(insn 37 36 38 2 (set (mem:QI (reg/f:SI 94 [ _7 ]) [0 *_7+0 S1 A8])
+        (reg:QI 95 [ _8 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":119 -1
+     (nil))
+(insn 38 37 39 2 (set (reg/f:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":120 -1
+     (nil))
+(insn 39 38 40 2 (parallel [
+            (set (reg/f:SI 96 [ _9 ])
+                (plus:SI (reg/f:SI 126)
+                    (const_int 6 [0x6])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":120 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])
+            (const_int 6 [0x6]))
+        (nil)))
+(insn 40 39 41 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":120 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 41 40 42 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [2 ulPayloadSize+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":120 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 42 41 43 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [12  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [12 pPayload+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":120 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 43 42 44 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [12  S4 A32])
+        (reg/f:SI 96 [ _9 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":120 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 44 43 45 2 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":120 -1
+     (nil))
+(call_insn 45 44 46 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("memcpy") [flags 0x41]  <function_decl 0x7ff21e694900 memcpy>) [0 __builtin_memcpy S1 A8])
+            (const_int 16 [0x10]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":120 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 46 45 47 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":120 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 47 46 48 2 (set (reg:SI 127)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [2 ulPayloadSize+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":121 -1
+     (nil))
+(insn 48 47 49 2 (parallel [
+            (set (reg:SI 97 [ _10 ])
+                (plus:SI (reg:SI 127)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":121 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 12 [0xc])) [2 ulPayloadSize+0 S4 A32])
+            (const_int 4 [0x4]))
+        (nil)))
+(insn 49 48 50 2 (set (reg/f:SI 128)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":121 -1
+     (nil))
+(insn 50 49 51 2 (parallel [
+            (set (reg/f:SI 98 [ _11 ])
+                (plus:SI (reg/f:SI 128)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":121 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])
+            (const_int 2 [0x2]))
+        (nil)))
+(insn 51 50 52 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":121 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 52 51 53 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 97 [ _10 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":121 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 53 52 54 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [12  S4 A32])
+        (reg/f:SI 98 [ _11 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":121 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 54 53 55 2 (set (reg:HI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("ubloxUbxCalculateChecksum") [flags 0x3]  <function_decl 0x7ff21e741300 ubloxUbxCalculateChecksum>) [0 ubloxUbxCalculateChecksum S1 A8])
+            (const_int 16 [0x10]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":121 -1
+     (nil)
+    (nil))
+(insn 55 54 56 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":121 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 56 55 57 2 (set (reg:HI 129)
+        (reg:HI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":121 -1
+     (nil))
+(insn 57 56 58 2 (set (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -2 [0xfffffffffffffffe])) [8 usChecksum+0 S2 A16])
+        (reg:HI 129)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":121 -1
+     (nil))
+(insn 58 57 59 2 (set (reg:SI 130)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [2 ulPayloadSize+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":122 -1
+     (nil))
+(insn 59 58 60 2 (parallel [
+            (set (reg:SI 99 [ _12 ])
+                (plus:SI (reg:SI 130)
+                    (const_int 6 [0x6])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":122 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 12 [0xc])) [2 ulPayloadSize+0 S4 A32])
+            (const_int 6 [0x6]))
+        (nil)))
+(insn 60 59 61 2 (set (reg/f:SI 131)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":122 -1
+     (nil))
+(insn 61 60 62 2 (parallel [
+            (set (reg/f:SI 100 [ _13 ])
+                (plus:SI (reg:SI 99 [ _12 ])
+                    (reg/f:SI 131)))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":122 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])
+            (reg:SI 99 [ _12 ]))
+        (nil)))
+(insn 62 61 63 2 (set (reg:HI 132)
+        (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -2 [0xfffffffffffffffe])) [8 usChecksum+0 S2 A16])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":122 -1
+     (nil))
+(insn 63 62 64 2 (set (reg:QI 101 [ _14 ])
+        (subreg:QI (reg:HI 132) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":122 -1
+     (nil))
+(insn 64 63 65 2 (set (mem:QI (reg/f:SI 100 [ _13 ]) [0 *_13+0 S1 A8])
+        (reg:QI 101 [ _14 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":122 -1
+     (nil))
+(insn 65 64 66 2 (set (reg:HI 133)
+        (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -2 [0xfffffffffffffffe])) [8 usChecksum+0 S2 A16])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":123 -1
+     (nil))
+(insn 66 65 67 2 (parallel [
+            (set (reg:HI 102 [ _15 ])
+                (lshiftrt:HI (reg:HI 133)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":123 -1
+     (expr_list:REG_EQUAL (lshiftrt:HI (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -2 [0xfffffffffffffffe])) [8 usChecksum+0 S2 A16])
+            (const_int 8 [0x8]))
+        (nil)))
+(insn 67 66 68 2 (set (reg:SI 134)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [2 ulPayloadSize+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":123 -1
+     (nil))
+(insn 68 67 69 2 (parallel [
+            (set (reg:SI 103 [ _16 ])
+                (plus:SI (reg:SI 134)
+                    (const_int 7 [0x7])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":123 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 12 [0xc])) [2 ulPayloadSize+0 S4 A32])
+            (const_int 7 [0x7]))
+        (nil)))
+(insn 69 68 70 2 (set (reg/f:SI 135)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":123 -1
+     (nil))
+(insn 70 69 71 2 (parallel [
+            (set (reg/f:SI 104 [ _17 ])
+                (plus:SI (reg:SI 103 [ _16 ])
+                    (reg/f:SI 135)))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":123 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 16 [0x10])) [12 pBufferOut+0 S4 A32])
+            (reg:SI 103 [ _16 ]))
+        (nil)))
+(insn 71 70 72 2 (set (reg:QI 105 [ _18 ])
+        (subreg:QI (reg:HI 102 [ _15 ]) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":123 -1
+     (nil))
+(insn 72 71 73 2 (set (mem:QI (reg/f:SI 104 [ _17 ]) [0 *_17+0 S1 A8])
+        (reg:QI 105 [ _18 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":123 -1
+     (nil))
+(insn 73 72 74 2 (set (reg:SI 136)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [2 ulPayloadSize+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":124 -1
+     (nil))
+(insn 74 73 77 2 (parallel [
+            (set (reg:SI 106 [ _36 ])
+                (plus:SI (reg:SI 136)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":124 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 12 [0xc])) [2 ulPayloadSize+0 S4 A32])
+            (const_int 8 [0x8]))
+        (nil)))
+(insn 77 74 78 2 (set (reg:DI 109 [ PROF_edge_counter_39 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrame") [flags 0x2]  <var_decl 0x7ff21e7d8ab0 __gcov0.ubloxUbxCreateFrame>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxUbxCreateFrame+8 S8 A64])) -1
+     (nil))
+(insn 78 77 79 2 (parallel [
+            (set (reg:DI 110 [ PROF_edge_counter_40 ])
+                (plus:DI (reg:DI 109 [ PROF_edge_counter_39 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 79 78 80 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrame") [flags 0x2]  <var_decl 0x7ff21e7d8ab0 __gcov0.ubloxUbxCreateFrame>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxUbxCreateFrame+8 S8 A64])
+        (reg:DI 110 [ PROF_edge_counter_40 ])) -1
+     (nil))
+(insn 80 79 84 2 (set (reg:SI 111 [ <retval> ])
+        (reg:SI 106 [ _36 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":124 -1
+     (nil))
+(insn 84 80 85 2 (set (reg/i:SI 0 ax)
+        (reg:SI 111 [ <retval> ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":125 -1
+     (nil))
+(insn 85 84 0 2 (use (reg/i:SI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":125 -1
+     (nil))
+
+;; Function ubloxUbxCreateFrameCfgRate (ubloxUbxCreateFrameCfgRate, funcdef_no=6, decl_uid=1582, cgraph_uid=6, symbol_order=7)
+
+Partition 0: size 4 align 4
+	ulFrameSize_5
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 25.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:DI 89 [ PROF_edge_counter_7 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameCfgRate") [flags 0x2]  <var_decl 0x7ff21e7d8a20 __gcov0.ubloxUbxCreateFrameCfgRate>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxCreateFrameCfgRate+0 S8 A64])) -1
+     (nil))
+(insn 6 5 7 2 (parallel [
+            (set (reg:DI 90 [ PROF_edge_counter_8 ])
+                (plus:DI (reg:DI 89 [ PROF_edge_counter_7 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 7 6 8 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameCfgRate") [flags 0x2]  <var_decl 0x7ff21e7d8a20 __gcov0.ubloxUbxCreateFrameCfgRate>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxCreateFrameCfgRate+0 S8 A64])
+        (reg:DI 90 [ PROF_edge_counter_8 ])) -1
+     (nil))
+(insn 8 7 9 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":130 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 9 8 10 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [12  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [12 pOutBuffer+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":130 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 10 9 11 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (const_int 6 [0x6])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":130 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 11 10 12 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [13 pUbxCfgRate+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":130 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 12 11 13 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (const_int 8 [0x8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":130 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 13 12 14 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (const_int 6 [0x6])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":130 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(call_insn 14 13 15 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("ubloxUbxCreateFrame") [flags 0x3]  <function_decl 0x7ff21e741400 ubloxUbxCreateFrame>) [0 ubloxUbxCreateFrame S1 A8])
+            (const_int 32 [0x20]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":130 -1
+     (nil)
+    (nil))
+(insn 15 14 16 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":130 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 16 15 17 2 (set (reg:SI 94)
+        (reg:SI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":130 -1
+     (nil))
+(insn 17 16 18 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 ulFrameSize+0 S4 A32])
+        (reg:SI 94)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":130 -1
+     (nil))
+(insn 18 17 21 2 (set (reg:SI 88 [ _6 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 ulFrameSize+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":133 -1
+     (nil))
+(insn 21 18 22 2 (set (reg:DI 91 [ PROF_edge_counter_9 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameCfgRate") [flags 0x2]  <var_decl 0x7ff21e7d8a20 __gcov0.ubloxUbxCreateFrameCfgRate>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxUbxCreateFrameCfgRate+8 S8 A64])) -1
+     (nil))
+(insn 22 21 23 2 (parallel [
+            (set (reg:DI 92 [ PROF_edge_counter_10 ])
+                (plus:DI (reg:DI 91 [ PROF_edge_counter_9 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 23 22 24 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameCfgRate") [flags 0x2]  <var_decl 0x7ff21e7d8a20 __gcov0.ubloxUbxCreateFrameCfgRate>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxUbxCreateFrameCfgRate+8 S8 A64])
+        (reg:DI 92 [ PROF_edge_counter_10 ])) -1
+     (nil))
+(insn 24 23 28 2 (set (reg:SI 93 [ <retval> ])
+        (reg:SI 88 [ _6 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":133 -1
+     (nil))
+(insn 28 24 29 2 (set (reg/i:SI 0 ax)
+        (reg:SI 93 [ <retval> ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":134 -1
+     (nil))
+(insn 29 28 0 2 (use (reg/i:SI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":134 -1
+     (nil))
+
+;; Function ubloxUbxCreateFrameEnable (ubloxUbxCreateFrameEnable, funcdef_no=7, decl_uid=1587, cgraph_uid=7, symbol_order=8)
+
+Partition 0: size 4 align 4
+	ulFrameSize_10
+Partition 1: size 3 align 1
+	pPayload
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 44.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 15 NOTE_INSN_DELETED)
+(note 15 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 15 5 2 (set (reg:SI 94)
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [0 ubId1+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":138 -1
+     (nil))
+(insn 5 2 8 2 (set (reg:SI 96)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [0 ubId2+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":138 -1
+     (nil))
+(insn 8 5 3 2 (set (reg:SI 98)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [0 ubRate+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":138 -1
+     (nil))
+(insn 3 8 4 2 (set (reg:QI 95)
+        (subreg:QI (reg:SI 94) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":138 -1
+     (nil))
+(insn 4 3 6 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 ubId1+0 S1 A32])
+        (reg:QI 95)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":138 -1
+     (nil))
+(insn 6 4 7 2 (set (reg:QI 97)
+        (subreg:QI (reg:SI 96) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":138 -1
+     (nil))
+(insn 7 6 9 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 ubId2+0 S1 A32])
+        (reg:QI 97)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":138 -1
+     (nil))
+(insn 9 7 10 2 (set (reg:QI 99)
+        (subreg:QI (reg:SI 98) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":138 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [0 ubRate+0 S1 A32])
+        (reg:QI 99)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":138 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 100)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [12 pOutBuffer+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":138 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [12 pOutBuffer+0 S4 A32])
+        (reg/f:SI 100)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":138 -1
+     (nil))
+(note 13 12 14 2 NOTE_INSN_FUNCTION_BEG)
+(insn 14 13 17 2 (parallel [
+            (set (mem/v/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [14 D.2368+0 S4 A32])
+                (unspec:SI [
+                        (const_int 20 [0x14])
+                    ] UNSPEC_SP_TLS_SET))
+            (set (scratch:SI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":138 -1
+     (nil))
+(insn 17 14 18 2 (set (reg:DI 89 [ PROF_edge_counter_13 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameEnable") [flags 0x2]  <var_decl 0x7ff21e7d8990 __gcov0.ubloxUbxCreateFrameEnable>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxCreateFrameEnable+0 S8 A64])) -1
+     (nil))
+(insn 18 17 19 2 (parallel [
+            (set (reg:DI 90 [ PROF_edge_counter_14 ])
+                (plus:DI (reg:DI 89 [ PROF_edge_counter_13 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 19 18 20 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameEnable") [flags 0x2]  <var_decl 0x7ff21e7d8990 __gcov0.ubloxUbxCreateFrameEnable>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxCreateFrameEnable+0 S8 A64])
+        (reg:DI 90 [ PROF_edge_counter_14 ])) -1
+     (nil))
+(insn 20 19 21 2 (set (reg:QI 101)
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 ubId1+0 S1 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":139 -1
+     (nil))
+(insn 21 20 22 2 (set (mem/j/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -7 [0xfffffffffffffff9])) [0 pPayload+0 S1 A8])
+        (reg:QI 101)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":139 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:QI 102)
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 ubId2+0 S1 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":139 -1
+     (nil))
+(insn 23 22 24 2 (set (mem/j/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -6 [0xfffffffffffffffa])) [0 pPayload+1 S1 A8])
+        (reg:QI 102)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":139 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:QI 103)
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [0 ubRate+0 S1 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":139 -1
+     (nil))
+(insn 25 24 26 2 (set (mem/j/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -5 [0xfffffffffffffffb])) [0 pPayload+2 S1 A8])
+        (reg:QI 103)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":139 -1
+     (nil))
+(insn 26 25 27 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":140 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 27 26 28 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [12  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [12 pOutBuffer+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":140 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 28 27 29 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (const_int 3 [0x3])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":140 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 29 28 30 2 (parallel [
+            (set (reg:SI 104)
+                (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -7 [0xfffffffffffffff9])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":140 -1
+     (nil))
+(insn 30 29 31 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [12  S4 A32])
+        (reg:SI 104)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":140 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 31 30 32 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (const_int 1 [0x1])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":140 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 32 31 33 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (const_int 6 [0x6])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":140 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(call_insn 33 32 34 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("ubloxUbxCreateFrame") [flags 0x3]  <function_decl 0x7ff21e741400 ubloxUbxCreateFrame>) [0 ubloxUbxCreateFrame S1 A8])
+            (const_int 32 [0x20]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":140 -1
+     (nil)
+    (nil))
+(insn 34 33 35 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":140 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 35 34 36 2 (set (reg:SI 105)
+        (reg:SI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":140 -1
+     (nil))
+(insn 36 35 37 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 ulFrameSize+0 S4 A32])
+        (reg:SI 105)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":140 -1
+     (nil))
+(insn 37 36 40 2 (set (reg:SI 88 [ _11 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 ulFrameSize+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":143 -1
+     (nil))
+(insn 40 37 41 2 (set (reg:DI 91 [ PROF_edge_counter_15 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameEnable") [flags 0x2]  <var_decl 0x7ff21e7d8990 __gcov0.ubloxUbxCreateFrameEnable>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxUbxCreateFrameEnable+8 S8 A64])) -1
+     (nil))
+(insn 41 40 42 2 (parallel [
+            (set (reg:DI 92 [ PROF_edge_counter_16 ])
+                (plus:DI (reg:DI 91 [ PROF_edge_counter_15 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 42 41 43 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameEnable") [flags 0x2]  <var_decl 0x7ff21e7d8990 __gcov0.ubloxUbxCreateFrameEnable>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxUbxCreateFrameEnable+8 S8 A64])
+        (reg:DI 92 [ PROF_edge_counter_16 ])) -1
+     (nil))
+(insn 43 42 47 2 (set (reg:SI 93 [ <retval> ])
+        (reg:SI 88 [ _11 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":143 -1
+     (nil))
+(insn 47 43 48 2 (set (reg/i:SI 0 ax)
+        (reg:SI 93 [ <retval> ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":144 -1
+     (nil))
+(insn 48 47 49 2 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                                (const_int -4 [0xfffffffffffffffc])) [14 D.2368+0 S4 A32])
+                        (const_int 20 [0x14])
+                    ] UNSPEC_SP_TLS_TEST))
+            (clobber (scratch:SI))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":144 -1
+     (nil))
+(jump_insn 49 48 55 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 52)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":144 -1
+     (nil)
+ -> 52)
+(note 55 49 50 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(call_insn 50 55 51 6 (call (mem:QI (symbol_ref:SI ("__stack_chk_fail_local") [flags 0x43]  <function_decl 0x7ff21e42b300 __stack_chk_fail_local>) [0 __stack_chk_fail_local S1 A8])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":144 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (expr_list:REG_EH_REGION (const_int 0 [0])
+                (nil))))
+    (nil))
+(barrier 51 50 52)
+(code_label 52 51 56 7 19 (nil) [1 uses])
+(note 56 52 53 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 53 56 0 7 (use (reg/i:SI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":144 -1
+     (nil))
+
+;; Function ubloxUbxCreateFrameCfgNmea (ubloxUbxCreateFrameCfgNmea, funcdef_no=8, decl_uid=1590, cgraph_uid=8, symbol_order=9)
+
+Partition 0: size 4 align 4
+	ulFrameSize_5
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 25.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:DI 89 [ PROF_edge_counter_7 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameCfgNmea") [flags 0x2]  <var_decl 0x7ff21e7d8900 __gcov0.ubloxUbxCreateFrameCfgNmea>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxCreateFrameCfgNmea+0 S8 A64])) -1
+     (nil))
+(insn 6 5 7 2 (parallel [
+            (set (reg:DI 90 [ PROF_edge_counter_8 ])
+                (plus:DI (reg:DI 89 [ PROF_edge_counter_7 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 7 6 8 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameCfgNmea") [flags 0x2]  <var_decl 0x7ff21e7d8900 __gcov0.ubloxUbxCreateFrameCfgNmea>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxCreateFrameCfgNmea+0 S8 A64])
+        (reg:DI 90 [ PROF_edge_counter_8 ])) -1
+     (nil))
+(insn 8 7 9 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":149 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 9 8 10 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [12  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [12 pOutBuffer+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":149 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 10 9 11 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (const_int 20 [0x14])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":149 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 11 10 12 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [15 pUbxCfgNmea+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":149 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 12 11 13 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (const_int 23 [0x17])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":149 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 13 12 14 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (const_int 6 [0x6])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":149 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(call_insn 14 13 15 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("ubloxUbxCreateFrame") [flags 0x3]  <function_decl 0x7ff21e741400 ubloxUbxCreateFrame>) [0 ubloxUbxCreateFrame S1 A8])
+            (const_int 32 [0x20]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":149 -1
+     (nil)
+    (nil))
+(insn 15 14 16 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":149 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 16 15 17 2 (set (reg:SI 94)
+        (reg:SI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":149 -1
+     (nil))
+(insn 17 16 18 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 ulFrameSize+0 S4 A32])
+        (reg:SI 94)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":149 -1
+     (nil))
+(insn 18 17 21 2 (set (reg:SI 88 [ _6 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 ulFrameSize+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":152 -1
+     (nil))
+(insn 21 18 22 2 (set (reg:DI 91 [ PROF_edge_counter_9 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameCfgNmea") [flags 0x2]  <var_decl 0x7ff21e7d8900 __gcov0.ubloxUbxCreateFrameCfgNmea>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxUbxCreateFrameCfgNmea+8 S8 A64])) -1
+     (nil))
+(insn 22 21 23 2 (parallel [
+            (set (reg:DI 92 [ PROF_edge_counter_10 ])
+                (plus:DI (reg:DI 91 [ PROF_edge_counter_9 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 23 22 24 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameCfgNmea") [flags 0x2]  <var_decl 0x7ff21e7d8900 __gcov0.ubloxUbxCreateFrameCfgNmea>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxUbxCreateFrameCfgNmea+8 S8 A64])
+        (reg:DI 92 [ PROF_edge_counter_10 ])) -1
+     (nil))
+(insn 24 23 28 2 (set (reg:SI 93 [ <retval> ])
+        (reg:SI 88 [ _6 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":152 -1
+     (nil))
+(insn 28 24 29 2 (set (reg/i:SI 0 ax)
+        (reg:SI 93 [ <retval> ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":153 -1
+     (nil))
+(insn 29 28 0 2 (use (reg/i:SI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":153 -1
+     (nil))
+
+;; Function ubloxUbxCreateFrameCfgGnss (ubloxUbxCreateFrameCfgGnss, funcdef_no=9, decl_uid=1593, cgraph_uid=9, symbol_order=10)
+
+Partition 0: size 4 align 4
+	ulFrameSize_5
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 25.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:DI 89 [ PROF_edge_counter_7 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameCfgGnss") [flags 0x2]  <var_decl 0x7ff21e7d8870 __gcov0.ubloxUbxCreateFrameCfgGnss>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxCreateFrameCfgGnss+0 S8 A64])) -1
+     (nil))
+(insn 6 5 7 2 (parallel [
+            (set (reg:DI 90 [ PROF_edge_counter_8 ])
+                (plus:DI (reg:DI 89 [ PROF_edge_counter_7 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 7 6 8 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameCfgGnss") [flags 0x2]  <var_decl 0x7ff21e7d8870 __gcov0.ubloxUbxCreateFrameCfgGnss>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxCreateFrameCfgGnss+0 S8 A64])
+        (reg:DI 90 [ PROF_edge_counter_8 ])) -1
+     (nil))
+(insn 8 7 9 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":158 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 9 8 10 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [12  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [12 pOutBuffer+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":158 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 10 9 11 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (const_int 60 [0x3c])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":158 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 11 10 12 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [16 pUbxCfgGnss+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":158 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 12 11 13 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (const_int 62 [0x3e])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":158 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 13 12 14 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (const_int 6 [0x6])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":158 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(call_insn 14 13 15 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("ubloxUbxCreateFrame") [flags 0x3]  <function_decl 0x7ff21e741400 ubloxUbxCreateFrame>) [0 ubloxUbxCreateFrame S1 A8])
+            (const_int 32 [0x20]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":158 -1
+     (nil)
+    (nil))
+(insn 15 14 16 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":158 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 16 15 17 2 (set (reg:SI 94)
+        (reg:SI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":158 -1
+     (nil))
+(insn 17 16 18 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 ulFrameSize+0 S4 A32])
+        (reg:SI 94)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":158 -1
+     (nil))
+(insn 18 17 21 2 (set (reg:SI 88 [ _6 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 ulFrameSize+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":161 -1
+     (nil))
+(insn 21 18 22 2 (set (reg:DI 91 [ PROF_edge_counter_9 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameCfgGnss") [flags 0x2]  <var_decl 0x7ff21e7d8870 __gcov0.ubloxUbxCreateFrameCfgGnss>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxUbxCreateFrameCfgGnss+8 S8 A64])) -1
+     (nil))
+(insn 22 21 23 2 (parallel [
+            (set (reg:DI 92 [ PROF_edge_counter_10 ])
+                (plus:DI (reg:DI 91 [ PROF_edge_counter_9 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 23 22 24 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxCreateFrameCfgGnss") [flags 0x2]  <var_decl 0x7ff21e7d8870 __gcov0.ubloxUbxCreateFrameCfgGnss>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxUbxCreateFrameCfgGnss+8 S8 A64])
+        (reg:DI 92 [ PROF_edge_counter_10 ])) -1
+     (nil))
+(insn 24 23 28 2 (set (reg:SI 93 [ <retval> ])
+        (reg:SI 88 [ _6 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":161 -1
+     (nil))
+(insn 28 24 29 2 (set (reg/i:SI 0 ax)
+        (reg:SI 93 [ <retval> ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":162 -1
+     (nil))
+(insn 29 28 0 2 (use (reg/i:SI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":162 -1
+     (nil))
+
+;; Function ubloxUbxOnBinary (ubloxUbxOnBinary, funcdef_no=10, decl_uid=1529, cgraph_uid=10, symbol_order=11)
+
+Partition 3: size 2 align 2
+	uwCalcCrc_34
+Partition 2: size 2 align 2
+	uwCrc_33
+Partition 1: size 1 align 1
+	isProcessed_24
+Partition 0: size 1 align 1
+	isParsed_22
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+
+;; Generating RTL for gimple basic block 23
+
+;; Generating RTL for gimple basic block 24
+
+;; Generating RTL for gimple basic block 25
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 27 into block 26...
+Merged blocks 26 and 27.
+Merged 26 and 27 without moving.
+Removing jump 212.
+Merging block 28 into block 26...
+Merged blocks 26 and 28.
+Merged 26 and 28 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg:SI 146)
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [0 ubReceivedByte+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":164 -1
+     (nil))
+(insn 3 2 4 2 (set (reg:QI 147)
+        (subreg:QI (reg:SI 146) 0)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":164 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 ubReceivedByte+0 S1 A32])
+        (reg:QI 147)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":164 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -6 [0xfffffffffffffffa])) [6 isParsed+0 S1 A8])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":167 -1
+     (nil))
+(insn 9 8 10 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -5 [0xfffffffffffffffb])) [6 isProcessed+0 S1 A8])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":167 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 88 [ sUbxParserState.2_1 ])
+        (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("sUbxParserState.2236") [flags 0x2]  <var_decl 0x7ff21e742ea0 sUbxParserState>)
+                        ] UNSPEC_GOTOFF))) [17 sUbxParserState+0 S4 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":169 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 88 [ sUbxParserState.2_1 ])
+            (const_int 8 [0x8]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":169 -1
+     (nil))
+(jump_insn 12 11 218 2 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 181)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":169 -1
+     (nil)
+ -> 181)
+(note 218 12 13 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 13 218 14 4 (parallel [
+            (set (reg:SI 148)
+                (ashift:SI (reg:SI 88 [ sUbxParserState.2_1 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":169 -1
+     (nil))
+(insn 14 13 15 4 (set (reg:SI 149)
+        (mem/u/c:SI (plus:SI (plus:SI (reg:SI 148)
+                    (reg:SI 87))
+                (const:SI (unspec:SI [
+                            (label_ref:SI 17)
+                        ] UNSPEC_GOTOFF))) [0  S4 A8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":169 -1
+     (insn_list:REG_LABEL_OPERAND 17 (nil)))
+(insn 15 14 16 4 (parallel [
+            (set (reg:SI 150)
+                (plus:SI (reg:SI 149)
+                    (reg:SI 87)))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":169 -1
+     (nil))
+(jump_insn 16 15 17 4 (parallel [
+            (set (pc)
+                (reg:SI 150))
+            (use (label_ref 17))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":169 -1
+     (nil)
+ -> 17)
+(code_label 17 16 18 27 (nil) [2 uses])
+(jump_table_data 18 17 19 (addr_diff_vec:SI (label_ref:SI 17)
+         [
+            (label_ref:SI 20)
+            (label_ref:SI 36)
+            (label_ref:SI 52)
+            (label_ref:SI 62)
+            (label_ref:SI 82)
+            (label_ref:SI 72)
+            (label_ref:SI 95)
+            (label_ref:SI 129)
+            (label_ref:SI 139)
+        ]
+        (const_int 0 [0])
+        (const_int 0 [0])))
+(barrier 19 18 20)
+(code_label 20 19 21 5 26 (nil) [1 uses])
+(note 21 20 22 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [0 ubReceivedByte+0 S1 A32])
+            (const_int -75 [0xffffffffffffffb5]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":172 -1
+     (nil))
+(jump_insn 23 22 24 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 29)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":172 -1
+     (nil)
+ -> 29)
+(note 24 23 25 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 6 (set (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("sUbxParserState.2236") [flags 0x2]  <var_decl 0x7ff21e742ea0 sUbxParserState>)
+                        ] UNSPEC_GOTOFF))) [17 sUbxParserState+0 S4 A32])
+        (const_int 1 [0x1])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":173 -1
+     (nil))
+(insn 26 25 27 6 (set (reg:DI 111 [ PROF_edge_counter_66 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxUbxOnBinary+8 S8 A64])) -1
+     (nil))
+(insn 27 26 28 6 (parallel [
+            (set (reg:DI 112 [ PROF_edge_counter_67 ])
+                (plus:DI (reg:DI 111 [ PROF_edge_counter_66 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 28 27 29 6 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 8 [0x8])))) [5 __gcov0.ubloxUbxOnBinary+8 S8 A64])
+        (reg:DI 112 [ PROF_edge_counter_67 ])) -1
+     (nil))
+(code_label 29 28 30 7 36 (nil) [1 uses])
+(note 30 29 31 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 7 (set (reg:DI 113 [ PROF_edge_counter_68 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 16 [0x10])))) [5 __gcov0.ubloxUbxOnBinary+16 S8 A128])) -1
+     (nil))
+(insn 32 31 33 7 (parallel [
+            (set (reg:DI 114 [ PROF_edge_counter_69 ])
+                (plus:DI (reg:DI 113 [ PROF_edge_counter_68 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 33 32 34 7 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 16 [0x10])))) [5 __gcov0.ubloxUbxOnBinary+16 S8 A128])
+        (reg:DI 114 [ PROF_edge_counter_69 ])) -1
+     (nil))
+(jump_insn 34 33 35 7 (set (pc)
+        (label_ref 188)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":175 -1
+     (nil)
+ -> 188)
+(barrier 35 34 36)
+(code_label 36 35 37 8 28 (nil) [1 uses])
+(note 37 36 38 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 38 37 39 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [0 ubReceivedByte+0 S1 A32])
+            (const_int 98 [0x62]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":178 -1
+     (nil))
+(jump_insn 39 38 40 8 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 45)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":178 -1
+     (nil)
+ -> 45)
+(note 40 39 41 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 42 9 (set (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("sUbxParserState.2236") [flags 0x2]  <var_decl 0x7ff21e742ea0 sUbxParserState>)
+                        ] UNSPEC_GOTOFF))) [17 sUbxParserState+0 S4 A32])
+        (const_int 2 [0x2])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":179 -1
+     (nil))
+(insn 42 41 43 9 (set (reg:DI 115 [ PROF_edge_counter_70 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 24 [0x18])))) [5 __gcov0.ubloxUbxOnBinary+24 S8 A64])) -1
+     (nil))
+(insn 43 42 44 9 (parallel [
+            (set (reg:DI 116 [ PROF_edge_counter_71 ])
+                (plus:DI (reg:DI 115 [ PROF_edge_counter_70 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 44 43 45 9 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 24 [0x18])))) [5 __gcov0.ubloxUbxOnBinary+24 S8 A64])
+        (reg:DI 116 [ PROF_edge_counter_71 ])) -1
+     (nil))
+(code_label 45 44 46 10 38 (nil) [1 uses])
+(note 46 45 47 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 47 46 48 10 (set (reg:DI 117 [ PROF_edge_counter_72 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 32 [0x20])))) [5 __gcov0.ubloxUbxOnBinary+32 S8 A256])) -1
+     (nil))
+(insn 48 47 49 10 (parallel [
+            (set (reg:DI 118 [ PROF_edge_counter_73 ])
+                (plus:DI (reg:DI 117 [ PROF_edge_counter_72 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 49 48 50 10 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 32 [0x20])))) [5 __gcov0.ubloxUbxOnBinary+32 S8 A256])
+        (reg:DI 118 [ PROF_edge_counter_73 ])) -1
+     (nil))
+(jump_insn 50 49 51 10 (set (pc)
+        (label_ref 188)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":181 -1
+     (nil)
+ -> 188)
+(barrier 51 50 52)
+(code_label 52 51 53 11 29 (nil) [1 uses])
+(note 53 52 54 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 54 53 55 11 (set (reg:QI 151)
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 ubReceivedByte+0 S1 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":184 -1
+     (nil))
+(insn 55 54 56 11 (set (mem/c:QI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+                        ] UNSPEC_GOTOFF))) [0 sUbxFrame.ubClassId+0 S1 A256])
+        (reg:QI 151)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":184 -1
+     (nil))
+(insn 56 55 57 11 (set (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("sUbxParserState.2236") [flags 0x2]  <var_decl 0x7ff21e742ea0 sUbxParserState>)
+                        ] UNSPEC_GOTOFF))) [17 sUbxParserState+0 S4 A32])
+        (const_int 3 [0x3])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":185 -1
+     (nil))
+(insn 57 56 58 11 (set (reg:DI 119 [ PROF_edge_counter_74 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 40 [0x28])))) [5 __gcov0.ubloxUbxOnBinary+40 S8 A64])) -1
+     (nil))
+(insn 58 57 59 11 (parallel [
+            (set (reg:DI 120 [ PROF_edge_counter_75 ])
+                (plus:DI (reg:DI 119 [ PROF_edge_counter_74 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 59 58 60 11 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 40 [0x28])))) [5 __gcov0.ubloxUbxOnBinary+40 S8 A64])
+        (reg:DI 120 [ PROF_edge_counter_75 ])) -1
+     (nil))
+(jump_insn 60 59 61 11 (set (pc)
+        (label_ref 188)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":186 -1
+     (nil)
+ -> 188)
+(barrier 61 60 62)
+(code_label 62 61 63 12 30 (nil) [1 uses])
+(note 63 62 64 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 64 63 65 12 (set (reg:QI 152)
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 ubReceivedByte+0 S1 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":189 -1
+     (nil))
+(insn 65 64 66 12 (set (mem/c:QI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 1 [0x1])))) [0 sUbxFrame.ubId+0 S1 A8])
+        (reg:QI 152)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":189 -1
+     (nil))
+(insn 66 65 67 12 (set (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("sUbxParserState.2236") [flags 0x2]  <var_decl 0x7ff21e742ea0 sUbxParserState>)
+                        ] UNSPEC_GOTOFF))) [17 sUbxParserState+0 S4 A32])
+        (const_int 5 [0x5])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":190 -1
+     (nil))
+(insn 67 66 68 12 (set (reg:DI 121 [ PROF_edge_counter_76 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 48 [0x30])))) [5 __gcov0.ubloxUbxOnBinary+48 S8 A128])) -1
+     (nil))
+(insn 68 67 69 12 (parallel [
+            (set (reg:DI 122 [ PROF_edge_counter_77 ])
+                (plus:DI (reg:DI 121 [ PROF_edge_counter_76 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 69 68 70 12 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 48 [0x30])))) [5 __gcov0.ubloxUbxOnBinary+48 S8 A128])
+        (reg:DI 122 [ PROF_edge_counter_77 ])) -1
+     (nil))
+(jump_insn 70 69 71 12 (set (pc)
+        (label_ref 188)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":191 -1
+     (nil)
+ -> 188)
+(barrier 71 70 72)
+(code_label 72 71 73 13 32 (nil) [1 uses])
+(note 73 72 74 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 74 73 75 13 (set (reg:HI 89 [ _2 ])
+        (zero_extend:HI (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [0 ubReceivedByte+0 S1 A32]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":194 -1
+     (nil))
+(insn 75 74 76 13 (set (mem/c:HI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 2 [0x2])))) [8 sUbxFrame.ubLen+0 S2 A16])
+        (reg:HI 89 [ _2 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":194 -1
+     (nil))
+(insn 76 75 77 13 (set (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("sUbxParserState.2236") [flags 0x2]  <var_decl 0x7ff21e742ea0 sUbxParserState>)
+                        ] UNSPEC_GOTOFF))) [17 sUbxParserState+0 S4 A32])
+        (const_int 4 [0x4])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":195 -1
+     (nil))
+(insn 77 76 78 13 (set (reg:DI 123 [ PROF_edge_counter_78 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 56 [0x38])))) [5 __gcov0.ubloxUbxOnBinary+56 S8 A64])) -1
+     (nil))
+(insn 78 77 79 13 (parallel [
+            (set (reg:DI 124 [ PROF_edge_counter_79 ])
+                (plus:DI (reg:DI 123 [ PROF_edge_counter_78 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 79 78 80 13 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 56 [0x38])))) [5 __gcov0.ubloxUbxOnBinary+56 S8 A64])
+        (reg:DI 124 [ PROF_edge_counter_79 ])) -1
+     (nil))
+(jump_insn 80 79 81 13 (set (pc)
+        (label_ref 188)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":196 -1
+     (nil)
+ -> 188)
+(barrier 81 80 82)
+(code_label 82 81 83 14 31 (nil) [1 uses])
+(note 83 82 84 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 84 83 85 14 (set (reg:HI 90 [ _3 ])
+        (mem/c:HI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 2 [0x2])))) [8 sUbxFrame.ubLen+0 S2 A16])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":199 -1
+     (nil))
+(insn 85 84 86 14 (set (reg:HI 91 [ _4 ])
+        (zero_extend:HI (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [0 ubReceivedByte+0 S1 A32]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":199 -1
+     (nil))
+(insn 86 85 87 14 (parallel [
+            (set (reg:HI 92 [ _5 ])
+                (ashift:HI (reg:HI 91 [ _4 ])
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":199 -1
+     (nil))
+(insn 87 86 88 14 (parallel [
+            (set (reg:HI 93 [ _6 ])
+                (plus:HI (reg:HI 90 [ _3 ])
+                    (reg:HI 92 [ _5 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":199 -1
+     (nil))
+(insn 88 87 89 14 (set (mem/c:HI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 2 [0x2])))) [8 sUbxFrame.ubLen+0 S2 A16])
+        (reg:HI 93 [ _6 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":199 -1
+     (nil))
+(insn 89 88 90 14 (set (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("sUbxParserState.2236") [flags 0x2]  <var_decl 0x7ff21e742ea0 sUbxParserState>)
+                        ] UNSPEC_GOTOFF))) [17 sUbxParserState+0 S4 A32])
+        (const_int 6 [0x6])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":200 -1
+     (nil))
+(insn 90 89 91 14 (set (reg:DI 125 [ PROF_edge_counter_80 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 64 [0x40])))) [5 __gcov0.ubloxUbxOnBinary+64 S8 A256])) -1
+     (nil))
+(insn 91 90 92 14 (parallel [
+            (set (reg:DI 126 [ PROF_edge_counter_81 ])
+                (plus:DI (reg:DI 125 [ PROF_edge_counter_80 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 92 91 93 14 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 64 [0x40])))) [5 __gcov0.ubloxUbxOnBinary+64 S8 A256])
+        (reg:DI 126 [ PROF_edge_counter_81 ])) -1
+     (nil))
+(jump_insn 93 92 94 14 (set (pc)
+        (label_ref 188)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":201 -1
+     (nil)
+ -> 188)
+(barrier 94 93 95)
+(code_label 95 94 96 15 33 (nil) [1 uses])
+(note 96 95 97 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 97 96 98 15 (set (reg:HI 94 [ ubPayloadIdx.3_7 ])
+        (mem/c:HI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("ubPayloadIdx.2248") [flags 0x2]  <var_decl 0x7ff21e7b6120 ubPayloadIdx>)
+                        ] UNSPEC_GOTOFF))) [8 ubPayloadIdx+0 S2 A16])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":205 -1
+     (nil))
+(insn 98 97 99 15 (set (reg:SI 95 [ _8 ])
+        (zero_extend:SI (reg:HI 94 [ ubPayloadIdx.3_7 ]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":205 -1
+     (nil))
+(insn 99 98 100 15 (set (reg:QI 153)
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 ubReceivedByte+0 S1 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":205 -1
+     (nil))
+(insn 100 99 101 15 (set (mem/j:QI (plus:SI (plus:SI (reg:SI 87)
+                    (reg:SI 95 [ _8 ]))
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 4 [0x4])))) [0 sUbxFrame.ubPayloadBuffer S1 A8])
+        (reg:QI 153)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":205 -1
+     (nil))
+(insn 101 100 102 15 (set (reg:HI 96 [ ubPayloadIdx.4_9 ])
+        (mem/c:HI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("ubPayloadIdx.2248") [flags 0x2]  <var_decl 0x7ff21e7b6120 ubPayloadIdx>)
+                        ] UNSPEC_GOTOFF))) [8 ubPayloadIdx+0 S2 A16])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":206 -1
+     (nil))
+(insn 102 101 103 15 (parallel [
+            (set (reg:HI 97 [ _11 ])
+                (plus:HI (reg:HI 96 [ ubPayloadIdx.4_9 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":206 -1
+     (nil))
+(insn 103 102 104 15 (set (mem/c:HI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("ubPayloadIdx.2248") [flags 0x2]  <var_decl 0x7ff21e7b6120 ubPayloadIdx>)
+                        ] UNSPEC_GOTOFF))) [8 ubPayloadIdx+0 S2 A16])
+        (reg:HI 97 [ _11 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":206 -1
+     (nil))
+(insn 104 103 105 15 (set (reg:HI 98 [ _12 ])
+        (mem/c:HI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 2 [0x2])))) [8 sUbxFrame.ubLen+0 S2 A16])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":207 -1
+     (nil))
+(insn 105 104 106 15 (set (reg:HI 99 [ ubPayloadIdx.6_13 ])
+        (mem/c:HI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("ubPayloadIdx.2248") [flags 0x2]  <var_decl 0x7ff21e7b6120 ubPayloadIdx>)
+                        ] UNSPEC_GOTOFF))) [8 ubPayloadIdx+0 S2 A16])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":207 -1
+     (nil))
+(insn 106 105 107 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 98 [ _12 ])
+            (reg:HI 99 [ ubPayloadIdx.6_13 ]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":207 -1
+     (nil))
+(jump_insn 107 106 108 15 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 115)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":207 -1
+     (nil)
+ -> 115)
+(note 108 107 109 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 109 108 110 16 (set (reg:DI 127 [ PROF_edge_counter_82 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 72 [0x48])))) [5 __gcov0.ubloxUbxOnBinary+72 S8 A64])) -1
+     (nil))
+(insn 110 109 111 16 (parallel [
+            (set (reg:DI 128 [ PROF_edge_counter_83 ])
+                (plus:DI (reg:DI 127 [ PROF_edge_counter_82 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 111 110 112 16 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 72 [0x48])))) [5 __gcov0.ubloxUbxOnBinary+72 S8 A64])
+        (reg:DI 128 [ PROF_edge_counter_83 ])) -1
+     (nil))
+(insn 112 111 113 16 (set (reg:HI 100 [ ubPayloadIdx.7_14 ])
+        (mem/c:HI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("ubPayloadIdx.2248") [flags 0x2]  <var_decl 0x7ff21e7b6120 ubPayloadIdx>)
+                        ] UNSPEC_GOTOFF))) [8 ubPayloadIdx+0 S2 A16])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":207 -1
+     (nil))
+(insn 113 112 114 16 (set (reg:CC 17 flags)
+        (compare:CC (reg:HI 100 [ ubPayloadIdx.7_14 ])
+            (const_int 255 [0xff]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":207 -1
+     (nil))
+(jump_insn 114 113 115 16 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 122)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":207 -1
+     (nil)
+ -> 122)
+(code_label 115 114 116 17 39 (nil) [1 uses])
+(note 116 115 117 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 117 116 118 17 (set (mem/c:HI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("ubPayloadIdx.2248") [flags 0x2]  <var_decl 0x7ff21e7b6120 ubPayloadIdx>)
+                        ] UNSPEC_GOTOFF))) [8 ubPayloadIdx+0 S2 A16])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":208 -1
+     (nil))
+(insn 118 117 119 17 (set (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("sUbxParserState.2236") [flags 0x2]  <var_decl 0x7ff21e742ea0 sUbxParserState>)
+                        ] UNSPEC_GOTOFF))) [17 sUbxParserState+0 S4 A32])
+        (const_int 7 [0x7])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":209 -1
+     (nil))
+(insn 119 118 120 17 (set (reg:DI 129 [ PROF_edge_counter_84 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 80 [0x50])))) [5 __gcov0.ubloxUbxOnBinary+80 S8 A128])) -1
+     (nil))
+(insn 120 119 121 17 (parallel [
+            (set (reg:DI 130 [ PROF_edge_counter_85 ])
+                (plus:DI (reg:DI 129 [ PROF_edge_counter_84 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 121 120 122 17 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 80 [0x50])))) [5 __gcov0.ubloxUbxOnBinary+80 S8 A128])
+        (reg:DI 130 [ PROF_edge_counter_85 ])) -1
+     (nil))
+(code_label 122 121 123 18 40 (nil) [1 uses])
+(note 123 122 124 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 124 123 125 18 (set (reg:DI 131 [ PROF_edge_counter_86 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 88 [0x58])))) [5 __gcov0.ubloxUbxOnBinary+88 S8 A64])) -1
+     (nil))
+(insn 125 124 126 18 (parallel [
+            (set (reg:DI 132 [ PROF_edge_counter_87 ])
+                (plus:DI (reg:DI 131 [ PROF_edge_counter_86 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 126 125 127 18 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 88 [0x58])))) [5 __gcov0.ubloxUbxOnBinary+88 S8 A64])
+        (reg:DI 132 [ PROF_edge_counter_87 ])) -1
+     (nil))
+(jump_insn 127 126 128 18 (set (pc)
+        (label_ref 188)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":211 -1
+     (nil)
+ -> 188)
+(barrier 128 127 129)
+(code_label 129 128 130 19 34 (nil) [1 uses])
+(note 130 129 131 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 131 130 132 19 (set (reg:QI 154)
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 ubReceivedByte+0 S1 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":214 -1
+     (nil))
+(insn 132 131 133 19 (set (mem/c:QI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 259 [0x103])))) [0 sUbxFrame.ubCRC_A+0 S1 A8])
+        (reg:QI 154)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":214 -1
+     (nil))
+(insn 133 132 134 19 (set (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("sUbxParserState.2236") [flags 0x2]  <var_decl 0x7ff21e742ea0 sUbxParserState>)
+                        ] UNSPEC_GOTOFF))) [17 sUbxParserState+0 S4 A32])
+        (const_int 8 [0x8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":215 -1
+     (nil))
+(insn 134 133 135 19 (set (reg:DI 133 [ PROF_edge_counter_88 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 96 [0x60])))) [5 __gcov0.ubloxUbxOnBinary+96 S8 A256])) -1
+     (nil))
+(insn 135 134 136 19 (parallel [
+            (set (reg:DI 134 [ PROF_edge_counter_89 ])
+                (plus:DI (reg:DI 133 [ PROF_edge_counter_88 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 136 135 137 19 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 96 [0x60])))) [5 __gcov0.ubloxUbxOnBinary+96 S8 A256])
+        (reg:DI 134 [ PROF_edge_counter_89 ])) -1
+     (nil))
+(jump_insn 137 136 138 19 (set (pc)
+        (label_ref 188)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":216 -1
+     (nil)
+ -> 188)
+(barrier 138 137 139)
+(code_label 139 138 140 20 35 (nil) [1 uses])
+(note 140 139 141 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 141 140 142 20 (set (reg:DI 109 [ PROF_edge_counter_64 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxOnBinary+0 S8 A256])) -1
+     (nil))
+(insn 142 141 143 20 (parallel [
+            (set (reg:DI 110 [ PROF_edge_counter_65 ])
+                (plus:DI (reg:DI 109 [ PROF_edge_counter_64 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 143 142 144 20 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxOnBinary+0 S8 A256])
+        (reg:DI 110 [ PROF_edge_counter_65 ])) -1
+     (nil))
+(insn 144 143 145 20 (set (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [8 uwCrc+0 S2 A16])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":219 -1
+     (nil))
+(insn 145 144 146 20 (set (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -2 [0xfffffffffffffffe])) [8 uwCalcCrc+0 S2 A16])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":219 -1
+     (nil))
+(insn 146 145 147 20 (set (reg:QI 155)
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 ubReceivedByte+0 S1 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":220 -1
+     (nil))
+(insn 147 146 148 20 (set (mem/c:QI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 260 [0x104])))) [0 sUbxFrame.ubCRC_B+0 S1 A32])
+        (reg:QI 155)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":220 -1
+     (nil))
+(insn 148 147 149 20 (set (reg:QI 101 [ _15 ])
+        (mem/c:QI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 260 [0x104])))) [0 sUbxFrame.ubCRC_B+0 S1 A32])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":221 -1
+     (nil))
+(insn 149 148 150 20 (set (reg:HI 102 [ _16 ])
+        (zero_extend:HI (reg:QI 101 [ _15 ]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":221 -1
+     (nil))
+(insn 150 149 151 20 (parallel [
+            (set (reg:HI 156)
+                (ashift:HI (reg:HI 102 [ _16 ])
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":221 -1
+     (nil))
+(insn 151 150 152 20 (set (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [8 uwCrc+0 S2 A16])
+        (reg:HI 156)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":221 -1
+     (nil))
+(insn 152 151 153 20 (set (reg:QI 103 [ _17 ])
+        (mem/c:QI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 259 [0x103])))) [0 sUbxFrame.ubCRC_A+0 S1 A8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":222 -1
+     (nil))
+(insn 153 152 154 20 (set (reg:HI 104 [ _18 ])
+        (zero_extend:HI (reg:QI 103 [ _17 ]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":222 -1
+     (nil))
+(insn 154 153 155 20 (parallel [
+            (set (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [8 uwCrc+0 S2 A16])
+                (plus:HI (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [8 uwCrc+0 S2 A16])
+                    (reg:HI 104 [ _18 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":222 -1
+     (nil))
+(insn 155 154 156 20 (set (reg:HI 105 [ _19 ])
+        (mem/c:HI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 2 [0x2])))) [8 sUbxFrame.ubLen+0 S2 A16])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":224 -1
+     (nil))
+(insn 156 155 157 20 (set (reg:SI 106 [ _20 ])
+        (zero_extend:SI (reg:HI 105 [ _19 ]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":224 -1
+     (nil))
+(insn 157 156 158 20 (parallel [
+            (set (reg:SI 107 [ _21 ])
+                (plus:SI (reg:SI 106 [ _20 ])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":223 -1
+     (nil))
+(insn 158 157 159 20 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 107 [ _21 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":223 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 159 158 160 20 (set (reg/f:SI 157)
+        (plus:SI (reg:SI 87)
+            (const:SI (unspec:SI [
+                        (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+                    ] UNSPEC_GOTOFF)))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":223 -1
+     (expr_list:REG_EQUAL (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+        (nil)))
+(insn 160 159 161 20 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (reg/f:SI 157)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":223 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(call_insn 161 160 162 20 (set (reg:HI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("ubloxUbxCalculateChecksum") [flags 0x3]  <function_decl 0x7ff21e741300 ubloxUbxCalculateChecksum>) [0 ubloxUbxCalculateChecksum S1 A8])
+            (const_int 8 [0x8]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":223 -1
+     (nil)
+    (nil))
+(insn 162 161 163 20 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":223 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 163 162 164 20 (set (reg:HI 158)
+        (reg:HI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":223 -1
+     (nil))
+(insn 164 163 165 20 (set (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -2 [0xfffffffffffffffe])) [8 uwCalcCrc+0 S2 A16])
+        (reg:HI 158)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":223 -1
+     (nil))
+(insn 165 164 166 20 (set (reg:HI 159)
+        (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -2 [0xfffffffffffffffe])) [8 uwCalcCrc+0 S2 A16])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":227 -1
+     (nil))
+(insn 166 165 167 20 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 159)
+            (mem/c:HI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [8 uwCrc+0 S2 A16]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":227 -1
+     (nil))
+(jump_insn 167 166 168 20 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 173)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":227 -1
+     (nil)
+ -> 173)
+(note 168 167 169 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 169 168 170 21 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -6 [0xfffffffffffffffa])) [6 isParsed+0 S1 A8])
+        (const_int 1 [0x1])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":228 -1
+     (nil))
+(insn 170 169 171 21 (set (reg:DI 135 [ PROF_edge_counter_90 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 104 [0x68])))) [5 __gcov0.ubloxUbxOnBinary+104 S8 A64])) -1
+     (nil))
+(insn 171 170 172 21 (parallel [
+            (set (reg:DI 136 [ PROF_edge_counter_91 ])
+                (plus:DI (reg:DI 135 [ PROF_edge_counter_90 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 172 171 173 21 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 104 [0x68])))) [5 __gcov0.ubloxUbxOnBinary+104 S8 A64])
+        (reg:DI 136 [ PROF_edge_counter_91 ])) -1
+     (nil))
+(code_label 173 172 174 22 41 (nil) [1 uses])
+(note 174 173 175 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 175 174 176 22 (set (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("sUbxParserState.2236") [flags 0x2]  <var_decl 0x7ff21e742ea0 sUbxParserState>)
+                        ] UNSPEC_GOTOFF))) [17 sUbxParserState+0 S4 A32])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":230 -1
+     (nil))
+(insn 176 175 177 22 (set (reg:DI 137 [ PROF_edge_counter_92 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 112 [0x70])))) [5 __gcov0.ubloxUbxOnBinary+112 S8 A128])) -1
+     (nil))
+(insn 177 176 178 22 (parallel [
+            (set (reg:DI 138 [ PROF_edge_counter_93 ])
+                (plus:DI (reg:DI 137 [ PROF_edge_counter_92 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 178 177 179 22 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 112 [0x70])))) [5 __gcov0.ubloxUbxOnBinary+112 S8 A128])
+        (reg:DI 138 [ PROF_edge_counter_93 ])) -1
+     (nil))
+(jump_insn 179 178 180 22 (set (pc)
+        (label_ref 188)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":231 -1
+     (nil)
+ -> 188)
+(barrier 180 179 181)
+(code_label 181 180 182 23 25 (nil) [1 uses])
+(note 182 181 183 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 183 182 184 23 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -6 [0xfffffffffffffffa])) [6 isParsed+0 S1 A8])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":234 -1
+     (nil))
+(insn 184 183 185 23 (set (mem/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("sUbxParserState.2236") [flags 0x2]  <var_decl 0x7ff21e742ea0 sUbxParserState>)
+                        ] UNSPEC_GOTOFF))) [17 sUbxParserState+0 S4 A32])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":235 -1
+     (nil))
+(insn 185 184 186 23 (set (reg:DI 139 [ PROF_edge_counter_94 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 120 [0x78])))) [5 __gcov0.ubloxUbxOnBinary+120 S8 A64])) -1
+     (nil))
+(insn 186 185 187 23 (parallel [
+            (set (reg:DI 140 [ PROF_edge_counter_95 ])
+                (plus:DI (reg:DI 139 [ PROF_edge_counter_94 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 187 186 188 23 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 120 [0x78])))) [5 __gcov0.ubloxUbxOnBinary+120 S8 A64])
+        (reg:DI 140 [ PROF_edge_counter_95 ])) -1
+     (nil))
+(code_label 188 187 189 24 37 (nil) [9 uses])
+(note 189 188 190 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 190 189 191 24 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -6 [0xfffffffffffffffa])) [6 isParsed+0 S1 A8])
+            (const_int 0 [0]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":239 -1
+     (nil))
+(jump_insn 191 190 192 24 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 203)
+            (pc))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":239 -1
+     (nil)
+ -> 203)
+(note 192 191 193 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 193 192 194 25 (set (reg:DI 141 [ PROF_edge_counter_96 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 128 [0x80])))) [5 __gcov0.ubloxUbxOnBinary+128 S8 A256])) -1
+     (nil))
+(insn 194 193 195 25 (parallel [
+            (set (reg:DI 142 [ PROF_edge_counter_97 ])
+                (plus:DI (reg:DI 141 [ PROF_edge_counter_96 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 195 194 196 25 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 128 [0x80])))) [5 __gcov0.ubloxUbxOnBinary+128 S8 A256])
+        (reg:DI 142 [ PROF_edge_counter_97 ])) -1
+     (nil))
+(insn 196 195 197 25 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":240 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 197 196 198 25 (set (reg/f:SI 160)
+        (plus:SI (reg:SI 87)
+            (const:SI (unspec:SI [
+                        (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+                    ] UNSPEC_GOTOFF)))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":240 -1
+     (expr_list:REG_EQUAL (symbol_ref:SI ("sUbxFrame.2237") [flags 0x2]  <var_decl 0x7ff21e742f30 sUbxFrame>)
+        (nil)))
+(insn 198 197 199 25 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (reg/f:SI 160)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":240 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(call_insn 199 198 200 25 (set (reg:QI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("ubxHandleInMessage") [flags 0x3]  <function_decl 0x7ff21e7aa100 ubxHandleInMessage>) [0 ubxHandleInMessage S1 A8])
+            (const_int 8 [0x8]))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":240 -1
+     (nil)
+    (nil))
+(insn 200 199 201 25 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":240 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 201 200 202 25 (set (reg:QI 161)
+        (reg:QI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":240 -1
+     (nil))
+(insn 202 201 203 25 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -5 [0xfffffffffffffffb])) [6 isProcessed+0 S1 A8])
+        (reg:QI 161)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":240 -1
+     (nil))
+(code_label 203 202 204 26 42 (nil) [1 uses])
+(note 204 203 205 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 205 204 208 26 (set (reg:QI 108 [ _63 ])
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -5 [0xfffffffffffffffb])) [6 isProcessed+0 S1 A8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":243 -1
+     (nil))
+(insn 208 205 209 26 (set (reg:DI 143 [ PROF_edge_counter_98 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 136 [0x88])))) [5 __gcov0.ubloxUbxOnBinary+136 S8 A64])) -1
+     (nil))
+(insn 209 208 210 26 (parallel [
+            (set (reg:DI 144 [ PROF_edge_counter_99 ])
+                (plus:DI (reg:DI 143 [ PROF_edge_counter_98 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 210 209 211 26 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (plus:SI (unspec:SI [
+                                (symbol_ref:SI ("__gcov0.ubloxUbxOnBinary") [flags 0x2]  <var_decl 0x7ff21e7d87e0 __gcov0.ubloxUbxOnBinary>)
+                            ] UNSPEC_GOTOFF)
+                        (const_int 136 [0x88])))) [5 __gcov0.ubloxUbxOnBinary+136 S8 A64])
+        (reg:DI 144 [ PROF_edge_counter_99 ])) -1
+     (nil))
+(insn 211 210 215 26 (set (reg:QI 145 [ <retval> ])
+        (reg:QI 108 [ _63 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":243 -1
+     (nil))
+(insn 215 211 216 26 (set (reg/i:QI 0 ax)
+        (reg:QI 145 [ <retval> ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":244 -1
+     (nil))
+(insn 216 215 0 26 (use (reg/i:QI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":244 -1
+     (nil))
+
+;; Function ubloxUbxGetInData (ubloxUbxGetInData, funcdef_no=11, decl_uid=1531, cgraph_uid=11, symbol_order=12)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 13.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 92)
+        (mem/u/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("sUbxInData")  <var_decl 0x7ff21e7427e0 sUbxInData>)
+                        ] UNSPEC_GOT))) [9  S4 A8])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":248 -1
+     (nil))
+(insn 6 5 9 2 (set (reg/f:SI 88 [ _1 ])
+        (reg:SI 92)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":248 -1
+     (expr_list:REG_EQUAL (symbol_ref:SI ("sUbxInData")  <var_decl 0x7ff21e7427e0 sUbxInData>)
+        (nil)))
+(insn 9 6 10 2 (set (reg:DI 89 [ PROF_edge_counter_3 ])
+        (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxGetInData") [flags 0x2]  <var_decl 0x7ff21e7d85a0 __gcov0.ubloxUbxGetInData>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxGetInData+0 S8 A64])) -1
+     (nil))
+(insn 10 9 11 2 (parallel [
+            (set (reg:DI 90 [ PROF_edge_counter_4 ])
+                (plus:DI (reg:DI 89 [ PROF_edge_counter_3 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 11 10 12 2 (set (mem/c:DI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("__gcov0.ubloxUbxGetInData") [flags 0x2]  <var_decl 0x7ff21e7d85a0 __gcov0.ubloxUbxGetInData>)
+                        ] UNSPEC_GOTOFF))) [5 __gcov0.ubloxUbxGetInData+0 S8 A64])
+        (reg:DI 90 [ PROF_edge_counter_4 ])) -1
+     (nil))
+(insn 12 11 16 2 (set (reg/f:SI 91 [ <retval> ])
+        (reg/f:SI 88 [ _1 ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":248 -1
+     (nil))
+(insn 16 12 17 2 (set (reg/i:SI 0 ax)
+        (reg/f:SI 91 [ <retval> ])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":249 -1
+     (nil))
+(insn 17 16 0 2 (use (reg/i:SI 0 ax)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":249 -1
+     (nil))
+
+;; Function _GLOBAL__sub_I_00100_0_ubloxPubxCreateCommandSetMessageOutput (_GLOBAL__sub_I_00100_0_ubloxPubxCreateCommandSetMessageOutput, funcdef_no=12, decl_uid=2345, cgraph_uid=15, symbol_order=33)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":249 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 6 5 7 2 (set (reg/f:SI 88)
+        (plus:SI (reg:SI 87)
+            (const:SI (unspec:SI [
+                        (symbol_ref:SI ("*.LPBX0") [flags 0x2]  <var_decl 0x7ff21e7d8e10 *.LPBX0>)
+                    ] UNSPEC_GOTOFF)))) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":249 -1
+     (expr_list:REG_EQUAL (symbol_ref:SI ("*.LPBX0") [flags 0x2]  <var_decl 0x7ff21e7d8e10 *.LPBX0>)
+        (nil)))
+(insn 7 6 8 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [19  S4 A32])
+        (reg/f:SI 88)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":249 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 8 7 9 2 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":249 -1
+     (nil))
+(call_insn 9 8 10 2 (call (mem:QI (symbol_ref:SI ("__gcov_init") [flags 0x41]  <function_decl 0x7ff21e7e2100 __gcov_init>) [0 __gcov_init S1 A8])
+        (const_int 16 [0x10])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":249 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 10 9 0 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":249 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+
+;; Function _GLOBAL__sub_D_00100_1_ubloxPubxCreateCommandSetMessageOutput (_GLOBAL__sub_D_00100_1_ubloxPubxCreateCommandSetMessageOutput, funcdef_no=13, decl_uid=2348, cgraph_uid=16, symbol_order=34)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 3 bx)
+        (reg:SI 87)) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":249 -1
+     (nil))
+(call_insn 6 5 0 2 (call (mem:QI (symbol_ref:SI ("__gcov_exit") [flags 0x41]  <function_decl 0x7ff21e7e2000 __gcov_exit>) [0 __gcov_exit S1 A8])
+        (const_int 0 [0])) "/media/DaneLinux/UC/tt_firmware/deps/aerolibs/c_libs/clib_gnss/src/ublox.c":249 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))

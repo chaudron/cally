@@ -1,0 +1,260 @@
+strict digraph callgraph {
+subgraph cluster_0 {
+node [style=filled,color=grey];
+"strIsEmpty"
+"gnssParseDop"
+"gnssParseTime"
+"gnssParseVelocityOverGround"
+"gnssParseTrack"
+"gnssParseDate"
+"gnssParseDegrees"
+"gnssParseLatitude"
+"gnssParseLongitude"
+"gnssParseAltitude"
+"gnssParseFixQuality"
+"gnssParseAccLatLonAlt"
+"gnssIsFixed"
+"gnssParseSatellites"
+"gnssHasFlag"
+"gnssParseArguments"
+"gnssHasPosition"
+"gnssParseArgumentsRMC"
+"gnssParseArgumentsGGA"
+"gnssParseArgumentsGsa"
+"gnssParseArgumentsGst"
+"gnssParseArgumentsPubxPos"
+"gnssUpdateState"
+"gnssProcessInputLine"
+"gnssTimeToMs"
+"gnssWriteIsoTimestamp"
+"_GLOBAL__sub_I_00100_0_gnssParseTime"
+"_GLOBAL__sub_D_00100_1_gnssParseTime"
+}
+subgraph cluster_1 {
+node [style=filled,color=lightblue];
+"gnssCalculateConstrolSum"
+"gnssCheckControlSum"
+"gnssSplitFrame"
+"gnssDetectFrameType"
+"gnssPreprocessFrame"
+"_GLOBAL__sub_I_00100_0_gnssCalculateConstrolSum"
+"_GLOBAL__sub_D_00100_1_gnssCalculateConstrolSum"
+}
+subgraph cluster_2 {
+node [style=filled,color=red];
+"pmtkCalculateCheckSum"
+"pmtkConcatenateCheckSum"
+"pmtkParseCheckSum"
+"pmtkHasFrameValidSum"
+"pmtkCheckAck"
+"pmtkCreateFrame"
+"_GLOBAL__sub_I_00100_0_pmtkCalculateCheckSum"
+"_GLOBAL__sub_D_00100_1_pmtkCalculateCheckSum"
+}
+subgraph cluster_3 {
+node [style=filled,color=green];
+"ubxProcessNaviPvtMessage"
+"ubxHandleInMessage"
+"ubloxPubxCreateCommandSetMessageOutput"
+"ubloxPubxChangeBaudrate"
+"ubloxUbxCalculateChecksum"
+"ubloxUbxCreateFrame"
+"ubloxUbxCreateFrameCfgRate"
+"ubloxUbxCreateFrameEnable"
+"ubloxUbxCreateFrameCfgNmea"
+"ubloxUbxCreateFrameCfgGnss"
+"ubloxUbxOnBinary"
+"ubloxUbxGetInData"
+"_GLOBAL__sub_I_00100_0_ubloxPubxCreateCommandSetMessageOutput"
+"_GLOBAL__sub_D_00100_1_ubloxPubxCreateCommandSetMessageOutput"
+}
+"_GLOBAL__sub_D_00100_1_gnssCalculateConstrolSum" -> "__gcov_exit";
+"__gcov_exit" [style=dashed]
+"_GLOBAL__sub_D_00100_1_gnssParseTime" -> "__gcov_exit";
+"__gcov_exit" [style=dashed]
+"_GLOBAL__sub_D_00100_1_pmtkCalculateCheckSum" -> "__gcov_exit";
+"__gcov_exit" [style=dashed]
+"_GLOBAL__sub_D_00100_1_ubloxPubxCreateCommandSetMessageOutput" -> "__gcov_exit";
+"__gcov_exit" [style=dashed]
+"_GLOBAL__sub_I_00100_0_gnssCalculateConstrolSum" -> "__gcov_init";
+"__gcov_init" [style=dashed]
+"_GLOBAL__sub_I_00100_0_gnssParseTime" -> "__gcov_init";
+"__gcov_init" [style=dashed]
+"_GLOBAL__sub_I_00100_0_pmtkCalculateCheckSum" -> "__gcov_init";
+"__gcov_init" [style=dashed]
+"_GLOBAL__sub_I_00100_0_ubloxPubxCreateCommandSetMessageOutput" -> "__gcov_init";
+"__gcov_init" [style=dashed]
+"gnssCheckControlSum" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssCheckControlSum" -> "gnssCalculateConstrolSum";
+"gnssCheckControlSum" -> "strCharPos";
+"strCharPos" [style=dashed]
+"gnssCheckControlSum" -> "strTryToInt";
+"strTryToInt" [style=dashed]
+"gnssCheckControlSum" -> "strlen";
+"strlen" [style=dashed]
+"gnssDetectFrameType" -> "strStartsWith";
+"strStartsWith" [style=dashed]
+"gnssDetectFrameType" -> "strcmp";
+"strcmp" [style=dashed]
+"gnssDetectFrameType" -> "strlen";
+"strlen" [style=dashed]
+"gnssParseAccLatLonAlt" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssParseAccLatLonAlt" -> "strTryToFloat";
+"strTryToFloat" [style=dashed]
+"gnssParseAltitude" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssParseAltitude" -> "strToLowercase";
+"strToLowercase" [style=dashed]
+"gnssParseAltitude" -> "strTryToFloat";
+"strTryToFloat" [style=dashed]
+"gnssParseArguments" -> "gnssParseArgumentsGGA";
+"gnssParseArguments" -> "gnssParseArgumentsGsa";
+"gnssParseArguments" -> "gnssParseArgumentsGst";
+"gnssParseArguments" -> "gnssParseArgumentsPubxPos";
+"gnssParseArguments" -> "gnssParseArgumentsRMC";
+"gnssParseArgumentsGGA" -> "gnssParseAltitude";
+"gnssParseArgumentsGGA" -> "gnssParseDop";
+"gnssParseArgumentsGGA" -> "gnssParseFixQuality";
+"gnssParseArgumentsGGA" -> "gnssParseLatitude";
+"gnssParseArgumentsGGA" -> "gnssParseLongitude";
+"gnssParseArgumentsGGA" -> "gnssParseSatellites";
+"gnssParseArgumentsGGA" -> "gnssParseTime";
+"gnssParseArgumentsGsa" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssParseArgumentsGsa" -> "gnssParseDop";
+"gnssParseArgumentsGsa" -> "strIsEmpty";
+"gnssParseArgumentsGsa" -> "strTryToInt";
+"strTryToInt" [style=dashed]
+"gnssParseArgumentsGst" -> "gnssParseAccLatLonAlt";
+"gnssParseArgumentsPubxPos" -> "gnssParseDop";
+"gnssParseArgumentsPubxPos" -> "gnssParseLatitude";
+"gnssParseArgumentsPubxPos" -> "gnssParseLongitude";
+"gnssParseArgumentsPubxPos" -> "gnssParseSatellites";
+"gnssParseArgumentsPubxPos" -> "gnssParseTime";
+"gnssParseArgumentsPubxPos" -> "gnssParseTrack";
+"gnssParseArgumentsPubxPos" -> "strcmp";
+"strcmp" [style=dashed]
+"gnssParseArgumentsRMC" -> "gnssParseDate";
+"gnssParseArgumentsRMC" -> "gnssParseLatitude";
+"gnssParseArgumentsRMC" -> "gnssParseLongitude";
+"gnssParseArgumentsRMC" -> "gnssParseTime";
+"gnssParseArgumentsRMC" -> "gnssParseTrack";
+"gnssParseArgumentsRMC" -> "gnssParseVelocityOverGround";
+"gnssParseDate" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssParseDate" -> "strTryToInt";
+"strTryToInt" [style=dashed]
+"gnssParseDegrees" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssParseDegrees" -> "floorf";
+"floorf" [style=dashed]
+"gnssParseDegrees" -> "strTryToDouble";
+"strTryToDouble" [style=dashed]
+"gnssParseDop" -> "strTryToFloat";
+"strTryToFloat" [style=dashed]
+"gnssParseDop" -> "strcmp";
+"strcmp" [style=dashed]
+"gnssParseFixQuality" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssParseFixQuality" -> "strTryToInt";
+"strTryToInt" [style=dashed]
+"gnssParseLatitude" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssParseLatitude" -> "gnssParseDegrees";
+"gnssParseLatitude" -> "strToLowercase";
+"strToLowercase" [style=dashed]
+"gnssParseLongitude" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssParseLongitude" -> "gnssParseDegrees";
+"gnssParseLongitude" -> "strToLowercase";
+"strToLowercase" [style=dashed]
+"gnssParseSatellites" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssParseSatellites" -> "strTryToInt";
+"strTryToInt" [style=dashed]
+"gnssParseTime" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssParseTime" -> "strTryToIntFractDiv";
+"strTryToIntFractDiv" [style=dashed]
+"gnssParseTrack" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssParseTrack" -> "strTryToFloat";
+"strTryToFloat" [style=dashed]
+"gnssParseVelocityOverGround" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssParseVelocityOverGround" -> "strTryToFloat";
+"strTryToFloat" [style=dashed]
+"gnssPreprocessFrame" -> "gnssCheckControlSum";
+"gnssPreprocessFrame" -> "gnssDetectFrameType";
+"gnssPreprocessFrame" -> "gnssSplitFrame";
+"gnssPreprocessFrame" -> "strCopyMax";
+"strCopyMax" [style=dashed]
+"gnssPreprocessFrame" -> "strchr";
+"strchr" [style=dashed]
+"gnssProcessInputLine" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssProcessInputLine" -> "gnssParseArguments";
+"gnssProcessInputLine" -> "gnssPreprocessFrame";
+"gnssProcessInputLine" -> "gnssUpdateState";
+"gnssSplitFrame" -> "strSplitNoCopy";
+"strSplitNoCopy" [style=dashed]
+"gnssUpdateState" -> "gnssHasPosition";
+"gnssWriteIsoTimestamp" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"gnssWriteIsoTimestamp" -> "sprintf";
+"sprintf" [style=dashed]
+"gnssWriteIsoTimestamp" -> "timeGetHrMinSecFromUtcTimestamp";
+"timeGetHrMinSecFromUtcTimestamp" [style=dashed]
+"pmtkCalculateCheckSum" -> "strCharPos";
+"strCharPos" [style=dashed]
+"pmtkCheckAck" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"pmtkCheckAck" -> "strSplitNoCopy";
+"strSplitNoCopy" [style=dashed]
+"pmtkCheckAck" -> "strStartsWith";
+"strStartsWith" [style=dashed]
+"pmtkCheckAck" -> "strTryToInt";
+"strTryToInt" [style=dashed]
+"pmtkConcatenateCheckSum" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"pmtkConcatenateCheckSum" -> "pmtkCalculateCheckSum";
+"pmtkConcatenateCheckSum" -> "sprintf";
+"sprintf" [style=dashed]
+"pmtkConcatenateCheckSum" -> "strlen";
+"strlen" [style=dashed]
+"pmtkCreateFrame" -> "pmtkConcatenateCheckSum";
+"pmtkCreateFrame" -> "sprintf";
+"sprintf" [style=dashed]
+"pmtkHasFrameValidSum" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"pmtkHasFrameValidSum" -> "pmtkCalculateCheckSum";
+"pmtkHasFrameValidSum" -> "pmtkParseCheckSum";
+"pmtkParseCheckSum" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"pmtkParseCheckSum" -> "strCharPos";
+"strCharPos" [style=dashed]
+"pmtkParseCheckSum" -> "strTryToInt";
+"strTryToInt" [style=dashed]
+"pmtkParseCheckSum" -> "strlen";
+"strlen" [style=dashed]
+"ubloxPubxChangeBaudrate" -> "pmtkConcatenateCheckSum";
+"ubloxPubxChangeBaudrate" -> "sprintf";
+"sprintf" [style=dashed]
+"ubloxPubxCreateCommandSetMessageOutput" -> "pmtkConcatenateCheckSum";
+"ubloxPubxCreateCommandSetMessageOutput" -> "sprintf";
+"sprintf" [style=dashed]
+"ubloxUbxCreateFrame" -> "memcpy";
+"memcpy" [style=dashed]
+"ubloxUbxCreateFrame" -> "ubloxUbxCalculateChecksum";
+"ubloxUbxCreateFrameCfgGnss" -> "ubloxUbxCreateFrame";
+"ubloxUbxCreateFrameCfgNmea" -> "ubloxUbxCreateFrame";
+"ubloxUbxCreateFrameCfgRate" -> "ubloxUbxCreateFrame";
+"ubloxUbxCreateFrameEnable" -> "__stack_chk_fail_local";
+"__stack_chk_fail_local" [style=dashed]
+"ubloxUbxCreateFrameEnable" -> "ubloxUbxCreateFrame";
+"ubloxUbxOnBinary" -> "ubloxUbxCalculateChecksum";
+"ubloxUbxOnBinary" -> "ubxHandleInMessage";
+"ubxHandleInMessage" -> "ubxProcessNaviPvtMessage";
+}

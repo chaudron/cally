@@ -6,13 +6,19 @@
         {
             "label": "graph data",
             "type": "shell",
-            "command": "find . -type f -name \"*.expand\" | xargs cally --no-externs | > out.txt"
-        },        
+            "command": "git ls-files \"testData/*.expand\" | xargs cally > out.dot"
+        },  
+        {
+            "label": "show data",
+            "type": "shell",
+            "command": "cat out.dot",
+            "dependsOn":["graph data"]
+        },      
         {
             "label": "graph image",
             "type": "shell",
-            "command": "cat out.txt | dot -Grankdir=LR -Tpng -o full_caller.png",
-            "dependsOn":["graph data"]
+            "command": "cat out.dot | dot -Grankdir=LR -Tpng -o full_caller.png && mimeopen full_caller.png",
+            "dependsOn":["show data"]
         },
     ]
 }

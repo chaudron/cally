@@ -11,7 +11,16 @@
             "program": "cally.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": ["test.expand"]
+            "args": [
+                "testData/aff.c.229r.expand",
+                "testData/updater_aff.c.229r.expand",
+                "testData/updater_esp.c.229r.expand",
+                "testData/updater_fpga.c.229r.expand",
+                "testData/updater_lib.c.229r.expand",
+                "testData/updater_slip_buffered.c.229r.expand",
+                "testData/updater_ti.c.229r.expand",
+                "testData/updater_uc.c.229r.expand"
+            ]
         }
     ]
 }

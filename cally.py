@@ -525,7 +525,7 @@ def full_call_graph(functions, **kwargs):
     for func in sorted(functions.keys(), key=lambda item:functions[item]["files"][0]):
         if exclude is None or \
             re.match(exclude, func) is None:
-                directory = os.path.dirname(functions[func]["files"][0])
+                directory = functions[func]["files"][0]
                 if directory != last:
                     if last != "":
                         print_buf(std_buf, "}")
@@ -533,7 +533,7 @@ def full_call_graph(functions, **kwargs):
                     print_buf(std_buf, f"node [style=filled,color={cols[cnt]}];")
                     last = directory
                     cnt += 1
-                print_buf(std_buf, '"{}"'.format(func))
+                print_buf(std_buf, f'"{func}"')
     print_buf(std_buf, "}")
 
     for func in sorted(functions.keys()):
