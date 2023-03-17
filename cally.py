@@ -530,6 +530,7 @@ def full_call_graph(functions, **kwargs):
                     if last != "":
                         print_buf(std_buf, "}")
                     print_buf(std_buf, f"subgraph cluster_{cnt}" + " {")
+                    print_buf(std_buf, "rankdir=LR;")
                     print_buf(std_buf, f"node [style=filled,color={cols[cnt]}];")
                     last = directory
                     cnt += 1

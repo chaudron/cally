@@ -1,5 +1,4 @@
 strict digraph callgraph {
-    rankdir=LR;
 subgraph cluster_0 {
 rankdir=LR;
 node [style=filled,color=grey];
@@ -33,7 +32,7 @@ node [style=filled,color=grey];
 "_GLOBAL__sub_D_00100_1_gnssParseTime"
 }
 subgraph cluster_1 {
-    rankdir=LR;
+rankdir=LR;
 node [style=filled,color=lightblue];
 "gnssCalculateConstrolSum"
 "gnssCheckControlSum"
@@ -44,7 +43,7 @@ node [style=filled,color=lightblue];
 "_GLOBAL__sub_D_00100_1_gnssCalculateConstrolSum"
 }
 subgraph cluster_2 {
-    rankdir=LR;
+rankdir=LR;
 node [style=filled,color=red];
 "pmtkCalculateCheckSum"
 "pmtkConcatenateCheckSum"
@@ -56,7 +55,7 @@ node [style=filled,color=red];
 "_GLOBAL__sub_D_00100_1_pmtkCalculateCheckSum"
 }
 subgraph cluster_3 {
-    rankdir=LR;
+rankdir=LR;
 node [style=filled,color=green];
 "ubxProcessNaviPvtMessage"
 "ubxHandleInMessage"
