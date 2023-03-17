@@ -1,0 +1,421 @@
+strict digraph callgraph {
+rankdir=LR;
+subgraph cluster_0 {
+rankdir=LR;
+node [style=filled,color=grey];
+"strIsEmpty"
+"gnssParseDop"
+"gnssParseTime"
+"gnssParseVelocityOverGround"
+"gnssParseTrack"
+"gnssParseDate"
+"gnssParseDegrees"
+"gnssParseLatitude"
+"gnssParseLongitude"
+"gnssParseAltitude"
+"gnssParseFixQuality"
+"gnssParseAccLatLonAlt"
+"gnssIsFixed"
+"gnssParseSatellites"
+"gnssHasFlag"
+"gnssParseArguments"
+"gnssHasPosition"
+"gnssParseArgumentsRMC"
+"gnssParseArgumentsGGA"
+"gnssParseArgumentsGsa"
+"gnssParseArgumentsGst"
+"gnssParseArgumentsPubxPos"
+"gnssUpdateState"
+"gnssProcessInputLine"
+"gnssTimeToMs"
+"gnssWriteIsoTimestamp"
+"_GLOBAL__sub_I_00100_0_gnssParseTime"
+"_GLOBAL__sub_D_00100_1_gnssParseTime"
+}
+subgraph cluster_1 {
+rankdir=LR;
+node [style=filled,color=lightblue];
+"gnssCalculateConstrolSum"
+"gnssCheckControlSum"
+"gnssSplitFrame"
+"gnssDetectFrameType"
+"gnssPreprocessFrame"
+"_GLOBAL__sub_I_00100_0_gnssCalculateConstrolSum"
+"_GLOBAL__sub_D_00100_1_gnssCalculateConstrolSum"
+}
+subgraph cluster_2 {
+rankdir=LR;
+node [style=filled,color=red];
+"pmtkCalculateCheckSum"
+"pmtkConcatenateCheckSum"
+"pmtkParseCheckSum"
+"pmtkHasFrameValidSum"
+"pmtkCheckAck"
+"pmtkCreateFrame"
+"_GLOBAL__sub_I_00100_0_pmtkCalculateCheckSum"
+"_GLOBAL__sub_D_00100_1_pmtkCalculateCheckSum"
+}
+subgraph cluster_3 {
+rankdir=LR;
+node [style=filled,color=green];
+"ubxProcessNaviPvtMessage"
+"ubxHandleInMessage"
+"ubloxPubxCreateCommandSetMessageOutput"
+"ubloxPubxChangeBaudrate"
+"ubloxUbxCalculateChecksum"
+"ubloxUbxCreateFrame"
+"ubloxUbxCreateFrameCfgRate"
+"ubloxUbxCreateFrameEnable"
+"ubloxUbxCreateFrameCfgNmea"
+"ubloxUbxCreateFrameCfgGnss"
+"ubloxUbxOnBinary"
+"ubloxUbxGetInData"
+"_GLOBAL__sub_I_00100_0_ubloxPubxCreateCommandSetMessageOutput"
+"_GLOBAL__sub_D_00100_1_ubloxPubxCreateCommandSetMessageOutput"
+}
+subgraph cluster_4 {
+rankdir=LR;
+node [style=filled,color=yellow];
+"affGetHeaderSize"
+"affGetBlockHeaderSize"
+"affPackBlockHeader"
+"affPackHeader"
+"_GLOBAL__sub_I_00100_0_affGetHeaderSize"
+"_GLOBAL__sub_D_00100_1_affGetHeaderSize"
+}
+subgraph cluster_5 {
+rankdir=LR;
+node [style=filled,color=cyan];
+"affReadHeader"
+"affReadBlockHeader"
+"affFindBlock"
+"affGetBlockStartPos"
+"_GLOBAL__sub_I_00100_0_affReadHeader"
+"_GLOBAL__sub_D_00100_1_affReadHeader"
+}
+subgraph cluster_6 {
+rankdir=LR;
+node [style=filled,color=pink];
+"updaterEspInFile"
+"updaterEspInit"
+"updaterEspSendCurrentBlockHead"
+"updaterEspSendCurrentBlockNextChunk"
+"updaterEspAfterBegin"
+"updaterEspAfterProgramBegin"
+"updaterEspAfterProgramData"
+"updaterEspAfterProgramFinish"
+"_GLOBAL__sub_I_00100_0_updaterEspInFile"
+"_GLOBAL__sub_D_00100_1_updaterEspInFile"
+}
+subgraph cluster_7 {
+rankdir=LR;
+node [style=filled,color=purple];
+"updaterFpgaInFile"
+"updaterFpgaInit"
+"updaterFpgaWriteVerifyBegin"
+"updaterFpgaAfterBegin"
+"updaterFpgaSendNextDataChunk"
+"updaterFpgaAfterProgramBegin"
+"updaterFpgaAfterProgramData"
+"updaterFpgaAfterUsercode"
+"updaterFpgaAfterEnd"
+"_GLOBAL__sub_I_00100_0_updaterFpgaInFile"
+"_GLOBAL__sub_D_00100_1_updaterFpgaInFile"
+}
+subgraph cluster_8 {
+rankdir=LR;
+node [style=filled,color=brown];
+"updaterSerialReadByte"
+"updaterSerialWriteByte"
+"updaterSerialGetMs"
+"updaterSerialChangeBaud"
+"updaterProgress"
+"updaterLogRecv"
+"updaterLogVerbose"
+"updaterLog"
+"updaterCheckSlipError"
+"updaterGetDelta"
+"updaterSendIv"
+"fmtMajMinFix"
+"fmtMajMinFixBuild"
+"printComponentVersion"
+"processSlipHello"
+"delayMs"
+"waitAfterReset"
+"measuringStart"
+"measuringIsElapsed"
+"tryResend"
+"tryRecv"
+"getBlockVersion"
+"updaterProcess"
+"determineComponentCount"
+"updaterInit"
+"readAffFromMem"
+"affFileSupported"
+"updater"
+"updaterComponentDone"
+"updaterComponentProgress"
+"updaterMakeBlockCurrent"
+"updaterSendNextFirmwarePart"
+"updaterPrintAffComponentsVersions"
+"_GLOBAL__sub_I_00100_0_updaterLogVerbose"
+"_GLOBAL__sub_D_00100_1_updaterLogVerbose"
+}
+subgraph cluster_9 {
+rankdir=LR;
+node [style=filled,color=grey];
+"bufferedWriteByte"
+"bufferReset"
+"slipBufferedInit"
+"slipBufferedSendVaPacket"
+"slipBufferedSendCrcChunkedPacket"
+"slipBufferedSendPacket"
+"slipBufferedResendPacket"
+"serialBufferedWriteStr"
+"_GLOBAL__sub_I_00100_0_slipBufferedInit"
+"_GLOBAL__sub_D_00100_1_slipBufferedInit"
+}
+subgraph cluster_10 {
+rankdir=LR;
+node [style=filled,color=lightblue];
+"updaterTiInFile"
+"updaterTiInit"
+"updaterTiAfterProgramBegin"
+"updaterTiAfterProgramData"
+"_GLOBAL__sub_I_00100_0_updaterTiInFile"
+"_GLOBAL__sub_D_00100_1_updaterTiInFile"
+}
+subgraph cluster_11 {
+rankdir=LR;
+node [style=filled,color=red];
+"updaterUcInFile"
+"updaterUcInit"
+"updaterUcAfterProgramBegin"
+"updaterUcAfterProgramData"
+"_GLOBAL__sub_I_00100_0_updaterUcInFile"
+"_GLOBAL__sub_D_00100_1_updaterUcInFile"
+}
+"affFileSupported" -> "affReadHeader";
+"affFindBlock" -> "affGetBlockHeaderSize";
+"affFindBlock" -> "affGetHeaderSize";
+"affFindBlock" -> "affReadBlockHeader";
+"affFindBlock" -> "affReadHeader";
+"affGetBlockStartPos" -> "affGetBlockHeaderSize";
+"affGetBlockStartPos" -> "affGetHeaderSize";
+"affGetBlockStartPos" -> "affReadBlockHeader";
+"affGetBlockStartPos" -> "affReadHeader";
+"affReadBlockHeader" -> "affReadHeader";
+"determineComponentCount" -> "updaterEspInFile";
+"determineComponentCount" -> "updaterFpgaInFile";
+"determineComponentCount" -> "updaterTiInFile";
+"determineComponentCount" -> "updaterUcInFile";
+"fmtMajMinFixBuild" -> "fmtMajMinFix";
+"getBlockVersion" -> "affFindBlock";
+"getBlockVersion" -> "affReadBlockHeader";
+"gnssCheckControlSum" -> "gnssCalculateConstrolSum";
+"gnssParseArguments" -> "gnssParseArgumentsGGA";
+"gnssParseArguments" -> "gnssParseArgumentsGsa";
+"gnssParseArguments" -> "gnssParseArgumentsGst";
+"gnssParseArguments" -> "gnssParseArgumentsPubxPos";
+"gnssParseArguments" -> "gnssParseArgumentsRMC";
+"gnssParseArgumentsGGA" -> "gnssParseAltitude";
+"gnssParseArgumentsGGA" -> "gnssParseDop";
+"gnssParseArgumentsGGA" -> "gnssParseFixQuality";
+"gnssParseArgumentsGGA" -> "gnssParseLatitude";
+"gnssParseArgumentsGGA" -> "gnssParseLongitude";
+"gnssParseArgumentsGGA" -> "gnssParseSatellites";
+"gnssParseArgumentsGGA" -> "gnssParseTime";
+"gnssParseArgumentsGsa" -> "gnssParseDop";
+"gnssParseArgumentsGsa" -> "strIsEmpty";
+"gnssParseArgumentsGst" -> "gnssParseAccLatLonAlt";
+"gnssParseArgumentsPubxPos" -> "gnssParseDop";
+"gnssParseArgumentsPubxPos" -> "gnssParseLatitude";
+"gnssParseArgumentsPubxPos" -> "gnssParseLongitude";
+"gnssParseArgumentsPubxPos" -> "gnssParseSatellites";
+"gnssParseArgumentsPubxPos" -> "gnssParseTime";
+"gnssParseArgumentsPubxPos" -> "gnssParseTrack";
+"gnssParseArgumentsRMC" -> "gnssParseDate";
+"gnssParseArgumentsRMC" -> "gnssParseLatitude";
+"gnssParseArgumentsRMC" -> "gnssParseLongitude";
+"gnssParseArgumentsRMC" -> "gnssParseTime";
+"gnssParseArgumentsRMC" -> "gnssParseTrack";
+"gnssParseArgumentsRMC" -> "gnssParseVelocityOverGround";
+"gnssParseLatitude" -> "gnssParseDegrees";
+"gnssParseLongitude" -> "gnssParseDegrees";
+"gnssPreprocessFrame" -> "gnssCheckControlSum";
+"gnssPreprocessFrame" -> "gnssDetectFrameType";
+"gnssPreprocessFrame" -> "gnssSplitFrame";
+"gnssProcessInputLine" -> "gnssParseArguments";
+"gnssProcessInputLine" -> "gnssPreprocessFrame";
+"gnssProcessInputLine" -> "gnssUpdateState";
+"gnssUpdateState" -> "gnssHasPosition";
+"pmtkConcatenateCheckSum" -> "pmtkCalculateCheckSum";
+"pmtkCreateFrame" -> "pmtkConcatenateCheckSum";
+"pmtkHasFrameValidSum" -> "pmtkCalculateCheckSum";
+"pmtkHasFrameValidSum" -> "pmtkParseCheckSum";
+"printComponentVersion" -> "fmtMajMinFix";
+"printComponentVersion" -> "fmtMajMinFixBuild";
+"printComponentVersion" -> "updaterLog";
+"processSlipHello" -> "affGetBlockHeaderSize";
+"processSlipHello" -> "affReadHeader";
+"processSlipHello" -> "printComponentVersion";
+"processSlipHello" -> "updaterEspInFile";
+"processSlipHello" -> "updaterFpgaInFile";
+"processSlipHello" -> "updaterLog";
+"processSlipHello" -> "updaterLogVerbose";
+"processSlipHello" -> "updaterTiInFile";
+"processSlipHello" -> "updaterUcInFile";
+"serialBufferedWriteStr" -> "bufferReset";
+"slipBufferedInit" -> "bufferReset";
+"slipBufferedSendCrcChunkedPacket" -> "slipBufferedSendVaPacket";
+"slipBufferedSendPacket" -> "slipBufferedSendCrcChunkedPacket";
+"slipBufferedSendVaPacket" -> "bufferReset";
+"slipBufferedSendVaPacket" -> "slipBufferedSendPacket";
+"tryRecv" -> "tryResend";
+"tryRecv" -> "updaterCheckSlipError";
+"tryRecv" -> "updaterLog";
+"tryRecv" -> "updaterLogVerbose";
+"tryResend" -> "slipBufferedResendPacket";
+"tryResend" -> "updaterLog";
+"ubloxPubxChangeBaudrate" -> "pmtkConcatenateCheckSum";
+"ubloxPubxCreateCommandSetMessageOutput" -> "pmtkConcatenateCheckSum";
+"ubloxUbxCreateFrame" -> "ubloxUbxCalculateChecksum";
+"ubloxUbxCreateFrameCfgGnss" -> "ubloxUbxCreateFrame";
+"ubloxUbxCreateFrameCfgNmea" -> "ubloxUbxCreateFrame";
+"ubloxUbxCreateFrameCfgRate" -> "ubloxUbxCreateFrame";
+"ubloxUbxCreateFrameEnable" -> "ubloxUbxCreateFrame";
+"ubloxUbxOnBinary" -> "ubloxUbxCalculateChecksum";
+"ubloxUbxOnBinary" -> "ubxHandleInMessage";
+"ubxHandleInMessage" -> "ubxProcessNaviPvtMessage";
+"updater" -> "updaterInit";
+"updater" -> "updaterLogVerbose";
+"updater" -> "updaterProcess";
+"updaterComponentDone" -> "updaterProgress";
+"updaterComponentProgress" -> "updaterProgress";
+"updaterEspAfterBegin" -> "affFindBlock";
+"updaterEspAfterBegin" -> "updaterEspSendCurrentBlockHead";
+"updaterEspAfterBegin" -> "updaterMakeBlockCurrent";
+"updaterEspAfterProgramBegin" -> "updaterEspSendCurrentBlockNextChunk";
+"updaterEspAfterProgramData" -> "affFindBlock";
+"updaterEspAfterProgramData" -> "slipBufferedSendCrcChunkedPacket";
+"updaterEspAfterProgramData" -> "updaterEspSendCurrentBlockHead";
+"updaterEspAfterProgramData" -> "updaterEspSendCurrentBlockNextChunk";
+"updaterEspAfterProgramData" -> "updaterLog";
+"updaterEspAfterProgramData" -> "updaterLogVerbose";
+"updaterEspAfterProgramData" -> "updaterMakeBlockCurrent";
+"updaterEspAfterProgramFinish" -> "affFindBlock";
+"updaterEspAfterProgramFinish" -> "updaterEspSendCurrentBlockHead";
+"updaterEspAfterProgramFinish" -> "updaterLog";
+"updaterEspAfterProgramFinish" -> "updaterMakeBlockCurrent";
+"updaterEspInFile" -> "affFindBlock";
+"updaterEspInFile" -> "affReadBlockHeader";
+"updaterEspInit" -> "affFindBlock";
+"updaterEspInit" -> "affReadBlockHeader";
+"updaterEspInit" -> "affReadHeader";
+"updaterEspInit" -> "slipBufferedSendPacket";
+"updaterEspInit" -> "updaterEspInFile";
+"updaterEspSendCurrentBlockHead" -> "slipBufferedSendCrcChunkedPacket";
+"updaterEspSendCurrentBlockHead" -> "updaterLogVerbose";
+"updaterEspSendCurrentBlockNextChunk" -> "updaterComponentProgress";
+"updaterEspSendCurrentBlockNextChunk" -> "updaterSendNextFirmwarePart";
+"updaterFpgaAfterBegin" -> "affFindBlock";
+"updaterFpgaAfterBegin" -> "updaterFpgaWriteVerifyBegin";
+"updaterFpgaAfterEnd" -> "updaterComponentProgress";
+"updaterFpgaAfterProgramBegin" -> "updaterFpgaSendNextDataChunk";
+"updaterFpgaAfterProgramData" -> "affFindBlock";
+"updaterFpgaAfterProgramData" -> "slipBufferedSendCrcChunkedPacket";
+"updaterFpgaAfterProgramData" -> "slipBufferedSendPacket";
+"updaterFpgaAfterProgramData" -> "updaterFpgaSendNextDataChunk";
+"updaterFpgaAfterProgramData" -> "updaterFpgaWriteVerifyBegin";
+"updaterFpgaAfterProgramData" -> "updaterLog";
+"updaterFpgaAfterProgramData" -> "updaterLogVerbose";
+"updaterFpgaAfterProgramData" -> "updaterMakeBlockCurrent";
+"updaterFpgaAfterUsercode" -> "affFindBlock";
+"updaterFpgaAfterUsercode" -> "updaterFpgaWriteVerifyBegin";
+"updaterFpgaInFile" -> "affFindBlock";
+"updaterFpgaInFile" -> "affReadBlockHeader";
+"updaterFpgaInit" -> "affFindBlock";
+"updaterFpgaInit" -> "affReadBlockHeader";
+"updaterFpgaInit" -> "affReadHeader";
+"updaterFpgaInit" -> "slipBufferedSendPacket";
+"updaterFpgaInit" -> "updaterFpgaInFile";
+"updaterFpgaSendNextDataChunk" -> "updaterComponentProgress";
+"updaterFpgaSendNextDataChunk" -> "updaterSendNextFirmwarePart";
+"updaterFpgaWriteVerifyBegin" -> "slipBufferedSendCrcChunkedPacket";
+"updaterFpgaWriteVerifyBegin" -> "slipBufferedSendPacket";
+"updaterFpgaWriteVerifyBegin" -> "updaterLog";
+"updaterFpgaWriteVerifyBegin" -> "updaterLogVerbose";
+"updaterFpgaWriteVerifyBegin" -> "updaterMakeBlockCurrent";
+"updaterInit" -> "determineComponentCount";
+"updaterInit" -> "slipBufferedInit";
+"updaterInit" -> "updaterLog";
+"updaterMakeBlockCurrent" -> "affGetBlockStartPos";
+"updaterMakeBlockCurrent" -> "affReadBlockHeader";
+"updaterMakeBlockCurrent" -> "updaterLogVerbose";
+"updaterPrintAffComponentsVersions" -> "affGetBlockHeaderSize";
+"updaterPrintAffComponentsVersions" -> "affReadHeader";
+"updaterPrintAffComponentsVersions" -> "printComponentVersion";
+"updaterPrintAffComponentsVersions" -> "updaterEspInFile";
+"updaterPrintAffComponentsVersions" -> "updaterFpgaInFile";
+"updaterPrintAffComponentsVersions" -> "updaterLog";
+"updaterPrintAffComponentsVersions" -> "updaterTiInFile";
+"updaterPrintAffComponentsVersions" -> "updaterUcInFile";
+"updaterProcess" -> "delayMs";
+"updaterProcess" -> "getBlockVersion";
+"updaterProcess" -> "measuringIsElapsed";
+"updaterProcess" -> "measuringStart";
+"updaterProcess" -> "processSlipHello";
+"updaterProcess" -> "serialBufferedWriteStr";
+"updaterProcess" -> "slipBufferedSendCrcChunkedPacket";
+"updaterProcess" -> "slipBufferedSendPacket";
+"updaterProcess" -> "tryRecv";
+"updaterProcess" -> "updaterComponentDone";
+"updaterProcess" -> "updaterEspAfterBegin";
+"updaterProcess" -> "updaterEspAfterProgramBegin";
+"updaterProcess" -> "updaterEspAfterProgramData";
+"updaterProcess" -> "updaterEspAfterProgramFinish";
+"updaterProcess" -> "updaterEspInit";
+"updaterProcess" -> "updaterFpgaAfterBegin";
+"updaterProcess" -> "updaterFpgaAfterEnd";
+"updaterProcess" -> "updaterFpgaAfterProgramBegin";
+"updaterProcess" -> "updaterFpgaAfterProgramData";
+"updaterProcess" -> "updaterFpgaAfterUsercode";
+"updaterProcess" -> "updaterFpgaInit";
+"updaterProcess" -> "updaterLog";
+"updaterProcess" -> "updaterSendIv";
+"updaterProcess" -> "updaterTiAfterProgramBegin";
+"updaterProcess" -> "updaterTiAfterProgramData";
+"updaterProcess" -> "updaterTiInit";
+"updaterProcess" -> "updaterUcAfterProgramBegin";
+"updaterProcess" -> "updaterUcAfterProgramData";
+"updaterProcess" -> "updaterUcInit";
+"updaterProcess" -> "waitAfterReset";
+"updaterSendIv" -> "affReadHeader";
+"updaterSendIv" -> "slipBufferedSendPacket";
+"updaterSendIv" -> "updaterLogVerbose";
+"updaterSendNextFirmwarePart" -> "slipBufferedSendCrcChunkedPacket";
+"updaterSendNextFirmwarePart" -> "updaterLogVerbose";
+"updaterTiAfterProgramBegin" -> "updaterComponentProgress";
+"updaterTiAfterProgramBegin" -> "updaterSendNextFirmwarePart";
+"updaterTiAfterProgramData" -> "slipBufferedSendPacket";
+"updaterTiAfterProgramData" -> "updaterComponentProgress";
+"updaterTiAfterProgramData" -> "updaterLog";
+"updaterTiAfterProgramData" -> "updaterSendNextFirmwarePart";
+"updaterTiInFile" -> "affFindBlock";
+"updaterTiInFile" -> "affReadBlockHeader";
+"updaterTiInit" -> "affFindBlock";
+"updaterTiInit" -> "slipBufferedSendCrcChunkedPacket";
+"updaterTiInit" -> "updaterMakeBlockCurrent";
+"updaterUcAfterProgramBegin" -> "updaterComponentProgress";
+"updaterUcAfterProgramBegin" -> "updaterSendNextFirmwarePart";
+"updaterUcAfterProgramData" -> "slipBufferedSendPacket";
+"updaterUcAfterProgramData" -> "updaterComponentProgress";
+"updaterUcAfterProgramData" -> "updaterLog";
+"updaterUcAfterProgramData" -> "updaterSendNextFirmwarePart";
+"updaterUcInFile" -> "affFindBlock";
+"updaterUcInFile" -> "affReadBlockHeader";
+"updaterUcInit" -> "affFindBlock";
+"updaterUcInit" -> "slipBufferedSendCrcChunkedPacket";
+"updaterUcInit" -> "updaterMakeBlockCurrent";
+"waitAfterReset" -> "delayMs";
+}

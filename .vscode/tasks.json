@@ -6,7 +6,7 @@
         {
             "label": "graph data",
             "type": "shell",
-            "command": "git ls-files -o \"testData/*.expand\" | xargs cally --no-externs > out.dot"
+            "command": "echo **/*.expand | xargs cally --no-externs > out.dot"
         },  
         {
             "label": "show data",

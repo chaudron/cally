@@ -526,7 +526,7 @@ def full_call_graph(functions, **kwargs):
     #
     last = ""
     cnt = 0
-    cols = [ "grey", "lightblue", "red", "green", "yellow", "cyan", "pink", "purple", "brown" ]
+    cols = [ "grey", "lightblue", "red", "green", "yellow", "cyan", "pink", "purple", "brown",  ]
     for func in sorted(functions.keys(), key=lambda item:functions[item]["files"][0]):
         if exclude is None or \
             re.match(exclude, func) is None:
@@ -538,7 +538,8 @@ def full_call_graph(functions, **kwargs):
                         print_buf(std_buf, f"subgraph cluster_{cnt}" + " {")
                         need_close = True
                     print_buf(std_buf, "rankdir=LR;")
-                    print_buf(std_buf, f"node [style=filled,color={cols[cnt]}];")
+                    color = cols[cnt % len(cols)]
+                    print_buf(std_buf, f"node [style=filled,color={color}];")
                     last = directory
                     cnt += 1
                 print_buf(std_buf, f'"{func}"')
