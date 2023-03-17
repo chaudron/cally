@@ -507,10 +507,14 @@ def dump_function_info(functions, function, details):
         print("\n")
 
 
+
 #
 # Build full call graph
 #
 def full_call_graph(functions, **kwargs):
+    DO_CLUSTERING = True
+
+    need_close = False
     exclude = kwargs.get("exclude", None)
     no_externs = kwargs.get("no_externs", False)
     std_buf = kwargs.get("stdio_buffer", None)
@@ -528,15 +532,18 @@ def full_call_graph(functions, **kwargs):
             re.match(exclude, func) is None:
                 directory = functions[func]["files"][0]
                 if directory != last:
-                    if last != "":
-                        print_buf(std_buf, "}")
-                    print_buf(std_buf, f"subgraph cluster_{cnt}" + " {")
+                    if DO_CLUSTERING:
+                        if last != "":
+                            print_buf(std_buf, "}")
+                        print_buf(std_buf, f"subgraph cluster_{cnt}" + " {")
+                        need_close = True
                     print_buf(std_buf, "rankdir=LR;")
                     print_buf(std_buf, f"node [style=filled,color={cols[cnt]}];")
                     last = directory
                     cnt += 1
                 print_buf(std_buf, f'"{func}"')
-    print_buf(std_buf, "}")
+    if need_close:
+        print_buf(std_buf, "}")
 
     for func in sorted(functions.keys()):
         printed_functions = 0

@@ -6,7 +6,7 @@
         {
             "label": "graph data",
             "type": "shell",
-            "command": "git ls-files \"testData/*.expand\" | xargs cally > out.dot"
+            "command": "git ls-files -o \"testData/*.expand\" | xargs cally --no-externs > out.dot"
         },  
         {
             "label": "show data",
@@ -18,7 +18,7 @@
             "label": "graph image",
             "type": "shell",
             "command": "cat out.dot | dot -Grankdir=LR -Tpng -o full_caller.png && mimeopen full_caller.png",
-            // "dependsOn":["show data"]
+            "dependsOn":["show data"]
         },
     ]
 }
