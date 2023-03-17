@@ -516,6 +516,7 @@ def full_call_graph(functions, **kwargs):
     std_buf = kwargs.get("stdio_buffer", None)
 
     print_buf(std_buf, "strict digraph callgraph {")
+    print_buf(std_buf, "rankdir=LR;")
     #
     # Simply walk all nodes and print the callers
     #
