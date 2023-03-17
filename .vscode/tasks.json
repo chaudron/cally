@@ -18,7 +18,7 @@
             "label": "graph image",
             "type": "shell",
             "command": "cat out.dot | dot -Grankdir=LR -Tpng -o full_caller.png && mimeopen full_caller.png",
-            "dependsOn":["show data"]
+            // "dependsOn":["show data"]
         },
     ]
 }
