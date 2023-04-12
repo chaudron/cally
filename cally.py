@@ -1,6 +1,8 @@
 #!/usr/bin/python
 #
 #  Copyright 2018, Eelco Chaudron
+#  Modifications Copyright 2020 Philipp Hochmann
+#  Modifications Copyright 2023 Aerobits
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -25,6 +27,12 @@
 #
 #  Initial Created:
 #    29 March 2018
+#
+#  Modifications:
+#    Directory-based clustering added by:
+#        Philipp Hochmann github.com/PHochmann
+#    Infinite colors, optional clustering and later modifications by:
+#        Aerobits www.aerobits.pl
 #
 #  Notes:
 #
