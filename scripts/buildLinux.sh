@@ -1,5 +1,5 @@
 #!/bin/bash
-pyinstaller -n Cally --onefile \
+pyinstaller -n cally --onefile \
     --add-binary "../version.txt:." \
     ../cally.py
 

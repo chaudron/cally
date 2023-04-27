@@ -9,6 +9,11 @@
             "command": "echo **/*.expand | xargs cally --no-externs > out.dot"
         },  
         {
+            "label": "graph data (package)",
+            "type": "shell",
+            "command": "echo **/*.expand | xargs ./build/dist/cally --no-externs > out.dot"
+        },  
+        {
             "label": "show data",
             "type": "shell",
             "command": "cat out.dot",
@@ -19,6 +24,14 @@
             "type": "shell",
             "command": "cat out.dot | dot -Grankdir=LR -Tpng -o full_caller.png && mimeopen full_caller.png",
             "dependsOn":["show data"]
+        },
+        {
+            "label": "create binary",
+            "type": "shell",
+            "command": "../scripts/buildLinux.sh",
+            "options": {
+				"cwd": "${workspaceFolder}/build"
+			},
         },
     ]
 }
