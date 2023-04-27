@@ -46,7 +46,7 @@ import os
 import re
 import sys
 import time
-
+from sys import exit
 
 #
 # Unit tests for the dump_path() function.
