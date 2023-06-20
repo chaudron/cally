@@ -520,12 +520,13 @@ def dump_function_info(functions, function, details):
 # Build full call graph
 #
 def full_call_graph(functions, **kwargs):
-    DO_CLUSTERING = True
-
+    
     need_close = False
     exclude = kwargs.get("exclude", None)
     no_externs = kwargs.get("no_externs", False)
     std_buf = kwargs.get("stdio_buffer", None)
+    clusters=kwargs.get("clusters",False)
+    colors=kwargs.get("colors",False)
 
     print_buf(std_buf, "strict digraph callgraph {")
     print_buf(std_buf, "rankdir=LR;")
@@ -540,14 +541,15 @@ def full_call_graph(functions, **kwargs):
             re.match(exclude, func) is None:
                 directory = functions[func]["files"][0]
                 if directory != last:
-                    if DO_CLUSTERING:
+                    if clusters:
                         if last != "":
                             print_buf(std_buf, "}")
                         print_buf(std_buf, f"subgraph cluster_{cnt}" + " {")
                         need_close = True
                     print_buf(std_buf, "rankdir=LR;")
-                    color = cols[cnt % len(cols)]
-                    print_buf(std_buf, f"node [style=filled,color={color}];")
+                    if colors:
+                        color = cols[cnt % len(cols)]
+                        print_buf(std_buf, f"node [style=filled,color={color}];")
                     last = directory
                     cnt += 1
                 print_buf(std_buf, f'"{func}"')
@@ -614,6 +616,10 @@ def main():
                         type=int, default=0)
     parser.add_argument("--unit-test", help=argparse.SUPPRESS,
                         action="store_true")
+    parser.add_argument("--enable-clusters", help="Nodes from the same file will be clustered together",
+                        action="store_true")
+    parser.add_argument("--color-clusters", help="Nodes from the same cluster will have the same color",
+                        action="store_true")
 
     parser.add_argument("RTLFILE", help="GCCs RTL .expand file", nargs="+")
 
@@ -657,6 +663,13 @@ def main():
         if not os.path.isfile(file) or not os.access(file, os.R_OK):
             print_err("ERROR: Can't open rtl file, \"{}\"!".format(file))
             return 1
+
+    #
+    # Check if all files exist
+    #
+    if config.color_clusters and not config.enable_clusters:
+        print_err("ERROR: Can't color clusters without enabling them. See --enable-clusters option!")
+        return 1
 
     #
     # Regex to extract functions
@@ -752,7 +765,7 @@ def main():
     #
     if not config.caller and not config.callee:
         full_call_graph(functions, exclude=config.exclude,
-                        no_externs=config.no_externs)
+                        no_externs=config.no_externs, clusters=config.enable_clusters, colors=config.color_clusters)
 
     #
     # Build callgraph for callee function
