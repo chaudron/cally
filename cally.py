@@ -531,7 +531,8 @@ def full_call_graph(functions, **kwargs):
 
                     print_buf(std_buf, '"{}" -> "{}";'.format(func, caller))
 
-                    if caller not in functions:
+                    if caller not in functions or \
+                       len(functions[caller]["files"]) == 0:
                         print_buf(std_buf, '"{}" [style=dashed]'.
                                   format(caller))
 
@@ -648,9 +649,10 @@ def main():
         match = re.match(function, line)
         if match is not None:
             function_name = match.group("function")
-            if function_name in functions:
+            if function_name in functions and \
+               functions[function_name]["files"]:
                 if not config.no_warnings:
-                    print_err("WARNING: Function {} defined in multiple"
+                    print_err("WARNING: Function {} defined in multiple "
                               "files \"{}\"!".
                               format(function_name,
                                      ', '.join(map(
@@ -673,6 +675,13 @@ def main():
             match = re.match(call, line)
             if match is not None:
                 target = match.group("target")
+                if not config.no_externs and target not in functions:
+                    functions[target] = dict()
+                    functions[target]["files"] = list()
+                    functions[target]["calls"] = dict()
+                    functions[target]["refs"] = dict()
+                    functions[target]["callee_calls"] = dict()
+                    functions[target]["callee_refs"] = dict()
                 if target not in functions[function_name]["calls"]:
                     functions[function_name]["calls"][target] = True
             else:
