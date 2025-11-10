@@ -635,6 +635,7 @@ def main():
     call = re.compile(
         r"^.*\(call.*\"(?P<target>.*)\".*$")
     symbol_ref = re.compile(r"^.*\(symbol_ref.*\"(?P<target>.*)\".*$")
+    cal_ops = re.compile(r"(.*_cal_ops\.[_a-z]*)")  # TODO() Step back doesn't work
 
     #
     # Parse each line in each file given
@@ -676,6 +677,13 @@ def main():
                 if target not in functions[function_name]["calls"]:
                     functions[function_name]["calls"][target] = True
             else:
+                match = re.match(cal_ops, line)
+                if match is not None:
+                    target = str(match.group())
+                    target = target.split(" ")[-1]  # TODO() Better regex
+                    if target not in functions[function_name]["calls"]:
+                        functions[function_name]["calls"][target] = True
+
                 match = re.match(symbol_ref, line)
                 if match is not None:
                     target = match.group("target")
